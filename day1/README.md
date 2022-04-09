@@ -331,7 +331,7 @@ docker-compose top
 ### Bash 스크립트 생성 예제
 
 * 환경변수에 따라 다르게 동작하는 스크립트를 생성합니다
-  - `cat > run.sh` <kbd>enter</kbd> 후에 아래 내용을 붙여넣고 <kbd>Ctrl+C</kbd> 하면 파일이 생성됩니다
+  - `cat > run.sh` <kbd>enter</kbd> 후에 아래 내용을 붙여넣고, 엔터 친 후(줄바꿈)에 <kbd>Ctrl+C</kbd> 하면 파일이 생성됩니다. 
 ```bash
 #!/bin/bash
 if [[ $DEBUG -eq 1 ]]; then
@@ -340,6 +340,12 @@ else
     echo "this is release mode"
 fi
 ```
+* 실행해보기
+```bash
+DEBUG=0 bash run.sh
+DEBUG=1 bash run.sh
+```
+
 
 * 아래의 도커 `cp` 명령어로 컨테이너 내부로 스크립트를 복사합니다
 ```bash
@@ -354,9 +360,14 @@ docker cp ./run.sh ubuntu:/run.sh
 $ this is debug mode
 ```
 
-> 아래와 같은 방법으로 실행할 수 있습니다 (-e 옵션의 위치가 중요합니다)
+> 아래와 같은 방법으로 실행할 수 있습니다. 
+- `-e` 옵션의 위치가 중요합니다. (-e, --env KEY=VAL : 환경변수를 전달)
+
 ```bash
 docker-compose exec -e DEBUG=0 ubuntu bash run.sh
+```
+  
+```bash
 docker-compose exec -e DEBUG=1 ubuntu bash run.sh
 ```
 
