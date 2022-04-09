@@ -319,6 +319,8 @@ docker-compose ps -a
 # docker compose cp [OPTIONS] SERVICE:SRC_PATH DEST_PATH|-
 docker-compose cp ./local/path/filename ubuntu:/container/path/filename
 ```
+
+* 반대 경우에도 사용할 수 있습니다.  
 <br>
 
 #### 2-3-5. [top](https://docs.docker.com/compose/reference/top/) : 컨테이너 내부에 실행되고 있는 프로세스를 출력합니다
