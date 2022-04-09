@@ -148,13 +148,17 @@ docker-compose -f docker-compose.yml up -d
 ```
 <br>
 
-> [MySQL 서버에 접속](https://dev.mysql.com/doc/refman/8.0/en/connecting.html) 하는 방법
+* 참고. [MySQL 서버에 접속](https://dev.mysql.com/doc/refman/8.0/en/connecting.html) 하는 방법
+  ```bash
+  mysql --host=localhost --user=scott --password=tiger default
+  # 혹은 줄여서
+  mysql -hlocalhost -uscott -ptiger default
+  ```
 
-* 로컬 환경에서는 `--host` 정보는 입력하지 않아도 됩니다
-```bash
-mysql --host=localhost --user=scott --password=tiger default
-mysql -hlocalhost -uscott -ptiger default
-```
+  * docker 로 띄워져있는 mysql 에 접속하려면,`docker-compose exec mysql` 후에 mysql 접속 명령어를 입력해야합니다. 
+
+  * 로컬 환경에서는 `--host` 정보는 입력하지 않아도 됩니다
+
 <br>
 
 
@@ -195,11 +199,18 @@ services:
 ...
 ```
 
-<details><summary> :green_book: [실습] .env 파일을 env 파일로 생성하고, 패스워드(=pass), 계정정보(=user) 및 데이터베이스(testdb)으로 변경하여 --env-file 옵션으로 config 를 통해 제대로 수정 되었는지 확인해 보세요</summary>
+<details><summary> :green_book: [실습] 다른 env 환경설정을 만들어, 해당 환경을 사용해 docker-compose 로 기동시킵니다. 개발단계(dev, staging, production 등)마다 여러 환경설정을 사용해야할 경우가 있습니다. 
+
+* `.env` 역할을 하는 파일을 `env`이라는 파일명으로 생성하고,   
+* env 파일의 환경 설정은 MYSQL의 패스워드는 `pass` 로, user는 `user` 로, 데이터베이스는 `testdb` 으로 변경해주세요.
+* --env-file 옵션으로 config 를 통해 제대로 수정 되었는지 확인해 보세요.  
+* [한 걸음 더] `env` 옵션을 사용해 docker를 구동시키고, docker 의 mysql 에 접속해보세요. 
+</summary>
 
 > 아래와 같이 config 결과가 나온다면 정답입니다
 ```bash
 docker-compose --env-file env config | head -15
+# 아래는 출력 결과
 services:
   mysql:
     container_name: mysql
@@ -260,8 +271,15 @@ docker-compose --env-file env config
 ```bash
 docker-compose down
 docker-compose --env-file env up -d
-docker-compose exec mysql mysql -uuser -ppass testdb
 ```
+
+* mysql 이 시작되는데 시간이 걸리므로 조금 기다렸다가 접속. 
+```bash
+docker-compose exec mysql mysql -uuser -ppass testdb
+```  
+  
+* 만약, 아래와 같이 mysql sock 에러 메시지가 뜬다면 아직 mysql 서버가 실행 전이라 그럴 수 있습니다.
+`ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'` 
 
 </details>
 
