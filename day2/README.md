@@ -133,6 +133,12 @@ ask sqoop eval --connect jdbc:mysql://mysql:3306/testdb --username sqoop --passw
 
 > 위와 같이 특정 데이터베이스에 계속 명령을 날리기에는 불편함이 있으므로 반복되는 명령어를 bash 쉘을 통해 만들어보면 편하게 사용할 수 있습니다
 
+- `ls` 와 `cat` 을 사용해 사용자정의해 둔 `cmd` 명령어가 어떤 내용인지 확인해보세요.   
+- `cmd` 실행해보기  
+```bash
+cmd "SELECT * FROM user_20201025"
+```
+
 <br>
 
 
@@ -329,6 +335,14 @@ ask cat /home/sqoop/target/student/part-m-00000
 ```
 <br>
 
+* 수집된 파일의 타입을 확인해보기  
+```bash
+file /home/sqoop/target/student/part-m-00000
+
+# /home/sqoop/target/student/part-m-00000: CSV text
+```  
+<br>
+
 
 ### 2-3. 저장 파일 포맷을 변경하며 수집
 
@@ -509,11 +523,6 @@ show tables;
 docker-compose exec sqoop bash
 ```
 
-```bash
-# terminal
-docker-compose exec sqoop bash
-```
-
 * 적재 작업을 수행하면 오류가 발생하고 예외가 발생하게 되는데 출력된 로그와 수집된 데이터를 통해 추적합니다
 ```bash
 # docker
@@ -528,6 +537,11 @@ ask sqoop export -m 1 --connect jdbc:mysql://mysql:3306/testdb --username sqoop 
 hadoop fs -cat /user/sqoop/target/seoul_popular_trip/part-m-00000 | more
 ```
 <br>
+
+```text
+0,441,울프강 스테이크 하우스,135-954 서울 강남구 청담동 89-6 ,06016 서울 강남구 선릉로152길 21 (청담동, 영인빌딩) ,02-556-8700,뉴
+3대스테이크,스테이크,스테이크음식점,청담동음식점,강남,레스토랑,울프강 스테이크 하우스
+```
 
 
 <details><summary> :blue_book: 6. [기본] 오류의 원인을 파악하고, 문제 해결 후에 Export 작업을 수행하세요 (hint: 수집 컬럼의 필드 구분자) </summary>
@@ -628,8 +642,6 @@ ask sqoop export -m 4 --connect jdbc:mysql://mysql:3306/testdb --username sqoop 
 cmd "SELECT COUNT(1) FROM seoul_popular_stg"
 cmd "SELECT COUNT(1) FROM seoul_popular_exp"
 ```
-
-> 적재시에 4개의 맵 작업수로 수행된 사항에 대해서도 디버깅 해보시면 어떻게 동작하는 지 확인할 수 있습니다
 
 ```text
 # "SELECT COUNT(1) FROM seoul_popular_stg"
@@ -790,7 +802,8 @@ hadoop fs -ls -R /user/sqoop/target/seoul_popular_partition | grep SUCCESS
 * id 값을 4로 나누어 나머지를 파티션을 값으로 사용하는 경우를 먼저 확인합니다 
 
 ```sql
-select (id mod 4) as uid, count(1) from seoul_popular_trip group by uid
+mysql> use testdb;
+mysql> select (id mod 4) as uid, count(1) from seoul_popular_trip group by uid;
 ```
 
 * 아래의 조건으로 파티션 별 수집을 수행합니다
@@ -803,7 +816,9 @@ for x in $(seq 0 3); do
   --where "\"(id mod 4) = $x\"" \
   --target-dir /user/sqoop/target/seoul_popular_mod/mod=$x
 done
-```
+```  
+  * 앞서 배운 내용을 활용해 스크립트 파일을 만든 후(`cat > 스크립트명.sh`), `bash 스크립트명.sh` 로 실행해도 됩니다. 
+
 
 * 아래와 같이 검증합니다
 ```bash
