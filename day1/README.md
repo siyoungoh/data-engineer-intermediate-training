@@ -60,7 +60,7 @@ git version 2.17.1
 # terminal
 mkdir -p /home/ubuntu/work
 cd /home/ubuntu/work
-git clone https://github.com/psyoblade/data-engineer-intermediate-training.git
+git clone https://github.com/siyoungoh/data-engineer-intermediate-training.git
 cd /home/ubuntu/work/data-engineer-intermediate-training/day1
 ```
 <br>

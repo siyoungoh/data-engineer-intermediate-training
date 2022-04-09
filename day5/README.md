@@ -15,8 +15,8 @@
   * [6. :green_book: 질문 및 컨테이너 종료](#6-green_book-질문-및-컨테이너-종료)
 
 - 정답
-  * [1. :green_book:/:blue_book: 시작 노트북](http://htmlpreview.github.io/?https://github.com/psyoblade/data-engineer-intermediate-training/blob/master/day5/notebooks/html/data-engineer-training-course.html)
-  * [2. :green_book:/:blue_book: 정답 노트북](http://htmlpreview.github.io/?https://github.com/psyoblade/data-engineer-intermediate-training/blob/master/day5/notebooks/html/data-engineer-training-course-answer.html)
+  * [1. :green_book:/:blue_book: 시작 노트북](https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day5/notebooks/data-engineer-training-course.ipynb)
+  * [2. :green_book:/:blue_book: 정답 노트북](https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day5/notebooks/data-engineer-training-course-answer.ipynb)
 
 <br>
 
