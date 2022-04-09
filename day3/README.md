@@ -48,3 +48,4 @@ docker-compose logs notebook
 <br>
 
 
+* 정답파일은 google drive - colab 을 사용해 공유합니다. 
