@@ -301,7 +301,7 @@ SELECT * FROM student;
 
 * 컨테이너 로컬 디스크에 예제 테이블(student)을 수집합니다
   - <kbd>-jt local</kbd> : 로컬 프로세스로 (원격 분산처리가 아니라) 테이블을 수집
-  - <kbd>-fs local</kbd> : 로컬 디스크에 (원격 부산저장소가 아니라) 테이블을 수집
+  - <kbd>-fs local</kbd> : 로컬 디스크에 (원격 분산저장소가 아니라) 테이블을 수집
   - <kbd>-m 1</kbd> : 하나의 프로세스로 실행
   - <kbd>--connect jdbc:mysql://mysql:3306/testdb</kbd> : 대상 서버 Connection String
   - <kbd>--username</kbd> : 이용자
