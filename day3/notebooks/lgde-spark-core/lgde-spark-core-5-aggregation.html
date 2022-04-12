@@ -14049,7 +14049,11 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="5%EA%B5%90%EC%8B%9C-%EC%A7%91%EA%B3%84-%EC%97%B0%EC%82%B0">5&#44368;&#49884; &#51665;&#44228; &#50672;&#49328;<a class="anchor-link" href="#5%EA%B5%90%EC%8B%9C-%EC%A7%91%EA%B3%84-%EC%97%B0%EC%82%B0">&#182;</a></h1><h3 id="%EB%AA%A9%EC%B0%A8">&#47785;&#52264;<a class="anchor-link" href="#%EB%AA%A9%EC%B0%A8">&#182;</a></h3><ul>
+<h1 id="5%EA%B5%90%EC%8B%9C-%EC%A7%91%EA%B3%84-%EC%97%B0%EC%82%B0">5&#44368;&#49884; &#51665;&#44228; &#50672;&#49328;<a class="anchor-link" href="#5%EA%B5%90%EC%8B%9C-%EC%A7%91%EA%B3%84-%EC%97%B0%EC%82%B0">&#182;</a></h1><ul>
+<li>집계함수(Aggregate function) : 여러행 또는 테이블 전체 행으로부터 하나의 결과값을 반환하는 함수</li>
+<li>그룹함수 (Group function) : 전체 행을 하나 이상의 컬럼을 기준으로 컬럼값에 따라 그룹화하여 그룹별로 결과를 출력하는 함수</li>
+</ul>
+<h3 id="%EB%AA%A9%EC%B0%A8">&#47785;&#52264;<a class="anchor-link" href="#%EB%AA%A9%EC%B0%A8">&#182;</a></h3><ul>
 <li><a href="#1.-집계-함수">1. 집계 함수</a></li>
 <li><a href="#2.-그룹-함수">2. 그룹 함수</a></li>
 <li><a href="#참고자료">참고자료</a></li>
@@ -14059,7 +14063,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="o">*</span>
@@ -14107,7 +14111,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>21/09/01 13:58:03 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<pre>22/04/12 19:38:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &#34;WARN&#34;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
@@ -14118,7 +14122,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
@@ -14130,7 +14134,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
         <div>
             <p><b>SparkContext</b></p>
 
-            <p><a href="http://c1aa5f4167a8:4040">Spark UI</a></p>
+            <p><a href="http://3ba1db1a8250:4040">Spark UI</a></p>
 
             <dl>
               <dt>Version</dt>
@@ -14459,17 +14463,6 @@ only showing top 5 rows
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>+--------------------------------+
 |approx_count_distinct(StockCode)|
@@ -14488,8 +14481,8 @@ only showing top 5 rows
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>21/08/21 08:49:41 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting &#39;spark.sql.debug.maxToStringFields&#39;.
-[Stage 20:&gt;                                                         (0 + 1) / 1]</pre>
+<pre>22/04/12 19:23:24 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting &#39;spark.sql.debug.maxToStringFields&#39;.
+[Stage 19:&gt;                                                         (0 + 4) / 4]</pre>
 </div>
 </div>
 
@@ -14562,17 +14555,6 @@ only showing top 5 rows
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>+----------------+---------------+
 |first(StockCode)|last(StockCode)|
@@ -14586,29 +14568,7 @@ only showing top 5 rows
 |       -80995|        80995|
 +-------------+-------------+
 
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+--------------------+-----------------+
++--------------------+-----------------+
 |    min(Description)| max(Description)|
 +--------------------+-----------------+
 | 4 PURPLE FLOCK D...|wrongly sold sets|
@@ -14637,11 +14597,7 @@ only showing top 5 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.3-%ED%86%B5%EA%B3%84-%EC%A7%91%EA%B3%84-%ED%95%A8%EC%88%98-(avg,-mean,-variance,-stddev)">1.3 &#53685;&#44228; &#51665;&#44228; &#54632;&#49688; (avg, mean, variance, stddev)<a class="anchor-link" href="#1.3-%ED%86%B5%EA%B3%84-%EC%A7%91%EA%B3%84-%ED%95%A8%EC%88%98-(avg,-mean,-variance,-stddev)">&#182;</a></h3><ul>
-<li>표본표준분산 및 편차: variance, stddev</li>
-<li>모표준분산 및 편차 : var_pop, stddev_pop</li>
-</ul>
-
+<h3 id="1.3-%ED%86%B5%EA%B3%84-%EC%A7%91%EA%B3%84-%ED%95%A8%EC%88%98-(avg,-mean,-variance,-stddev)">1.3 &#53685;&#44228; &#51665;&#44228; &#54632;&#49688; (avg, mean, variance, stddev)<a class="anchor-link" href="#1.3-%ED%86%B5%EA%B3%84-%EC%A7%91%EA%B3%84-%ED%95%A8%EC%88%98-(avg,-mean,-variance,-stddev)">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14693,6 +14649,15 @@ only showing top 5 rows
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>표본표준분산 및 편차: variance, stddev</li>
+<li>모표준분산 및 편차 : var_pop, stddev_pop</li>
+</ul>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14726,11 +14691,11 @@ only showing top 5 rows
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+------------------+---------------------+------------------+---------------------+------------------+--------------------+
-|var_samp(Quantity)|stddev_samp(Quantity)|var_samp(Quantity)|stddev_samp(Quantity)| var_pop(Quantity)|stddev_pop(Quantity)|
-+------------------+---------------------+------------------+---------------------+------------------+--------------------+
-|47559.391409298696|   218.08115785023404|47559.391409298696|   218.08115785023404|47559.303646609005|  218.08095663447784|
-+------------------+---------------------+------------------+---------------------+------------------+--------------------+
+<pre>+------------------+---------------------+------------------+---------------------+-----------------+--------------------+
+|var_samp(Quantity)|stddev_samp(Quantity)|var_samp(Quantity)|stddev_samp(Quantity)|var_pop(Quantity)|stddev_pop(Quantity)|
++------------------+---------------------+------------------+---------------------+-----------------+--------------------+
+| 47559.39140929892|   218.08115785023455| 47559.39140929892|   218.08115785023455|47559.30364660923|  218.08095663447835|
++------------------+---------------------+------------------+---------------------+-----------------+--------------------+
 
 </pre>
 </div>
@@ -14781,11 +14746,11 @@ only showing top 5 rows
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+------------------+---------------------+------------------+---------------------+------------------+--------------------+
-|var_samp(Quantity)|stddev_samp(Quantity)|var_samp(Quantity)|stddev_samp(Quantity)| var_pop(Quantity)|stddev_pop(Quantity)|
-+------------------+---------------------+------------------+---------------------+------------------+--------------------+
-|47559.391409298696|   218.08115785023404|47559.391409298696|   218.08115785023404|47559.303646609005|  218.08095663447784|
-+------------------+---------------------+------------------+---------------------+------------------+--------------------+
+<pre>+------------------+---------------------+------------------+---------------------+-----------------+--------------------+
+|var_samp(Quantity)|stddev_samp(Quantity)|var_samp(Quantity)|stddev_samp(Quantity)|var_pop(Quantity)|stddev_pop(Quantity)|
++------------------+---------------------+------------------+---------------------+-----------------+--------------------+
+| 47559.39140929892|   218.08115785023455| 47559.39140929892|   218.08115785023455|47559.30364660923|  218.08095663447835|
++------------------+---------------------+------------------+---------------------+-----------------+--------------------+
 
 </pre>
 </div>
@@ -14822,17 +14787,6 @@ only showing top 5 rows
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Stage 39:&gt;                                                         (0 + 3) / 3]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>+------------------+---------------------+------------------+---------------------+-----------------+--------------------+
 |var_samp(Quantity)|stddev_samp(Quantity)|var_samp(Quantity)|stddev_samp(Quantity)|var_pop(Quantity)|stddev_pop(Quantity)|
@@ -14841,17 +14795,6 @@ only showing top 5 rows
 +------------------+---------------------+------------------+---------------------+-----------------+--------------------+
 
 </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
 </div>
 </div>
 
@@ -14895,11 +14838,11 @@ only showing top 5 rows
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+-------------------+------------------+
-| skewness(Quantity)|kurtosis(Quantity)|
-+-------------------+------------------+
-|-0.2640755761052783|119768.05495533274|
-+-------------------+------------------+
+<pre>+--------------------+------------------+
+|  skewness(Quantity)|kurtosis(Quantity)|
++--------------------+------------------+
+|-0.26407557610528376|119768.05495530753|
++--------------------+------------------+
 
 </pre>
 </div>
@@ -14912,8 +14855,8 @@ only showing top 5 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/func1.png" alt="왜도"></p>
-<h4 id="%EB%B9%84%EB%8C%80%EC%B9%AD%EB%8F%84,-%EC%99%9C%EB%8F%84-(skewness)">&#48708;&#45824;&#52845;&#46020;, &#50780;&#46020; (skewness)<a class="anchor-link" href="#%EB%B9%84%EB%8C%80%EC%B9%AD%EB%8F%84,-%EC%99%9C%EB%8F%84-(skewness)">&#182;</a></h4><blockquote><p>왜도는 데이터가 대칭이 아닌 정도입니다. 왜도 값(0, 양수 또는 음수)이 데이터 형상에 대한 정보를 나타냅니다.
+<p><img src="https://www.oppadu.com/wp-content/uploads/2021/02/%EC%97%91%EC%85%80-skew-%ED%95%A8%EC%88%98-%EC%99%9C%EB%8F%84-%EC%84%A4%EB%AA%85-600x246.png" alt="왜도"></p>
+<h4 id="%EB%B9%84%EB%8C%80%EC%B9%AD%EB%8F%84,-%EC%99%9C%EB%8F%84-(skewness)">&#48708;&#45824;&#52845;&#46020;, &#50780;&#46020; (skewness)<a class="anchor-link" href="#%EB%B9%84%EB%8C%80%EC%B9%AD%EB%8F%84,-%EC%99%9C%EB%8F%84-(skewness)">&#182;</a></h4><blockquote><p>왜도는 데이터가 대칭이 아닌 정도, 비대칭도입니다. 왜도 값(0, 양수 또는 음수)이 데이터 형상에 대한 정보를 나타냅니다.
 데이터가 대칭에 가까울수록 왜도 값이 0에 근접합니다. 그러나 왜도 부족만으로 정규성을 의미하지는 않습니다.</p>
 </blockquote>
 <h4 id="%EC%B2%A8%EB%8F%84(kurtosis)">&#52392;&#46020;(kurtosis)<a class="anchor-link" href="#%EC%B2%A8%EB%8F%84(kurtosis)">&#182;</a></h4><blockquote><p>첨도는 분포의 꼬리가 정규 분포와 어떻게 다른지 나타냅니다. 완전히 정규 분포를 따르는 데이터의 첨도 값은 0입니다.
@@ -15004,17 +14947,14 @@ only showing top 5 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/func2.gif" alt="공분산"></p>
 <h4 id="%EA%B3%B5%EB%B6%84%EC%82%B0-(covariance)"><a href="https://ko.wikipedia.org/wiki/%EA%B3%B5%EB%B6%84%EC%82%B0">&#44277;&#48516;&#49328;</a> (covariance)<a class="anchor-link" href="#%EA%B3%B5%EB%B6%84%EC%82%B0-(covariance)">&#182;</a></h4><blockquote><p>공분산(共分散, 영어: covariance)은 2개의 확률변수의 상관정도를 나타내는 값이다.(1개의 변수의 이산정도를 나타내는 분산과는 별개임) 만약 2개의 변수중 하나의 값이 상승하는 경향을 보일 때, 다른 값도 상승하는 경향의 상관관계에 있다면, 공분산의 값은 양수가 될 것이다. 반대로 2개의 변수중 하나의 값이 상승하는 경향을 보일 때, 다른 값이 하강하는 경향을 보인다면 공분산의 값은 음수가 된다. <br>
-<br>
-<img src="images/func3.png" alt="function"></p>
+<br></p>
 </blockquote>
 <p><br>
 단, 100점만점인 두과목의 점수 공분산은 별로 상관성이 부족하지만 100점만점이기 때문에 큰 값이 나오고
 10점짜리 두과목의 점수 공분산은 상관성이 아주 높을지만 10점만점이기 때문에 작은값이 나온다</p>
-<p><img src="images/func4.png" alt="function"></p>
 <h4 id="%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84-(correlation)"><a href="https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80_%EB%B6%84%EC%84%9D">&#49345;&#44288;&#44288;&#44228;</a> (correlation)<a class="anchor-link" href="#%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84-(correlation)">&#182;</a></h4><blockquote><p>상관 분석(Correlation analysis)은 확률론과 통계학에서 두 변수간에 어떤 선형적 관계를 갖고 있는 지를 분석하는 방법이다. 
-<img src="image/func5.png" alt="function"></p>
+<img src="https://t1.daumcdn.net/cfile/tistory/99E3B03C5DF5EF520B" alt=""></p>
 </blockquote>
 <h4 id="%ED%94%BC%EC%96%B4%EC%8A%A8-%EC%83%81%EA%B4%80-%EA%B3%84%EC%88%98">&#54588;&#50612;&#49832; &#49345;&#44288; &#44228;&#49688;<a class="anchor-link" href="#%ED%94%BC%EC%96%B4%EC%8A%A8-%EC%83%81%EA%B4%80-%EA%B3%84%EC%88%98">&#182;</a></h4><blockquote><p>피어슨 상관 계수란 두 변수 X 와 Y 간의 선형 상관 관계를 계량화한 수치다 . 피어슨 상관 계수는 코시-슈바르츠 부등식에 의해 +1과 -1 사이의 값을 가지며, +1은 완벽한 양의 선형 상관 관계, 0은 선형 상관 관계 없음, -1은 완벽한 음의 선형 상관 관계를 의미한다.</p>
 </blockquote>
@@ -15028,7 +14968,7 @@ only showing top 5 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">collect_list</span><span class="p">,</span> <span class="n">collect_set</span><span class="p">,</span> <span class="n">size</span>
@@ -15070,7 +15010,7 @@ only showing top 5 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">collect_list</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">)),</span> <span class="n">size</span><span class="p">(</span><span class="n">collect_set</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">)))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># 각 컬럼의 복합데이터 사이즈</span>
@@ -15110,7 +15050,7 @@ only showing top 5 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">countDistinct</span><span class="p">(</span><span class="s2">&quot;Country&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># 중복없이 카운트</span>
@@ -15147,21 +15087,6 @@ only showing top 5 rows
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%EB%B3%B5%ED%95%A9-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85%EC%9D%98-%EC%A7%91%EA%B3%84-%ED%95%A8%EC%88%98(collect_set,-collect_list)%EC%9D%98-%EC%8B%A4%EC%9A%A9-%EC%82%AC%EB%A1%80?">&#48373;&#54633; &#45936;&#51060;&#53552; &#53440;&#51077;&#51032; &#51665;&#44228; &#54632;&#49688;(collect_set, collect_list)&#51032; &#49892;&#50857; &#49324;&#47168;?<a class="anchor-link" href="#%EB%B3%B5%ED%95%A9-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85%EC%9D%98-%EC%A7%91%EA%B3%84-%ED%95%A8%EC%88%98(collect_set,-collect_list)%EC%9D%98-%EC%8B%A4%EC%9A%A9-%EC%82%AC%EB%A1%80?">&#182;</a></h4><blockquote><p>데이터의 Cardinality 가 충분히 많지 않은 경우에 하나의 컬럼에 담아 처리하고 싶을 때 활용할 수 있습니다.</p>
-</blockquote>
-<h4 id="collect_set"><a href="https://github.com/apache/spark/blob/master/sql/catalyst/src/main/scala/org/apache/spark/sql/catalyst/expressions/aggregate/collect.scala#L125">collect_set</a><a class="anchor-link" href="#collect_set">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">spark</span><span class="p">.</span><span class="n">sql</span><span class="p">.</span><span class="n">catalyst</span><span class="p">.</span><span class="n">expressions</span><span class="p">.</span><span class="n">aggregate</span><span class="p">.</span><span class="n">collect</span><span class="p">.</span><span class="n">scala</span>
-<span class="k">case</span> <span class="k">class</span> <span class="nc">CollectSet</span><span class="p">(</span>
-    <span class="n">child</span><span class="p">:</span> <span class="nc">Expression</span><span class="p">,</span>
-    <span class="n">mutableAggBufferOffset</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">inputAggBufferOffset</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">extends</span> <span class="nc">Collect</span><span class="p">[</span><span class="n">mutable</span><span class="p">.</span><span class="nc">HashSet</span><span class="p">[</span><span class="nc">Any</span><span class="p">]]</span> <span class="p">{</span>
-    <span class="p">...</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15317,100 +15242,10 @@ only showing top 5 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%EB%A7%B5%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B7%B8%EB%A3%B9%ED%99%94-(agg(key-%3Evalue))">&#47605;&#51012; &#51060;&#50857;&#54620; &#44536;&#47353;&#54868; (agg(key-&gt;value))<a class="anchor-link" href="#%EB%A7%B5%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B7%B8%EB%A3%B9%ED%99%94-(agg(key-%3Evalue))">&#182;</a></h4><blockquote><p>맵을 이용하여 컬럼 단위로 적용할 함수를 전달하는 방식입니다</p>
-</blockquote>
-<h4 id="RelationalGroupedDataset.agg"><a href="https://github.com/apache/spark/blob/master/sql/core/src/main/scala/org/apache/spark/sql/RelationalGroupedDataset.scala#L168">RelationalGroupedDataset.agg</a><a class="anchor-link" href="#RelationalGroupedDataset.agg">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">spark</span><span class="p">.</span><span class="n">sql</span><span class="p">.</span><span class="nc">RelationalGroupedDataset</span>
-
-<span class="k">def</span> <span class="nf">agg</span><span class="p">(</span><span class="n">exprs</span><span class="p">:</span> <span class="nc">Map</span><span class="p">[</span><span class="nc">String</span><span class="p">,</span> <span class="nc">String</span><span class="p">]):</span> <span class="nc">DataFrame</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">toDF</span><span class="p">(</span><span class="n">exprs</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="k">case</span> <span class="p">(</span><span class="n">colName</span><span class="p">,</span> <span class="n">expr</span><span class="p">)</span> <span class="o">=&gt;</span>
-        <span class="n">strToExpr</span><span class="p">(</span><span class="n">expr</span><span class="p">)(</span><span class="n">df</span><span class="p">(</span><span class="n">colName</span><span class="p">).</span><span class="n">expr</span><span class="p">)</span>
-    <span class="p">}.</span><span class="n">toSeq</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-<h5 id="1.-%EC%9C%84%EC%9D%98-%ED%95%A8%EC%88%98-%ED%98%B8%EC%B6%9C-%EC%8B%9C%EC%97%90-value-(key)-%ED%98%95%EC%8B%9D%EC%9C%BC%EB%A1%9C-expression-%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A3%BC%EA%B2%8C-%EB%90%A9%EB%8B%88%EB%8B%A4.">1. &#50948;&#51032; &#54632;&#49688; &#54840;&#52636; &#49884;&#50640; value (key) &#54805;&#49885;&#51004;&#47196; expression &#51012; &#47564;&#46308;&#50612;&#51452;&#44172; &#46121;&#45768;&#45796;.<a class="anchor-link" href="#1.-%EC%9C%84%EC%9D%98-%ED%95%A8%EC%88%98-%ED%98%B8%EC%B6%9C-%EC%8B%9C%EC%97%90-value-(key)-%ED%98%95%EC%8B%9D%EC%9C%BC%EB%A1%9C-expression-%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A3%BC%EA%B2%8C-%EB%90%A9%EB%8B%88%EB%8B%A4.">&#182;</a></h5><h5 id="2.-map-%EC%9D%B4-mutable.HashMap--%EC%9D%84-%EB%84%98%EA%B8%B0%EB%A9%B4--Compile-Error-%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%A8%EC%97%90-%EC%9C%A0%EC%9D%98%ED%95%A9%EB%8B%88%EB%8B%A4">2. map &#51060; mutable.HashMap  &#51012; &#45336;&#44592;&#47732;  Compile Error &#44032; &#48156;&#49373;&#54632;&#50640; &#50976;&#51032;&#54633;&#45768;&#45796;<a class="anchor-link" href="#2.-map-%EC%9D%B4-mutable.HashMap--%EC%9D%84-%EB%84%98%EA%B8%B0%EB%A9%B4--Compile-Error-%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%A8%EC%97%90-%EC%9C%A0%EC%9D%98%ED%95%A9%EB%8B%88%EB%8B%A4">&#182;</a></h5>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 런타임 시에 맵으로 전달된 함수를 표현식으로 사용할 수 있습니다.</span>
-<span class="p">(</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">&quot;InvoiceNo&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
-        <span class="p">{</span><span class="s2">&quot;Quantity&quot;</span><span class="p">:</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">:</span><span class="s2">&quot;stddev_pop&quot;</span><span class="p">}</span>
-    <span class="p">)</span>
-<span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table border='1'>
-<tr><th>InvoiceNo</th><th>stddev_pop(Quantity)</th></tr>
-<tr><td>536370</td><td>8.935742834258381</td></tr>
-<tr><td>536380</td><td>0.0</td></tr>
-<tr><td>536384</td><td>15.750645708563392</td></tr>
-<tr><td>536387</td><td>117.57550765359255</td></tr>
-<tr><td>536397</td><td>18.0</td></tr>
-<tr><td>536405</td><td>0.0</td></tr>
-<tr><td>536407</td><td>0.0</td></tr>
-<tr><td>536463</td><td>0.0</td></tr>
-<tr><td>536500</td><td>4.019950248448356</td></tr>
-<tr><td>536522</td><td>1.6046058535136642</td></tr>
-<tr><td>536523</td><td>7.487025815072067</td></tr>
-<tr><td>536536</td><td>34.373762603991366</td></tr>
-<tr><td>536538</td><td>3.7173833008743054</td></tr>
-<tr><td>536542</td><td>8.73212459828649</td></tr>
-<tr><td>536555</td><td>0.0</td></tr>
-<tr><td>536561</td><td>2.9814239699997196</td></tr>
-<tr><td>536573</td><td>23.748684174075834</td></tr>
-<tr><td>536579</td><td>78.0</td></tr>
-<tr><td>536580</td><td>2.23606797749979</td></tr>
-<tr><td>536582</td><td>6.99777522727673</td></tr>
-</table>
-only showing top 20 rows
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="3.-%EC%9A%94%EC%95%BD">3. &#50836;&#50557;<a class="anchor-link" href="#3.-%EC%9A%94%EC%95%BD">&#182;</a></h3><ul>
-<li>User Defined Aggregation Function, UDAF</li>
+<h3 id="%5B%EC%B0%B8%EA%B3%A0%5D-3.-UDAF">[&#52280;&#44256;] 3. UDAF<a class="anchor-link" href="#%5B%EC%B0%B8%EA%B3%A0%5D-3.-UDAF">&#182;</a></h3><ul>
+<li>User Defined Aggregation Function, </li>
 <li>UDAF를 생성하려면 기본 클래스인 UserDefinedAggregateFunction을 상속</li>
-<li>UDAF는 현재 스칼라와 자바로만 사용할 수 있음(ver 2.3)
-<pre><code>inputSchema: UDAF 입력 파라미터의 스키마를 StructType으로 정의 
-bufferSchema: UDAF 중간 결과의 스키마를 StructType으로 정의
-dataType: 반환될 값의 DataType을 정의
-deterministic: UDAF가 동일한 입력값에 대해 항상 동일한 결과를 반환하는지 불리언값으로 정의
-initialize: 집계용 버퍼의 값을 초기화하는 로직을 정의
-update: 입력받은 로우를 기바느로 내부 버퍼를 업데이트하는 로직을 정의
-merge: 두 개의 집계용 버퍼를 병합하는 로직을 정의
-evaluate: 집계의 최종 결과를 생성하는 로직을 정의</code></pre>
-</li>
+<li>UDAF는 현재 스칼라와 자바로만 사용할 수 있음(ver 2.3)</li>
 </ul>
 <p>※ Efficient UD(A)Fs with PySpark <a href="https://www.inovex.de/blog/efficient-udafs-with-pyspark/">https://www.inovex.de/blog/efficient-udafs-with-pyspark/</a></p>
 
@@ -15419,39 +15254,32 @@ evaluate: 집계의 최종 결과를 생성하는 로직을 정의</code></pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3><font color=blue>1. [중급]</font> 구매 이력 CSV f"{work_data}/retail-data/all" 파일을 읽고</h3>
-<h4 id="1.-%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C(StockCode)%EC%9D%98-%EC%9C%A0%EC%9D%BC%ED%95%9C-%EA%B0%92%EC%9D%98-%EA%B0%AF%EC%88%98%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">1. &#49345;&#54408;&#53076;&#46300;(StockCode)&#51032; &#50976;&#51068;&#54620; &#44050;&#51032; &#44079;&#49688;&#47484; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#1.-%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C(StockCode)%EC%9D%98-%EC%9C%A0%EC%9D%BC%ED%95%9C-%EA%B0%92%EC%9D%98-%EA%B0%AF%EC%88%98%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="2.-%EC%83%81%ED%92%88%EB%8B%A8%EA%B0%80(UnitPrice)%EC%9D%98-%EC%B5%9C%EC%86%8C,-%EC%B5%9C%EB%8C%80-%EA%B0%92%EC%9D%84-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">2. &#49345;&#54408;&#45800;&#44032;(UnitPrice)&#51032; &#52572;&#49548;, &#52572;&#45824; &#44050;&#51012; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#2.-%EC%83%81%ED%92%88%EB%8B%A8%EA%B0%80(UnitPrice)%EC%9D%98-%EC%B5%9C%EC%86%8C,-%EC%B5%9C%EB%8C%80-%EA%B0%92%EC%9D%84-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="3.-%EC%86%A1%EC%9E%A5%EB%B2%88%ED%98%B8(StockCode)%EB%B3%84%EB%A1%9C-%EC%86%A1%EC%9E%A5%EB%B3%84-%EC%B4%9D%EB%A7%A4%EC%B6%9C%EA%B8%88%EC%95%A1(TotalInvoicePrice)%EB%A5%BC-%EA%B3%84%EC%82%B0%ED%95%98%EA%B3%A0-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EC%A0%95%EB%A0%AC%ED%95%98%EC%84%B8%EC%9A%94">3. &#49569;&#51109;&#48264;&#54840;(StockCode)&#48324;&#47196; <code>&#49569;&#51109;&#48324; &#52509;&#47588;&#52636;&#44552;&#50529;</code>(TotalInvoicePrice)&#47484; &#44228;&#49328;&#54616;&#44256; &#45236;&#47548;&#52264;&#49692;&#51004;&#47196; &#51221;&#47148;&#54616;&#49464;&#50836;<a class="anchor-link" href="#3.-%EC%86%A1%EC%9E%A5%EB%B2%88%ED%98%B8(StockCode)%EB%B3%84%EB%A1%9C-%EC%86%A1%EC%9E%A5%EB%B3%84-%EC%B4%9D%EB%A7%A4%EC%B6%9C%EA%B8%88%EC%95%A1(TotalInvoicePrice)%EB%A5%BC-%EA%B3%84%EC%82%B0%ED%95%98%EA%B3%A0-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EC%A0%95%EB%A0%AC%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><ul>
-<li>정상 범위에 있는 UnitPrice 값만 처리되어야 합니다 (&gt;= 0)</li>
-<li>`송장별 총매출금액``(TotalInvoicePrice) 값의 소수점 이하는 버림으로 계산합니다</li>
-<li>`송장별 총매출금액``(TotalInvoicePrice) 가장 큰 5개의 송장번호만 출력합니다<ul>
-<li><code>select sum(unit-price * quantity) from table where invoiceno = '123456'</code> 와 같은 쿼리로 검증이 가능합니다</li>
-</ul>
-</li>
-</ul>
-<details><summary>[실습7] 출력 결과 확인 </summary>
+<h4 id="1.-%EC%8A%A4%ED%82%A4%EB%A7%88%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">1. &#49828;&#53412;&#47560;&#47484; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#1.-%EC%8A%A4%ED%82%A4%EB%A7%88%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="2.-%EB%8D%B0%EC%9D%B4%ED%84%B0-10%EA%B1%B4%EC%9D%84-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">2. &#45936;&#51060;&#53552; 10&#44148;&#51012; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#2.-%EB%8D%B0%EC%9D%B4%ED%84%B0-10%EA%B1%B4%EC%9D%84-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="3.-%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C(StockCode)%EC%9D%98-%EC%9C%A0%EC%9D%BC%ED%95%9C-%EA%B0%92%EC%9D%98-%EA%B0%AF%EC%88%98%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">3. &#49345;&#54408;&#53076;&#46300;(StockCode)&#51032; &#50976;&#51068;&#54620; &#44050;&#51032; &#44079;&#49688;&#47484; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#3.-%EC%83%81%ED%92%88%EC%BD%94%EB%93%9C(StockCode)%EC%9D%98-%EC%9C%A0%EC%9D%BC%ED%95%9C-%EA%B0%92%EC%9D%98-%EA%B0%AF%EC%88%98%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="4.-%EC%83%81%ED%92%88%EB%8B%A8%EA%B0%80(UnitPrice)%EC%9D%98-%EC%B5%9C%EC%86%8C,-%EC%B5%9C%EB%8C%80-%EA%B0%92%EC%9D%84-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">4. &#49345;&#54408;&#45800;&#44032;(UnitPrice)&#51032; &#52572;&#49548;, &#52572;&#45824; &#44050;&#51012; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#4.-%EC%83%81%ED%92%88%EB%8B%A8%EA%B0%80(UnitPrice)%EC%9D%98-%EC%B5%9C%EC%86%8C,-%EC%B5%9C%EB%8C%80-%EA%B0%92%EC%9D%84-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="5.-%EC%86%A1%EC%9E%A5%EB%B2%88%ED%98%B8(StockCode)%EB%B3%84%EB%A1%9C-%EC%86%A1%EC%9E%A5%EB%B3%84%EC%B4%9D%EB%A7%A4%EC%B6%9C%EA%B8%88%EC%95%A1(TotalInvoicePrice)%EB%A5%BC-%EA%B3%84%EC%82%B0%ED%95%98%EA%B3%A0-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EC%A0%95%EB%A0%AC%ED%95%98%EC%84%B8%EC%9A%94">5. &#49569;&#51109;&#48264;&#54840;(StockCode)&#48324;&#47196; &#49569;&#51109;&#48324;&#52509;&#47588;&#52636;&#44552;&#50529;(TotalInvoicePrice)&#47484; &#44228;&#49328;&#54616;&#44256; &#45236;&#47548;&#52264;&#49692;&#51004;&#47196; &#51221;&#47148;&#54616;&#49464;&#50836;<a class="anchor-link" href="#5.-%EC%86%A1%EC%9E%A5%EB%B2%88%ED%98%B8(StockCode)%EB%B3%84%EB%A1%9C-%EC%86%A1%EC%9E%A5%EB%B3%84%EC%B4%9D%EB%A7%A4%EC%B6%9C%EA%B8%88%EC%95%A1(TotalInvoicePrice)%EB%A5%BC-%EA%B3%84%EC%82%B0%ED%95%98%EA%B3%A0-%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EC%A0%95%EB%A0%AC%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="6.-%EC%86%A1%EC%9E%A5%EB%B3%84%EC%B4%9D%EB%A7%A4%EC%B6%9C%EA%B8%88%EC%95%A1(TotalInvoicePrice)%EC%9D%B4-%EC%B5%9C%EA%B3%A0%EA%B8%88%EC%95%A1%EC%9D%B4-%EC%86%A1%EC%9E%A5%EC%9D%84-%ED%95%84%ED%84%B0%ED%95%98%EC%97%AC-%EA%B2%80%EC%A6%9D%ED%95%B4-%EB%B3%B4%EC%84%B8%EC%9A%94">6. &#49569;&#51109;&#48324;&#52509;&#47588;&#52636;&#44552;&#50529;(TotalInvoicePrice)&#51060; &#52572;&#44256;&#44552;&#50529;&#51060; &#49569;&#51109;&#51012; &#54596;&#53552;&#54616;&#50668; &#44160;&#51613;&#54644; &#48372;&#49464;&#50836;<a class="anchor-link" href="#6.-%EC%86%A1%EC%9E%A5%EB%B3%84%EC%B4%9D%EB%A7%A4%EC%B6%9C%EA%B8%88%EC%95%A1(TotalInvoicePrice)%EC%9D%B4-%EC%B5%9C%EA%B3%A0%EA%B8%88%EC%95%A1%EC%9D%B4-%EC%86%A1%EC%9E%A5%EC%9D%84-%ED%95%84%ED%84%B0%ED%95%98%EC%97%AC-%EA%B2%80%EC%A6%9D%ED%95%B4-%EB%B3%B4%EC%84%B8%EC%9A%94">&#182;</a></h4><h5 id="%EC%98%88%EB%A5%BC-%EB%93%A4%EC%96%B4-select-sum(unit-price-*-quantity)-from-table-where-invoiceno-=-'123456'-%EC%99%80-%EA%B0%99%EC%9D%80-%EC%BF%BC%EB%A6%AC%EB%A1%9C-%EA%B2%80%EC%A6%9D%EC%9D%B4-%EA%B0%80%EB%8A%A5%ED%95%A9%EB%8B%88%EB%8B%A4">&#50696;&#47484; &#46308;&#50612; <code>select sum(unit-price * quantity) from table where invoiceno = '123456'</code> &#50752; &#44057;&#51008; &#53244;&#47532;&#47196; &#44160;&#51613;&#51060; &#44032;&#45733;&#54633;&#45768;&#45796;<a class="anchor-link" href="#%EC%98%88%EB%A5%BC-%EB%93%A4%EC%96%B4-select-sum(unit-price-*-quantity)-from-table-where-invoiceno-=-'123456'-%EC%99%80-%EA%B0%99%EC%9D%80-%EC%BF%BC%EB%A6%AC%EB%A1%9C-%EA%B2%80%EC%A6%9D%EC%9D%B4-%EA%B0%80%EB%8A%A5%ED%95%A9%EB%8B%88%EB%8B%A4">&#182;</a></h5><details><summary>[실습7] 출력 결과 확인 </summary>
 
 > 아래와 유사하게 방식으로 작성 되었다면 정답입니다
 
 ```python
-df1 = spark.read.csv(f"{work_data}/retail-data/all", inferSchema=True, header=True)
-display(df1.select("StockCode").count()) # 541909 -> 4070
-df1.select(min("UnitPrice"), max("UnitPrice")).show()
-
-answer = (
-    df1.where(col("UnitPrice") > 0).withColumn("InvoicePrice", col("UnitPrice") * col("Quantity"))
-    .groupBy("StockCode").agg(floor(sum("InvoicePrice")).alias("TotalInvoicePrice"))
-    .orderBy(desc(col("TotalInvoicePrice")))
+df1 = (
+    spark.read.format("csv")
+    .option("header", "true")
+    .option("inferSchema", "true")
+    .load(f"{work_data}/retail-data/all")
 )
-display(answer.limit(5))
+df1.printSchema()
+df1.show()
+answer = df1.withColumn("TotalPrice", expr("UnitPrice * Quantity")).groupBy("InvoiceNo").agg(sum("TotalPrice").alias("TotalInvoicePrice"))
+answer.printSchema()
+display(answer.orderBy(desc("TotalInvoicePrice")).limit(10))
 
-df1.where(col("StockCode") == "DOT").select(floor(sum(col("UnitPrice") * col("Quantity"))))
+df1.where("InvoiceNo = '581483'").select(sum(expr("UnitPrice * Quantity"))).show()
 ```
 
 </details>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15460,106 +15288,6 @@ df1.where(col("StockCode") == "DOT").select(floor(sum(col("UnitPrice") * col("Qu
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>541909</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+--------------+--------------+
-|min(UnitPrice)|max(UnitPrice)|
-+--------------+--------------+
-|     -11062.06|       38970.0|
-+--------------+--------------+
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>StockCode</th><th>TotalInvoicePrice</th></tr>
-<tr><td>DOT</td><td>206245</td></tr>
-<tr><td>22423</td><td>164762</td></tr>
-<tr><td>47566</td><td>98302</td></tr>
-<tr><td>85123A</td><td>97894</td></tr>
-<tr><td>85099B</td><td>92356</td></tr>
-</table>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table border='1'>
-<tr><th>FLOOR(sum((UnitPrice * Quantity)))</th></tr>
-<tr><td>206245</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15582,14 +15310,15 @@ df2.show()
 answer = df2.groupBy("p_name").agg(sum("p_amount").alias("sum_amount"))
 answer.printSchema()
 display(answer)
+
 ```
 
 </details>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15598,72 +15327,6 @@ display(answer)
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- p_time: integer (nullable = true)
- |-- p_uid: integer (nullable = true)
- |-- p_id: integer (nullable = true)
- |-- p_name: string (nullable = true)
- |-- p_amount: integer (nullable = true)
-
-+----------+-----+----+-----------+--------+
-|    p_time|p_uid|p_id|     p_name|p_amount|
-+----------+-----+----+-----------+--------+
-|1603651550|    0|1000|GoldStar TV|  100000|
-|1603651550|    1|2000|    LG DIOS| 2000000|
-|1603694755|    1|2001|    LG Gram| 1800000|
-|1603673500|    2|2002|    LG Cyon| 1400000|
-|1603652155|    3|2003|      LG TV| 1000000|
-|1603674500|    4|2004|LG Computer| 4500000|
-|1603665955|    5|2001|    LG Gram| 3500000|
-|1603666155|    5|2003|      LG TV| 2500000|
-+----------+-----+----+-----------+--------+
-
-root
- |-- p_name: string (nullable = true)
- |-- sum_amount: long (nullable = true)
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>p_name</th><th>sum_amount</th></tr>
-<tr><td>LG Cyon</td><td>1400000</td></tr>
-<tr><td>LG Gram</td><td>5300000</td></tr>
-<tr><td>LG Computer</td><td>4500000</td></tr>
-<tr><td>LG TV</td><td>3500000</td></tr>
-<tr><td>GoldStar TV</td><td>100000</td></tr>
-<tr><td>LG DIOS</td><td>2000000</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15690,10 +15353,10 @@ display(answer)
 
 </details>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15704,701 +15367,37 @@ display(answer)
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- p_time: integer (nullable = true)
- |-- p_uid: integer (nullable = true)
- |-- p_id: integer (nullable = true)
- |-- p_name: string (nullable = true)
- |-- p_amount: integer (nullable = true)
-
-+----------+-----+----+-----------+--------+
-|    p_time|p_uid|p_id|     p_name|p_amount|
-+----------+-----+----+-----------+--------+
-|1603651550|    0|1000|GoldStar TV|  100000|
-|1603651550|    1|2000|    LG DIOS| 2000000|
-|1603694755|    1|2001|    LG Gram| 1800000|
-|1603673500|    2|2002|    LG Cyon| 1400000|
-|1603652155|    3|2003|      LG TV| 1000000|
-|1603674500|    4|2004|LG Computer| 4500000|
-|1603665955|    5|2001|    LG Gram| 3500000|
-|1603666155|    5|2003|      LG TV| 2500000|
-+----------+-----+----+-----------+--------+
-
-root
- |-- p_uid: integer (nullable = true)
- |-- sum_amount_per_user: long (nullable = true)
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>p_uid</th><th>sum_amount_per_user</th></tr>
-<tr><td>0</td><td>100000</td></tr>
-<tr><td>3</td><td>1000000</td></tr>
-<tr><td>5</td><td>6000000</td></tr>
-<tr><td>4</td><td>4500000</td></tr>
-<tr><td>1</td><td>3800000</td></tr>
-<tr><td>2</td><td>1400000</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3><font color=blue>4. [중급]</font> 샌프란시스코 긴급출동 데이터 CSV 파일인 f"{work_data}/learning-spark/sf-fire-calls.csv"를 읽고</h3>
-<h4 id="1.-%ED%98%B8%EC%B6%9C%EC%9D%98-%EC%A2%85%EB%A5%98-(CallType)%EC%9D%98-%EC%9C%A0%EC%9D%BC%ED%95%9C-%EA%B0%92%EB%93%A4%EC%9D%84-%EC%98%81%EB%AC%B8-%EC%98%A4%EB%A6%84%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">1. &#54840;&#52636;&#51032; &#51333;&#47448; (CallType)&#51032; &#50976;&#51068;&#54620; &#44050;&#46308;&#51012; &#50689;&#47928; &#50724;&#47492;&#52264;&#49692;&#51004;&#47196; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#1.-%ED%98%B8%EC%B6%9C%EC%9D%98-%EC%A2%85%EB%A5%98-(CallType)%EC%9D%98-%EC%9C%A0%EC%9D%BC%ED%95%9C-%EA%B0%92%EB%93%A4%EC%9D%84-%EC%98%81%EB%AC%B8-%EC%98%A4%EB%A6%84%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="2.-%EA%B0%80%EC%9E%A5-%EB%B9%88%EB%8F%84%EC%88%98%EA%B0%80-%EB%86%92%EC%9D%80-3%EA%B0%9C%EC%9D%98-%EC%A2%85%EB%A5%98(CallType)%EC%99%80-%EB%B9%88%EB%8F%84%EC%88%98%EB%A5%BC-%EA%B5%AC%ED%95%98%EC%84%B8%EC%9A%94">2. &#44032;&#51109; &#48712;&#46020;&#49688;&#44032; &#45458;&#51008; 3&#44060;&#51032; &#51333;&#47448;(CallType)&#50752; &#48712;&#46020;&#49688;&#47484; &#44396;&#54616;&#49464;&#50836;<a class="anchor-link" href="#2.-%EA%B0%80%EC%9E%A5-%EB%B9%88%EB%8F%84%EC%88%98%EA%B0%80-%EB%86%92%EC%9D%80-3%EA%B0%9C%EC%9D%98-%EC%A2%85%EB%A5%98(CallType)%EC%99%80-%EB%B9%88%EB%8F%84%EC%88%98%EB%A5%BC-%EA%B5%AC%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><details><summary>[실습3] 출력 결과 확인 </summary>
+<h3><font color=red>4. [고급]</font> 샌프란시스코 긴급출동 데이터 CSV 파일인 f"{work_data}/learning-spark/sf-fire-calls.csv"를 읽고</h3>
+<h4 id="1.-%EC%8A%A4%ED%82%A4%EB%A7%88%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">1. &#49828;&#53412;&#47560;&#47484; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#1.-%EC%8A%A4%ED%82%A4%EB%A7%88%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="2.-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-3%EA%B1%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">2. &#45936;&#51060;&#53552;&#47484; 3&#44148; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#2.-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-3%EA%B1%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="3.-%ED%98%B8%EC%B6%9C%EC%9D%98-%EC%A2%85%EB%A5%98(CallType)%EA%B0%80-%EC%96%B4%EB%96%A4-%EA%B2%83%EB%93%A4%EC%9D%B4-%EC%9E%88%EB%8A%94%EC%A7%80-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94-(%EC%A4%91%EB%B3%B5%EC%A0%9C%EA%B1%B0)">3. &#54840;&#52636;&#51032; &#51333;&#47448;(CallType)&#44032; &#50612;&#46500; &#44163;&#46308;&#51060; &#51080;&#45716;&#51648; &#52636;&#47141;&#54616;&#49464;&#50836; (&#51473;&#48373;&#51228;&#44144;)<a class="anchor-link" href="#3.-%ED%98%B8%EC%B6%9C%EC%9D%98-%EC%A2%85%EB%A5%98(CallType)%EA%B0%80-%EC%96%B4%EB%96%A4-%EA%B2%83%EB%93%A4%EC%9D%B4-%EC%9E%88%EB%8A%94%EC%A7%80-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94-(%EC%A4%91%EB%B3%B5%EC%A0%9C%EA%B1%B0)">&#182;</a></h4><h4 id="3.-%EC%83%8C%ED%94%84%EB%9E%80%EC%8B%9C%EC%8A%A4%EC%BD%94%EC%97%90%EC%84%9C-%EB%B0%9C%EC%83%9D%EC%9D%98-%EA%B0%80%EC%9E%A5-%EB%B9%88%EB%8F%84%EC%88%98%EA%B0%80-%EB%86%92%EC%9D%80-%EC%A2%85%EB%A5%98(CallType)%EB%A5%BC-%EA%B5%AC%ED%95%98%EA%B3%A0-%EB%B9%88%EB%8F%84%EC%88%98%EB%A5%BC-%EA%B5%AC%ED%95%98%EC%84%B8%EC%9A%94">3. &#49356;&#54532;&#46976;&#49884;&#49828;&#53076;&#50640;&#49436; &#48156;&#49373;&#51032; &#44032;&#51109; &#48712;&#46020;&#49688;&#44032; &#45458;&#51008; &#51333;&#47448;(CallType)&#47484; &#44396;&#54616;&#44256; &#48712;&#46020;&#49688;&#47484; &#44396;&#54616;&#49464;&#50836;<a class="anchor-link" href="#3.-%EC%83%8C%ED%94%84%EB%9E%80%EC%8B%9C%EC%8A%A4%EC%BD%94%EC%97%90%EC%84%9C-%EB%B0%9C%EC%83%9D%EC%9D%98-%EA%B0%80%EC%9E%A5-%EB%B9%88%EB%8F%84%EC%88%98%EA%B0%80-%EB%86%92%EC%9D%80-%EC%A2%85%EB%A5%98(CallType)%EB%A5%BC-%EA%B5%AC%ED%95%98%EA%B3%A0-%EB%B9%88%EB%8F%84%EC%88%98%EB%A5%BC-%EA%B5%AC%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="4.-%EC%83%8C%ED%94%84%EB%9E%80%EC%8B%9C%EC%8A%A4%EC%BD%94%EC%97%90%EC%84%9C-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%B5%9C%EA%B3%A0-%EB%B9%88%EB%8F%84%EC%88%98-3%EA%B1%B4%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94?">4. &#49356;&#54532;&#46976;&#49884;&#49828;&#53076;&#50640;&#49436; &#48156;&#49373;&#54616;&#45716; &#52572;&#44256; &#48712;&#46020;&#49688; 3&#44148;&#51008; &#47924;&#50631;&#51064;&#44032;&#50836;?<a class="anchor-link" href="#4.-%EC%83%8C%ED%94%84%EB%9E%80%EC%8B%9C%EC%8A%A4%EC%BD%94%EC%97%90%EC%84%9C-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%B5%9C%EA%B3%A0-%EB%B9%88%EB%8F%84%EC%88%98-3%EA%B1%B4%EC%9D%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94?">&#182;</a></h4><details><summary>[실습3] 출력 결과 확인 </summary>
 
 > 아래와 유사하게 방식으로 작성 되었다면 정답입니다
 
 ```python
-df4 = spark.read.csv(f"{work_data}/learning-spark/sf-fire-calls.csv", inferSchema=True, header=True)
-df4.printSchema()
-display(df4.select("CallType").distinct().orderBy(asc(col("CallType"))).limit(10))
-df4.groupBy("CallType").agg(count(col("CallType")).alias("CallTypeCount")).orderBy(desc(col("CallTypeCount"))).limit(3)
+df3 = (
+    spark
+    .read
+    .option("header", "true")
+    .option("inferSchema", "true")
+    .csv(f"{work_data}/learning-spark/sf-fire-calls.csv")
+)
+df3.printSchema()
+df3.show(3)
+df3.createOrReplaceTempView("fire_calls")
+spark.sql("select distinct(CallType) from fire_calls").show(truncate=False)
+
+answer = spark.sql("select CallType, count(CallType) as CallTypeCount from fire_calls group by CallType order by CallTypeCount desc")
+display(answer.limit(3))
 ```
 
 </details>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- CallNumber: integer (nullable = true)
- |-- UnitID: string (nullable = true)
- |-- IncidentNumber: integer (nullable = true)
- |-- CallType: string (nullable = true)
- |-- CallDate: string (nullable = true)
- |-- WatchDate: string (nullable = true)
- |-- CallFinalDisposition: string (nullable = true)
- |-- AvailableDtTm: string (nullable = true)
- |-- Address: string (nullable = true)
- |-- City: string (nullable = true)
- |-- Zipcode: integer (nullable = true)
- |-- Battalion: string (nullable = true)
- |-- StationArea: string (nullable = true)
- |-- Box: string (nullable = true)
- |-- OriginalPriority: string (nullable = true)
- |-- Priority: string (nullable = true)
- |-- FinalPriority: integer (nullable = true)
- |-- ALSUnit: boolean (nullable = true)
- |-- CallTypeGroup: string (nullable = true)
- |-- NumAlarms: integer (nullable = true)
- |-- UnitType: string (nullable = true)
- |-- UnitSequenceInCallDispatch: integer (nullable = true)
- |-- FirePreventionDistrict: string (nullable = true)
- |-- SupervisorDistrict: string (nullable = true)
- |-- Neighborhood: string (nullable = true)
- |-- Location: string (nullable = true)
- |-- RowID: string (nullable = true)
- |-- Delay: double (nullable = true)
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>CallType</th></tr>
-<tr><td>Administrative</td></tr>
-<tr><td>Aircraft Emergency</td></tr>
-<tr><td>Alarms</td></tr>
-<tr><td>Assist Police</td></tr>
-<tr><td>Citizen Assist / Service Call</td></tr>
-<tr><td>Confined Space / Structure Collapse</td></tr>
-<tr><td>Electrical Hazard</td></tr>
-<tr><td>Elevator / Escalator Rescue</td></tr>
-<tr><td>Explosion</td></tr>
-<tr><td>Extrication / Entrapped (Machinery, Vehicle)</td></tr>
-</table>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table border='1'>
-<tr><th>CallType</th><th>CallTypeCount</th></tr>
-<tr><td>Medical Incident</td><td>113794</td></tr>
-<tr><td>Structure Fire</td><td>23319</td></tr>
-<tr><td>Alarms</td><td>19406</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3><font color=red>5. [숙제]</font> 샌프란시스코 긴급출동 데이터 CSV 파일인 f"{work_data}/learning-spark/sf-fire-calls.csv"를 읽고 다음 질문에 대해 실습해 보세요</h3>
-<blockquote><p>명확한 정답을 찾기 보다 데이터를 어떻게 해석하고 접근하여 프로그래밍 하셨는 지에 집중하시면 좋을 듯 합니다.</p>
-</blockquote>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fire</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/learning-spark/sf-fire-calls.csv&quot;</span><span class="p">,</span> <span class="n">inferSchema</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">fire</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-<span class="n">fire</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- CallNumber: integer (nullable = true)
- |-- UnitID: string (nullable = true)
- |-- IncidentNumber: integer (nullable = true)
- |-- CallType: string (nullable = true)
- |-- CallDate: string (nullable = true)
- |-- WatchDate: string (nullable = true)
- |-- CallFinalDisposition: string (nullable = true)
- |-- AvailableDtTm: string (nullable = true)
- |-- Address: string (nullable = true)
- |-- City: string (nullable = true)
- |-- Zipcode: integer (nullable = true)
- |-- Battalion: string (nullable = true)
- |-- StationArea: string (nullable = true)
- |-- Box: string (nullable = true)
- |-- OriginalPriority: string (nullable = true)
- |-- Priority: string (nullable = true)
- |-- FinalPriority: integer (nullable = true)
- |-- ALSUnit: boolean (nullable = true)
- |-- CallTypeGroup: string (nullable = true)
- |-- NumAlarms: integer (nullable = true)
- |-- UnitType: string (nullable = true)
- |-- UnitSequenceInCallDispatch: integer (nullable = true)
- |-- FirePreventionDistrict: string (nullable = true)
- |-- SupervisorDistrict: string (nullable = true)
- |-- Neighborhood: string (nullable = true)
- |-- Location: string (nullable = true)
- |-- RowID: string (nullable = true)
- |-- Delay: double (nullable = true)
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table border='1'>
-<tr><th>CallNumber</th><th>UnitID</th><th>IncidentNumber</th><th>CallType</th><th>CallDate</th><th>WatchDate</th><th>CallFinalDisposition</th><th>AvailableDtTm</th><th>Address</th><th>City</th><th>Zipcode</th><th>Battalion</th><th>StationArea</th><th>Box</th><th>OriginalPriority</th><th>Priority</th><th>FinalPriority</th><th>ALSUnit</th><th>CallTypeGroup</th><th>NumAlarms</th><th>UnitType</th><th>UnitSequenceInCallDispatch</th><th>FirePreventionDistrict</th><th>SupervisorDistrict</th><th>Neighborhood</th><th>Location</th><th>RowID</th><th>Delay</th></tr>
-<tr><td>20110016</td><td>T13</td><td>2003235</td><td>Structure Fire</td><td>01/11/2002</td><td>01/10/2002</td><td>Other</td><td>01/11/2002 01:51:44 AM</td><td>2000 Block of CALIFORNIA ST</td><td>SF</td><td>94109</td><td>B04</td><td>38</td><td>3362</td><td>3</td><td>3</td><td>3</td><td>false</td><td>null</td><td>1</td><td>TRUCK</td><td>2</td><td>4</td><td>5</td><td>Pacific Heights</td><td>(37.7895840679362, -122.428071912459)</td><td>020110016-T13</td><td>2.95</td></tr>
-<tr><td>20110022</td><td>M17</td><td>2003241</td><td>Medical Incident</td><td>01/11/2002</td><td>01/10/2002</td><td>Other</td><td>01/11/2002 03:01:18 AM</td><td>0 Block of SILVERVIEW DR</td><td>SF</td><td>94124</td><td>B10</td><td>42</td><td>6495</td><td>3</td><td>3</td><td>3</td><td>true</td><td>null</td><td>1</td><td>MEDIC</td><td>1</td><td>10</td><td>10</td><td>Bayview Hunters Point</td><td>(37.7337623673897, -122.396113802632)</td><td>020110022-M17</td><td>4.7</td></tr>
-<tr><td>20110023</td><td>M41</td><td>2003242</td><td>Medical Incident</td><td>01/11/2002</td><td>01/10/2002</td><td>Other</td><td>01/11/2002 02:39:50 AM</td><td>MARKET ST/MCALLISTER ST</td><td>SF</td><td>94102</td><td>B03</td><td>01</td><td>1455</td><td>3</td><td>3</td><td>3</td><td>true</td><td>null</td><td>1</td><td>MEDIC</td><td>2</td><td>3</td><td>6</td><td>Tenderloin</td><td>(37.7811772186856, -122.411699931232)</td><td>020110023-M41</td><td>2.4333334</td></tr>
-<tr><td>20110032</td><td>E11</td><td>2003250</td><td>Vehicle Fire</td><td>01/11/2002</td><td>01/10/2002</td><td>Other</td><td>01/11/2002 04:16:46 AM</td><td>APPLETON AV/MISSION ST</td><td>SF</td><td>94110</td><td>B06</td><td>32</td><td>5626</td><td>3</td><td>3</td><td>3</td><td>false</td><td>null</td><td>1</td><td>ENGINE</td><td>1</td><td>6</td><td>9</td><td>Bernal Heights</td><td>(37.7388432849018, -122.423948785199)</td><td>020110032-E11</td><td>1.5</td></tr>
-<tr><td>20110043</td><td>B04</td><td>2003259</td><td>Alarms</td><td>01/11/2002</td><td>01/10/2002</td><td>Other</td><td>01/11/2002 06:01:58 AM</td><td>1400 Block of SUTTER ST</td><td>SF</td><td>94109</td><td>B04</td><td>03</td><td>3223</td><td>3</td><td>3</td><td>3</td><td>false</td><td>null</td><td>1</td><td>CHIEF</td><td>2</td><td>4</td><td>2</td><td>Western Addition</td><td>(37.7872890372638, -122.424236212664)</td><td>020110043-B04</td><td>3.4833333</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="5-1.-2018-%EB%85%84%EC%9D%98-%EB%AA%A8%EB%93%A0-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0-%EC%9C%A0%ED%98%95-%EA%B0%80%EC%9A%B4%EB%8D%B0-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%80-%EB%B9%88%EB%8F%84%EC%88%98-%EC%83%81%EC%9C%84-3%EA%B1%B4%EC%9D%80-%EB%AC%B4%EC%97%87-%EC%9D%B4%EC%97%88%EC%8A%B5%EB%8B%88%EA%B9%8C?">5-1. 2018 &#45380;&#51032; &#47784;&#46304; &#54868;&#51116; &#49888;&#44256; &#50976;&#54805; &#44032;&#50868;&#45936; &#44032;&#51109; &#47566;&#51008; &#48712;&#46020;&#49688; &#49345;&#50948; 3&#44148;&#51008; &#47924;&#50631; &#51060;&#50632;&#49845;&#45768;&#44620;?<a class="anchor-link" href="#5-1.-2018-%EB%85%84%EC%9D%98-%EB%AA%A8%EB%93%A0-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0-%EC%9C%A0%ED%98%95-%EA%B0%80%EC%9A%B4%EB%8D%B0-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%80-%EB%B9%88%EB%8F%84%EC%88%98-%EC%83%81%EC%9C%84-3%EA%B1%B4%EC%9D%80-%EB%AC%B4%EC%97%87-%EC%9D%B4%EC%97%88%EC%8A%B5%EB%8B%88%EA%B9%8C?">&#182;</a></h3><details><summary> 강사가 풀이한 결과와 비교 </summary>
-
-```python
-answer = (
-    fire.withColumn("CallYear", year(to_date("CallDate", "MM/dd/yyyy")))
-    .where(col("CallYear") == lit(2018))
-    .groupBy("CallType").count()
-    .orderBy(desc("count"))
-)
-answer.limit(3)
-```
-
-</details>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table border='1'>
-<tr><th>CallType</th><th>count</th></tr>
-<tr><td>Medical Incident</td><td>7004</td></tr>
-<tr><td>Alarms</td><td>1144</td></tr>
-<tr><td>Structure Fire</td><td>906</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="5-2.-2018-%EB%85%84%EC%9D%98-%EB%AA%87-%EC%9B%94%EC%97%90-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EA%B0%80-%EB%AA%87-%EA%B1%B4%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%95%98%EC%8A%B5%EB%8B%88%EA%B9%8C?">5-2. 2018 &#45380;&#51032; &#47751; &#50900;&#50640; &#54868;&#51116; &#49888;&#44256;&#44032; &#47751; &#44148;&#51004;&#47196; &#44032;&#51109; &#47566;&#50520;&#49845;&#45768;&#44620;?<a class="anchor-link" href="#5-2.-2018-%EB%85%84%EC%9D%98-%EB%AA%87-%EC%9B%94%EC%97%90-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EA%B0%80-%EB%AA%87-%EA%B1%B4%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%95%98%EC%8A%B5%EB%8B%88%EA%B9%8C?">&#182;</a></h3><details><summary> 강사가 풀이한 결과와 비교 </summary>
-
-```python
-answer = (
-    fire.withColumn("CallDate", to_date("CallDate", "MM/dd/yyyy"))
-    .where(year(col("CallDate")) == lit(2018))
-    .where(lower(col("CallType")).contains("fire"))
-    .withColumn("Month", month(col("CallDate")))
-    .groupBy("Month").count()
-    .orderBy(desc("count"))
-)
-answer.limit(1)
-```
-
-</details>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table border='1'>
-<tr><th>Month</th><th>count</th></tr>
-<tr><td>10</td><td>120</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="5-3.-2018-%EB%85%84%EC%97%90-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%80-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%9C-%EC%A7%80%EC%97%AD(city-or-zipcode)%EB%8A%94-%EC%96%B4%EB%94%94%EC%9E%85%EB%8B%88%EA%B9%8C?">5-3. 2018 &#45380;&#50640; &#44032;&#51109; &#47566;&#51008; &#54868;&#51116; &#49888;&#44256;&#44032; &#48156;&#49373;&#54620; &#51648;&#50669;(city or zipcode)&#45716; &#50612;&#46356;&#51077;&#45768;&#44620;?<a class="anchor-link" href="#5-3.-2018-%EB%85%84%EC%97%90-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%9D%80-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EA%B0%80-%EB%B0%9C%EC%83%9D%ED%95%9C-%EC%A7%80%EC%97%AD(city-or-zipcode)%EB%8A%94-%EC%96%B4%EB%94%94%EC%9E%85%EB%8B%88%EA%B9%8C?">&#182;</a></h3><ul>
-<li>city 값 전체를 확인하고 동일한 값은 하나로 처리되도록 전처리를 수행합니다 (예: sf -&gt; san francisco )<ul>
-<li>참고로 샌프란시스코 내의 소규모 도시를 포함한 값이므로 city 값은 sf 가 대부분입니다 :-)</li>
-</ul>
-</li>
-</ul>
-<details><summary> 강사가 풀이한 결과와 비교 </summary>
-
-```python
-@udf(returnType=StringType())
-def replace_city_names(name):
-    city_names = { 
-        "bn":"brisbane", "dc":"daly city", "fm":"fort mason"
-        , "hp":"hunters point", "pr":"presidio", "sf":"san francisco"
-        , "ti":"treasure island", "treasure isla":"treasure island"
-        , "yb":"yerba buena", "sfo":"san francisco airport"
-    }
-    return city_names.get(name, name)
-
-fire.select(replace_city_names(lower("City")).alias("city")).distinct().show(truncate=False)
-
-answer = (
-    fire.withColumn("CallDate", to_date("CallDate", "MM/dd/yyyy"))
-    .where(year(col("CallDate")) == lit(2018))
-    .where(lower(col("CallType")).contains("fire"))
-    .withColumn("Cities", replace_city_names(lower(col("City"))))
-    .groupBy("Cities").count()
-    .orderBy(desc("count"))
-)
-answer.show(truncate=False)
-
-zipcode = (
-    fire.withColumn("CallDate", to_date("CallDate", "MM/dd/yyyy"))
-    .where(year(col("CallDate")) == lit(2018))
-    .where(lower(col("CallType")).contains("fire"))
-    .groupBy("Zipcode").count()
-    .orderBy(desc("count"))
-)
-zipcode.show(truncate=False)
-```
-
-* [94102@zillow.com](https://www.zillow.com/homes/94102_rb/)
-
-</details>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+---------------------+
-|city                 |
-+---------------------+
-|treasure island      |
-|brisbane             |
-|daly city            |
-|oak                  |
-|presidio             |
-|yerba buena          |
-|null                 |
-|san francisco        |
-|san francisco airport|
-|hunters point        |
-|fort mason           |
-+---------------------+
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+---------------+-----+
-|Cities         |count|
-+---------------+-----+
-|san francisco  |1071 |
-|presidio       |7    |
-|treasure island|4    |
-|null           |3    |
-|daly city      |1    |
-|yerba buena    |1    |
-+---------------+-----+
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>[Stage 372:======================================&gt;                  (2 + 1) / 3]</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+-------+-----+
-|Zipcode|count|
-+-------+-----+
-|94102  |114  |
-|94109  |98   |
-|94103  |98   |
-|94110  |81   |
-|94107  |64   |
-|94124  |63   |
-|94112  |58   |
-|94111  |45   |
-|94115  |42   |
-|94122  |40   |
-|94133  |39   |
-|94118  |36   |
-|94117  |34   |
-|94121  |34   |
-|94114  |32   |
-|94108  |31   |
-|94123  |29   |
-|94132  |28   |
-|94134  |25   |
-|94105  |24   |
-+-------+-----+
-only showing top 20 rows
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/sf.png" alt="sf"></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="5-4.-2018-%EB%85%84%EC%97%90-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%91%EB%8B%B5-%EC%8B%9C%EA%B0%84%EC%9D%B4-%EA%B0%80%EC%9E%A5-%EB%82%98%EC%81%9C-%EC%A7%80%EC%97%AD%EC%9D%80-%EC%96%B4%EB%94%94%EC%9E%85%EB%8B%88%EA%B9%8C?">5-4. 2018 &#45380;&#50640; &#54868;&#51116; &#49888;&#44256;&#50640; &#45824;&#54620; &#51025;&#45813; &#49884;&#44036;&#51060; &#44032;&#51109; &#45208;&#49244; &#51648;&#50669;&#51008; &#50612;&#46356;&#51077;&#45768;&#44620;?<a class="anchor-link" href="#5-4.-2018-%EB%85%84%EC%97%90-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%91%EB%8B%B5-%EC%8B%9C%EA%B0%84%EC%9D%B4-%EA%B0%80%EC%9E%A5-%EB%82%98%EC%81%9C-%EC%A7%80%EC%97%AD%EC%9D%80-%EC%96%B4%EB%94%94%EC%9E%85%EB%8B%88%EA%B9%8C?">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="5-5.-2018-%EB%85%84-%EC%A4%91-%EC%96%B4%EB%8A%90-%EC%A3%BC%EC%97%90-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EA%B0%80-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%95%98%EC%8A%B5%EB%8B%88%EA%B9%8C?">5-5. 2018 &#45380; &#51473; &#50612;&#45712; &#51452;&#50640; &#54868;&#51116; &#49888;&#44256;&#44032; &#44032;&#51109; &#47566;&#50520;&#49845;&#45768;&#44620;?<a class="anchor-link" href="#5-5.-2018-%EB%85%84-%EC%A4%91-%EC%96%B4%EB%8A%90-%EC%A3%BC%EC%97%90-%ED%99%94%EC%9E%AC-%EC%8B%A0%EA%B3%A0%EA%B0%80-%EA%B0%80%EC%9E%A5-%EB%A7%8E%EC%95%98%EC%8A%B5%EB%8B%88%EA%B9%8C?">&#182;</a></h3>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -16413,234 +15412,6 @@ only showing top 20 rows
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C">&#52280;&#44256;&#51088;&#47308;<a class="anchor-link" href="#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C">&#182;</a></h2><h4 id="1.-Spark-Programming-Guide">1. <a href="https://spark.apache.org/docs/latest/sql-programming-guide.html">Spark Programming Guide</a><a class="anchor-link" href="#1.-Spark-Programming-Guide">&#182;</a></h4><h4 id="2.-PySpark-SQL-Modules-Documentation">2. <a href="https://spark.apache.org/docs/latest/api/python/pyspark.sql.html">PySpark SQL Modules Documentation</a><a class="anchor-link" href="#2.-PySpark-SQL-Modules-Documentation">&#182;</a></h4><h4 id="3.-PySpark-3.0.1-Builtin-Functions">3. <a href="https://spark.apache.org/docs/3.0.1/api/sql/" target="_blank">PySpark 3.0.1 Builtin Functions</a><a class="anchor-link" href="#3.-PySpark-3.0.1-Builtin-Functions">&#182;</a></h4><h4 id="4.-PySpark-Search">4. <a href="https://spark.apache.org/docs/latest/api/python/search.html">PySpark Search</a><a class="anchor-link" href="#4.-PySpark-Search">&#182;</a></h4><h4 id="5.-Pyspark-Functions">5. <a href="https://spark.apache.org/docs/latest/api/python/pyspark.sql.html?#module-pyspark.sql.functions">Pyspark Functions</a><a class="anchor-link" href="#5.-Pyspark-Functions">&#182;</a></h4>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="SparkContext-vs.-SparkSession-(1/2)">SparkContext vs. SparkSession (1/2)<a class="anchor-link" href="#SparkContext-vs.-SparkSession-(1/2)">&#182;</a></h3><blockquote><p>SparkContext 는 spark.core 프로젝트이고, SparkSession 은 spark.sql 프로젝트이다
-아래와 같이 SparkContext 는 Spark 실행에 가장 중심이 되는 객체이고, 병렬화, 브로드캐스팅, 분산 파일 추가 및 종료 등의 스파크 작업을 관장하는 클래스라 볼 수 있습니다</p>
-</blockquote>
-<h4 id="1.-SparkContext.%7Bparallelize,-broadcast,-addFile,-listFiles,-addJar,-listJars,-stop,-getOrCreate%7D">1. <a href="https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/SparkContext.scala">SparkContext.{parallelize, broadcast, addFile, listFiles, addJar, listJars, stop, getOrCreate}</a><a class="anchor-link" href="#1.-SparkContext.%7Bparallelize,-broadcast,-addFile,-listFiles,-addJar,-listJars,-stop,-getOrCreate%7D">&#182;</a></h4><div class="highlight"><pre><span></span><span class="ss">&#39;SparkContext</span> <span class="p">:</span> <span class="s">&quot;Main entry point for Spark functionality. A SparkContext represents the connection to a Spark cluster, and can be used to create RDDs, accumulators and broadcast variables on that cluster.&quot;</span>
-<span class="nd">@note</span> <span class="nc">Only</span> <span class="n">one</span> <span class="n">`SparkContext`</span> <span class="n">should</span> <span class="n">be</span> <span class="n">active</span> <span class="n">per</span> <span class="nc">JVM</span><span class="p">.</span> <span class="nc">You</span> <span class="n">must</span> <span class="n">`stop()`</span> <span class="n">the</span> <span class="n">active</span> <span class="n">`SparkContext`</span> <span class="n">before</span> <span class="n">creating</span> <span class="n">a</span> <span class="k">new</span> <span class="n">one</span><span class="p">.</span>
-<span class="nd">@param</span> <span class="n">config</span> <span class="n">a</span> <span class="nc">Spark</span> <span class="nc">Config</span> <span class="k">object</span> <span class="nc">describing</span> <span class="n">the</span> <span class="n">application</span> <span class="n">configuration</span><span class="p">.</span> <span class="nc">Any</span> <span class="n">settings</span> <span class="n">in</span> <span class="bp">this</span> <span class="n">config</span> <span class="n">overrides</span> <span class="n">the</span> <span class="n">default</span> <span class="n">configs</span> <span class="n">as</span> <span class="n">well</span> <span class="n">as</span> <span class="n">system</span> <span class="n">properties</span><span class="p">.</span>
-
-
-<span class="ss">&#39;parallelize</span> <span class="p">:</span> <span class="s">&quot;Distribute a local Scala collection to form an RDD.&quot;</span>
-<span class="nd">@note</span> <span class="nc">Parallelize</span> <span class="n">acts</span> <span class="n">lazily</span><span class="p">.</span> <span class="nc">If</span> <span class="n">`seq`</span> <span class="n">is</span> <span class="n">a</span> <span class="n">mutable</span> <span class="n">collection</span> <span class="n">and</span> <span class="n">is</span> <span class="n">altered</span> <span class="n">after</span> <span class="n">the</span> <span class="n">call</span> <span class="n">to</span> <span class="n">parallelize</span> <span class="n">and</span> <span class="n">before</span> <span class="n">the</span> <span class="n">first</span> <span class="n">action</span> <span class="n">on</span> <span class="n">the</span> <span class="nc">RDD</span><span class="p">,</span> <span class="n">the</span> <span class="n">resultant</span> <span class="nc">RDD</span> <span class="n">will</span> <span class="n">reflect</span> <span class="n">the</span> <span class="n">modified</span> <span class="n">collection</span><span class="p">.</span> <span class="nc">Pass</span> <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">argument</span> <span class="n">to</span> <span class="n">avoid</span> <span class="bp">this</span><span class="p">.</span>
-<span class="nd">@note</span> <span class="n">avoid</span> <span class="n">using</span> <span class="n">`parallelize(Seq())`</span> <span class="n">to</span> <span class="n">create</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">`RDD`</span><span class="p">.</span> <span class="nc">Consider</span> <span class="n">`emptyRDD`</span> <span class="k">for</span> <span class="n">an</span> <span class="nc">RDD</span> <span class="k">with</span> <span class="n">no</span> <span class="n">partitions</span><span class="p">,</span> <span class="n">or</span> <span class="n">`parallelize(Seq[T]())`</span> <span class="k">for</span> <span class="n">an</span> <span class="nc">RDD</span> <span class="n">of</span> <span class="n">`T`</span> <span class="k">with</span> <span class="n">empty</span> <span class="n">partitions</span><span class="p">.</span>
-<span class="nd">@param</span> <span class="n">seq</span> <span class="nc">Scala</span> <span class="n">collection</span> <span class="n">to</span> <span class="n">distribute</span>
-<span class="nd">@param</span> <span class="n">numSlices</span> <span class="n">number</span> <span class="n">of</span> <span class="n">partitions</span> <span class="n">to</span> <span class="n">divide</span> <span class="n">the</span> <span class="n">collection</span> <span class="n">into</span>
-<span class="k">def</span> <span class="nf">parallelize</span><span class="p">[</span><span class="nc">T</span><span class="p">:</span> <span class="nc">ClassTag</span><span class="p">](</span><span class="n">seq</span><span class="p">:</span> <span class="nc">Seq</span><span class="p">[</span><span class="nc">T</span><span class="p">],</span> <span class="n">numSlices</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="n">defaultParallelism</span><span class="p">):</span> <span class="nc">RDD</span><span class="p">[</span><span class="nc">T</span><span class="p">]</span> <span class="o">=</span> <span class="n">withScope</span> <span class="p">{</span>
-  <span class="n">assertNotStopped</span><span class="p">()</span>
-  <span class="k">new</span> <span class="nc">ParallelCollectionRDD</span><span class="p">[</span><span class="nc">T</span><span class="p">](</span><span class="bp">this</span><span class="p">,</span> <span class="n">seq</span><span class="p">,</span> <span class="n">numSlices</span><span class="p">,</span> <span class="nc">Map</span><span class="p">[</span><span class="nc">Int</span><span class="p">,</span> <span class="nc">Seq</span><span class="p">[</span><span class="nc">String</span><span class="p">]]())</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;broadcast</span> <span class="p">:</span> <span class="s">&quot;Broadcast a read-only variable to the cluster, returning a [[org.apache.spark.broadcast.Broadcast]] object for reading it in distributed functions. The variable will be sent to each cluster only once.&quot;</span>
-<span class="nd">@param</span> <span class="n">value</span> <span class="n">value</span> <span class="n">to</span> <span class="n">broadcast</span> <span class="n">to</span> <span class="n">the</span> <span class="nc">Spark</span> <span class="n">nodes</span>
-<span class="nd">@return</span> <span class="n">`Broadcast`</span> <span class="k">object</span><span class="p">,</span> <span class="n">a</span> <span class="n">read</span><span class="o">-</span><span class="n">only</span> <span class="n">variable</span> <span class="n">cached</span> <span class="n">on</span> <span class="n">each</span> <span class="n">machine</span>
-<span class="k">def</span> <span class="nf">broadcast</span><span class="p">[</span><span class="nc">T</span><span class="p">:</span> <span class="nc">ClassTag</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nc">T</span><span class="p">):</span> <span class="nc">Broadcast</span><span class="p">[</span><span class="nc">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">assertNotStopped</span><span class="p">()</span>
-  <span class="n">require</span><span class="p">(</span><span class="o">!</span><span class="k">classOf</span><span class="p">[</span><span class="nc">RDD</span><span class="p">[</span><span class="n">_</span><span class="p">]].</span><span class="n">isAssignableFrom</span><span class="p">(</span><span class="n">classTag</span><span class="p">[</span><span class="nc">T</span><span class="p">].</span><span class="n">runtimeClass</span><span class="p">),</span> <span class="s">&quot;Can not directly broadcast RDDs; instead, call collect() and broadcast the result.&quot;</span><span class="p">)</span>
-  <span class="kd">val</span> <span class="n">bc</span> <span class="o">=</span> <span class="n">env</span><span class="p">.</span><span class="n">broadcastManager</span><span class="p">.</span><span class="n">newBroadcast</span><span class="p">[</span><span class="nc">T</span><span class="p">](</span><span class="n">value</span><span class="p">,</span> <span class="n">isLocal</span><span class="p">)</span>
-  <span class="kd">val</span> <span class="n">callSite</span> <span class="o">=</span> <span class="n">getCallSite</span>
-  <span class="n">logInfo</span><span class="p">(</span><span class="s">&quot;Created broadcast &quot;</span> <span class="o">+</span> <span class="n">bc</span><span class="p">.</span><span class="n">id</span> <span class="o">+</span> <span class="s">&quot; from &quot;</span> <span class="o">+</span> <span class="n">callSite</span><span class="p">.</span><span class="n">shortForm</span><span class="p">)</span>
-  <span class="n">cleaner</span><span class="p">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">_</span><span class="p">.</span><span class="n">registerBroadcastForCleanup</span><span class="p">(</span><span class="n">bc</span><span class="p">))</span>
-  <span class="n">bc</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;addFile</span> <span class="p">:</span> <span class="s">&quot; Add a file to be downloaded with this Spark job on every node. If a file is added during execution, it will not be available until the next TaskSet starts.&quot;</span>
-<span class="nd">@param</span> <span class="n">path</span> <span class="n">can</span> <span class="n">be</span> <span class="n">either</span> <span class="n">a</span> <span class="n">local</span> <span class="n">file</span><span class="p">,</span> <span class="n">a</span> <span class="n">file</span> <span class="n">in</span> <span class="nc">HDFS</span> <span class="p">(</span><span class="n">or</span> <span class="n">other</span> <span class="nc">Hadoop</span><span class="o">-</span><span class="n">supported</span> <span class="n">filesystems</span><span class="p">),</span> <span class="n">or</span> <span class="n">an</span> <span class="nc">HTTP</span><span class="p">,</span> <span class="nc">HTTPS</span> <span class="n">or</span> <span class="nc">FTP</span> <span class="nc">URI</span><span class="p">.</span> <span class="nc">To</span> <span class="n">access</span> <span class="n">the</span> <span class="n">file</span> <span class="n">in</span> <span class="nc">Spark</span> <span class="n">jobs</span><span class="p">,</span> <span class="n">use</span> <span class="n">`SparkFiles.get(fileName)`</span> <span class="n">to</span> <span class="n">find</span> <span class="n">its</span> <span class="n">download</span> <span class="n">location</span><span class="p">.</span> 
-<span class="nd">@note</span> <span class="nc">A</span> <span class="n">path</span> <span class="n">can</span> <span class="n">be</span> <span class="n">added</span> <span class="n">only</span> <span class="n">once</span><span class="p">.</span> <span class="nc">Subsequent</span> <span class="n">additions</span> <span class="n">of</span> <span class="n">the</span> <span class="n">same</span> <span class="n">path</span> <span class="n">are</span> <span class="n">ignored</span><span class="p">.</span>
-<span class="k">def</span> <span class="nf">addFile</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">Unit</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">addFile</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;listFiles</span> <span class="p">:</span> <span class="s">&quot;Returns a list of file paths that are added to resources.&quot;</span>
-<span class="k">def</span> <span class="nf">listFiles</span><span class="p">():</span> <span class="nc">Seq</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span> <span class="o">=</span> <span class="n">addedFiles</span><span class="p">.</span><span class="n">keySet</span><span class="p">.</span><span class="n">toSeq</span>
-
-<span class="ss">&#39;addJar</span> <span class="p">:</span> <span class="s">&quot;Adds a JAR dependency for all tasks to be executed on this `SparkContext` in the future.  If a jar is added during execution, it will not be available until the next TaskSet starts.&quot;</span>
-<span class="nd">@param</span> <span class="n">path</span> <span class="n">can</span> <span class="n">be</span> <span class="n">either</span> <span class="n">a</span> <span class="n">local</span> <span class="n">file</span><span class="p">,</span> <span class="n">a</span> <span class="n">file</span> <span class="n">in</span> <span class="nc">HDFS</span> <span class="p">(</span><span class="n">or</span> <span class="n">other</span> <span class="nc">Hadoop</span><span class="o">-</span><span class="n">supported</span> <span class="n">filesystems</span><span class="p">),</span> <span class="n">an</span> <span class="nc">HTTP</span><span class="p">,</span> <span class="nc">HTTPS</span> <span class="n">or</span> <span class="nc">FTP</span> <span class="nc">URI</span><span class="p">,</span> <span class="n">or</span> <span class="n">local</span><span class="p">:</span><span class="o">/</span><span class="n">path</span> <span class="k">for</span> <span class="n">a</span> <span class="n">file</span> <span class="n">on</span> <span class="n">every</span> <span class="n">worker</span> <span class="n">node</span><span class="p">.</span>
-<span class="nd">@note</span> <span class="nc">A</span> <span class="n">path</span> <span class="n">can</span> <span class="n">be</span> <span class="n">added</span> <span class="n">only</span> <span class="n">once</span><span class="p">.</span> <span class="nc">Subsequent</span> <span class="n">additions</span> <span class="n">of</span> <span class="n">the</span> <span class="n">same</span> <span class="n">path</span> <span class="n">are</span> <span class="n">ignored</span><span class="p">.</span>
-<span class="k">def</span> <span class="nf">addJar</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
-
-<span class="ss">&#39;listJars</span> <span class="p">:</span> <span class="s">&quot;Returns a list of jar files that are added to resources.&quot;</span>
-<span class="k">def</span> <span class="nf">listJars</span><span class="p">():</span> <span class="nc">Seq</span><span class="p">[</span><span class="nc">String</span><span class="p">]</span> <span class="o">=</span> <span class="n">addedJars</span><span class="p">.</span><span class="n">keySet</span><span class="p">.</span><span class="n">toSeq</span>
-
-
-<span class="ss">&#39;stop</span> <span class="p">:</span> <span class="s">&quot;Shut down the SparkContext.&quot;</span>
-<span class="k">def</span> <span class="nf">stop</span><span class="p">():</span> <span class="nc">Unit</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
-
-<span class="ss">&#39;getOrCreate</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="p">:</span> <span class="s">&quot;This function may be used to get or instantiate a SparkContext and register it as a singleton object. Because we can only have one active SparkContext per JVM, this is useful when applications may wish to share a SparkContext.&quot;</span>
-<span class="nd">@param</span> <span class="n">config</span> <span class="n">`SparkConfig`</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="n">initialisation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">`SparkContext`</span>
-<span class="nd">@return</span> <span class="n">current</span> <span class="n">`SparkContext`</span> <span class="p">(</span><span class="n">or</span> <span class="n">a</span> <span class="k">new</span> <span class="n">one</span> <span class="k">if</span> <span class="n">it</span> <span class="n">wasn</span><span class="ss">&#39;t</span> <span class="n">created</span> <span class="n">before</span> <span class="n">the</span> <span class="n">function</span> <span class="n">call</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">getOrCreate</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="nc">SparkConf</span><span class="p">):</span> <span class="nc">SparkContext</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="c1">// Synchronize to ensure that multiple create requests don&#39;t trigger an exception</span>
-  <span class="c1">// from assertNoOtherContextIsRunning within setActiveContext</span>
-  <span class="nc">SPARK_CONTEXT_CONSTRUCTOR_LOCK</span><span class="p">.</span><span class="k">synchronized</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">activeContext</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">setActiveContext</span><span class="p">(</span><span class="k">new</span> <span class="nc">SparkContext</span><span class="p">(</span><span class="n">config</span><span class="p">))</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">getAll</span><span class="p">.</span><span class="n">nonEmpty</span><span class="p">)</span> <span class="p">{</span> <span class="n">logWarning</span><span class="p">(</span><span class="s">&quot;Using an existing SparkContext; some configuration may not take effect.&quot;</span><span class="p">)</span> <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">activeContext</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;getOrCreate</span><span class="p">()</span> <span class="p">:</span> <span class="s">&quot;This function may be used to get or instantiate a SparkContext and register it as a singleton object. Because we can only have one active SparkContext per JVM, this is useful when applications may wish to share a SparkContext. This method allows not passing a SparkConf (useful if just retrieving).&quot;</span>
-<span class="nd">@return</span> <span class="n">current</span> <span class="n">`SparkContext`</span> <span class="p">(</span><span class="n">or</span> <span class="n">a</span> <span class="k">new</span> <span class="n">one</span> <span class="k">if</span> <span class="n">wasn</span><span class="ss">&#39;t</span> <span class="n">created</span> <span class="n">before</span> <span class="n">the</span> <span class="n">function</span> <span class="n">call</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">getOrCreate</span><span class="p">():</span> <span class="nc">SparkContext</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nc">SPARK_CONTEXT_CONSTRUCTOR_LOCK</span><span class="p">.</span><span class="k">synchronized</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">activeContext</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span> <span class="n">setActiveContext</span><span class="p">(</span><span class="k">new</span> <span class="nc">SparkContext</span><span class="p">())</span> <span class="p">}</span>
-    <span class="n">activeContext</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-<blockquote><p>Only one <code>SparkContext</code> should be active per JVM. You must <code>stop()</code> the active <code>SparkContext</code> before creating a new one. <br>
-a Spark Config object describing the application configuration. Any settings in this config overrides the default configs as well as system properties.</p>
-</blockquote>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="SparkContext-vs.-SparkSession-(2/2)">SparkContext vs. SparkSession (2/2)<a class="anchor-link" href="#SparkContext-vs.-SparkSession-(2/2)">&#182;</a></h3><blockquote><p>SparkSession 경우 sparkContext 와 관련을 가지는 객체와 데이터프레임을 다루는 함수들로 구성되어 있습니다.</p>
-</blockquote>
-<h4 id="2.-SparkSession">2. <a href="https://github.com/apache/spark/blob/master/sql/core/src/main/scala/org/apache/spark/sql/SparkSession.scala">SparkSession</a><a class="anchor-link" href="#2.-SparkSession">&#182;</a></h4><h4 id="2-1-SparkSession.%7Bversion,-sqlContext,-udf%7D">2-1 SparkSession.{version, sqlContext, udf}<a class="anchor-link" href="#2-1-SparkSession.%7Bversion,-sqlContext,-udf%7D">&#182;</a></h4><h4 id="2-2-SparkSession.%7BnewSession,-emptyDataFrame,-emptyDataset,-createDataFrame%7D">2-2 SparkSession.{newSession, emptyDataFrame, emptyDataset, createDataFrame}<a class="anchor-link" href="#2-2-SparkSession.%7BnewSession,-emptyDataFrame,-emptyDataset,-createDataFrame%7D">&#182;</a></h4><h4 id="2-3-SparkSession.%7Brange,-table,-sql,-read,-time,-stop,-close%7D">2-3 SparkSession.{range, table, sql, read, time, stop, close}<a class="anchor-link" href="#2-3-SparkSession.%7Brange,-table,-sql,-read,-time,-stop,-close%7D">&#182;</a></h4><h4 id="2-4-SparkSession.builder.%7Bmaster,-appName,-config,-getOrCreate%7D">2-4 SparkSession.builder.{master, appName, config, getOrCreate}<a class="anchor-link" href="#2-4-SparkSession.builder.%7Bmaster,-appName,-config,-getOrCreate%7D">&#182;</a></h4><div class="highlight"><pre><span></span><span class="ss">&#39;SparkSession</span> <span class="p">:</span> <span class="s">&quot;The entry point to programming Spark with the Dataset and DataFrame API.  In environments that this has been created upfront (e.g. REPL, notebooks), use the builder to get an existing session:&quot;</span>
-<span class="nc">SparkSession</span><span class="p">.</span><span class="n">builder</span><span class="p">().</span><span class="n">getOrCreate</span><span class="p">()</span>
-<span class="s">&quot;The builder can also be used to create a new session:&quot;</span>
-<span class="nc">SparkSession</span><span class="p">.</span><span class="n">builder</span>
-  <span class="p">.</span><span class="n">master</span><span class="p">(</span><span class="s">&quot;local&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="n">appName</span><span class="p">(</span><span class="s">&quot;Word Count&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="n">config</span><span class="p">(</span><span class="s">&quot;spark.some.config.option&quot;</span><span class="p">,</span> <span class="s">&quot;some-value&quot;</span><span class="p">)</span>
-  <span class="p">.</span><span class="n">getOrCreate</span><span class="p">()</span>
-<span class="nd">@param</span> <span class="n">sparkContext</span> <span class="nc">The</span> <span class="nc">Spark</span> <span class="n">context</span> <span class="n">associated</span> <span class="k">with</span> <span class="bp">this</span> <span class="nc">Spark</span> <span class="n">session</span><span class="p">.</span>
-<span class="nd">@param</span> <span class="n">existingSharedState</span> <span class="nc">If</span> <span class="n">supplied</span><span class="p">,</span> <span class="n">use</span> <span class="n">the</span> <span class="n">existing</span> <span class="n">shared</span> <span class="n">state</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">creating</span> <span class="n">a</span> <span class="k">new</span> <span class="n">one</span><span class="p">.</span>
-<span class="nd">@param</span> <span class="n">parentSessionState</span> <span class="nc">If</span> <span class="n">supplied</span><span class="p">,</span> <span class="n">inherit</span> <span class="n">all</span> <span class="n">session</span> <span class="n">state</span> <span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.</span> <span class="n">temporary</span> <span class="n">views</span><span class="p">,</span> <span class="nc">SQL</span> <span class="n">config</span><span class="p">,</span> <span class="nc">UDFs</span> <span class="n">etc</span><span class="p">)</span> <span class="n">from</span> <span class="n">parent</span><span class="p">.</span>
-
-
-<span class="ss">&#39;version</span> <span class="p">:</span> <span class="s">&quot;The version of Spark on which this application is running.&quot;</span>
-<span class="k">def</span> <span class="nf">version</span><span class="p">:</span> <span class="nc">String</span> <span class="o">=</span> <span class="nc">SPARK_VERSION</span>
-
-<span class="ss">&#39;sqlContext</span> <span class="p">:</span> <span class="s">&quot;A wrapped version of this session in the form of a [[SQLContext]], for backward compatibility.&quot;</span>
-<span class="kd">val</span> <span class="n">sqlContext</span><span class="p">:</span> <span class="nc">SQLContext</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SQLContext</span><span class="p">(</span><span class="bp">this</span><span class="p">)</span>
-
-<span class="ss">&#39;udf</span> <span class="p">:</span> <span class="s">&quot;A collection of methods for registering user-defined functions (UDF).  The following example registers a Scala closure as UDF:&quot;</span>
-<span class="n">sparkSession</span><span class="p">.</span><span class="n">udf</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="s">&quot;myUDF&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">arg1</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">arg2</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">arg2</span> <span class="o">+</span> <span class="n">arg1</span><span class="p">)</span>
-<span class="s">&quot;The following example registers a UDF in Java:&quot;</span>
-<span class="n">sparkSession</span><span class="p">.</span><span class="n">udf</span><span class="p">().</span><span class="n">register</span><span class="p">(</span><span class="s">&quot;myUDF&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="nc">Integer</span> <span class="n">arg1</span><span class="p">,</span> <span class="nc">String</span> <span class="n">arg2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">arg2</span> <span class="o">+</span> <span class="n">arg1</span><span class="p">,</span>
-   <span class="nc">DataTypes</span><span class="p">.</span><span class="nc">StringType</span><span class="p">);</span>
-<span class="nd">@note</span> <span class="nc">The</span> <span class="n">user</span><span class="o">-</span><span class="n">defined</span> <span class="n">functions</span> <span class="n">must</span> <span class="n">be</span> <span class="n">deterministic</span><span class="p">.</span> <span class="nc">Due</span> <span class="n">to</span> <span class="n">optimization</span><span class="p">,</span> <span class="n">duplicate</span> <span class="n">invocations</span> <span class="n">may</span> <span class="n">be</span> <span class="n">eliminated</span> <span class="n">or</span> <span class="n">the</span> <span class="n">function</span> <span class="n">may</span> <span class="n">even</span> <span class="n">be</span> <span class="n">invoked</span> <span class="n">more</span> <span class="n">times</span> <span class="n">than</span> <span class="n">it</span> <span class="n">is</span> <span class="n">present</span> <span class="n">in</span> <span class="n">the</span> <span class="n">query</span><span class="p">.</span>
-<span class="k">def</span> <span class="nf">udf</span><span class="p">:</span> <span class="nc">UDFRegistration</span> <span class="o">=</span> <span class="n">sessionState</span><span class="p">.</span><span class="n">udfRegistration</span>
-
-<span class="ss">&#39;newSession</span> <span class="p">:</span> <span class="s">&quot;Start a new session with isolated SQL configurations, temporary tables, registered functions are isolated, but sharing the underlying `SparkContext` and cached data.&quot;</span>
-<span class="nd">@note</span> <span class="nc">Other</span> <span class="n">than</span> <span class="n">the</span> <span class="n">`SparkContext`</span><span class="p">,</span> <span class="n">all</span> <span class="n">shared</span> <span class="n">state</span> <span class="n">is</span> <span class="n">initialized</span> <span class="n">lazily</span><span class="p">.</span> <span class="nc">This</span> <span class="n">method</span> <span class="n">will</span> <span class="n">force</span> <span class="n">the</span> <span class="n">initialization</span> <span class="n">of</span> <span class="n">the</span> <span class="n">shared</span> <span class="n">state</span> <span class="n">to</span> <span class="n">ensure</span> <span class="n">that</span> <span class="n">parent</span> <span class="n">and</span> <span class="n">child</span> <span class="n">sessions</span> <span class="n">are</span> <span class="n">set</span> <span class="n">up</span> <span class="k">with</span> <span class="n">the</span> <span class="n">same</span> <span class="n">shared</span> <span class="n">state</span><span class="p">.</span> <span class="nc">If</span> <span class="n">the</span> <span class="n">underlying</span> <span class="n">catalog</span> <span class="n">implementation</span> <span class="n">is</span> <span class="nc">Hive</span><span class="p">,</span> <span class="bp">this</span> <span class="n">will</span> <span class="n">initialize</span> <span class="n">the</span> <span class="n">metastore</span><span class="p">,</span> <span class="n">which</span> <span class="n">may</span> <span class="n">take</span> <span class="n">some</span> <span class="n">time</span><span class="p">.</span>
-<span class="k">def</span> <span class="nf">newSession</span><span class="p">():</span> <span class="nc">SparkSession</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="k">new</span> <span class="nc">SparkSession</span><span class="p">(</span><span class="n">sparkContext</span><span class="p">,</span> <span class="nc">Some</span><span class="p">(</span><span class="n">sharedState</span><span class="p">),</span> <span class="n">parentSessionState</span> <span class="o">=</span> <span class="nc">None</span><span class="p">,</span> <span class="n">extensions</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;emptyDataFrame</span> <span class="p">:</span> <span class="s">&quot;Returns a `DataFrame` with no rows or columns.&quot;</span>
-<span class="k">lazy</span> <span class="kd">val</span> <span class="n">emptyDataFrame</span><span class="p">:</span> <span class="nc">DataFrame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">createDataFrame</span><span class="p">(</span><span class="n">sparkContext</span><span class="p">.</span><span class="n">emptyRDD</span><span class="p">[</span><span class="nc">Row</span><span class="p">].</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;empty&quot;</span><span class="p">),</span> <span class="nc">StructType</span><span class="p">(</span><span class="nc">Nil</span><span class="p">))</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;emptyDataset</span> <span class="p">:</span> <span class="s">&quot;Creates a new [[Dataset]] of type T containing zero elements.&quot;</span>
-<span class="k">def</span> <span class="nf">emptyDataset</span><span class="p">[</span><span class="nc">T</span><span class="p">:</span> <span class="nc">Encoder</span><span class="p">]:</span> <span class="nc">Dataset</span><span class="p">[</span><span class="nc">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="kd">val</span> <span class="n">encoder</span> <span class="o">=</span> <span class="n">implicitly</span><span class="p">[</span><span class="nc">Encoder</span><span class="p">[</span><span class="nc">T</span><span class="p">]]</span>
-  <span class="k">new</span> <span class="nc">Dataset</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="nc">LocalRelation</span><span class="p">(</span><span class="n">encoder</span><span class="p">.</span><span class="n">schema</span><span class="p">.</span><span class="n">toAttributes</span><span class="p">),</span> <span class="n">encoder</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;createDataFrame</span> <span class="p">:</span> <span class="s">&quot;Creates a `DataFrame` from an RDD of Product (e.g. case classes, tuples).&quot;</span>
-<span class="k">def</span> <span class="nf">createDataFrame</span><span class="p">[</span><span class="nc">A</span> <span class="o">&lt;:</span> <span class="nc">Product</span> <span class="p">:</span> <span class="nc">TypeTag</span><span class="p">](</span><span class="n">rdd</span><span class="p">:</span> <span class="nc">RDD</span><span class="p">[</span><span class="nc">A</span><span class="p">]):</span> <span class="nc">DataFrame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nc">SparkSession</span><span class="p">.</span><span class="n">setActiveSession</span><span class="p">(</span><span class="bp">this</span><span class="p">)</span>
-  <span class="kd">val</span> <span class="n">encoder</span> <span class="o">=</span> <span class="nc">Encoders</span><span class="p">.</span><span class="n">product</span><span class="p">[</span><span class="nc">A</span><span class="p">]</span>
-  <span class="nc">Dataset</span><span class="p">.</span><span class="n">ofRows</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="nc">ExternalRDD</span><span class="p">(</span><span class="n">rdd</span><span class="p">,</span> <span class="n">self</span><span class="p">)(</span><span class="n">encoder</span><span class="p">))</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;range</span><span class="p">(</span><span class="n">end</span><span class="p">)</span> <span class="p">:</span> <span class="s">&quot;Creates a [[Dataset]] with a single `LongType` column named `id`, containing elements in a range from 0 to `end` (exclusive) with step value 1.&quot;</span>
-<span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">end</span><span class="p">:</span> <span class="nc">Long</span><span class="p">):</span> <span class="nc">Dataset</span><span class="p">[</span><span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="nc">Long</span><span class="p">]</span> <span class="o">=</span> <span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
-
-<span class="ss">&#39;range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="p">:</span> <span class="s">&quot;Creates a [[Dataset]] with a single `LongType` column named `id`, containing elements in a range from `start` to `end` (exclusive) with step value 1.&quot;</span>
-<span class="k">def</span> <span class="nf">range</span><span class="p">(</span><span class="n">start</span><span class="p">:</span> <span class="nc">Long</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="nc">Long</span><span class="p">):</span> <span class="nc">Dataset</span><span class="p">[</span><span class="n">java</span><span class="p">.</span><span class="n">lang</span><span class="p">.</span><span class="nc">Long</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">numPartitions</span> <span class="o">=</span> <span class="n">sparkContext</span><span class="p">.</span><span class="n">defaultParallelism</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;table</span><span class="p">(</span><span class="n">tableName</span><span class="p">)</span> <span class="p">:</span> <span class="s">&quot;Returns the specified table/view as a `DataFrame`.&quot;</span>
-<span class="nd">@param</span> <span class="n">tableName</span> <span class="n">is</span> <span class="n">either</span> <span class="n">a</span> <span class="n">qualified</span> <span class="n">or</span> <span class="n">unqualified</span> <span class="n">name</span> <span class="n">that</span> <span class="n">designates</span> <span class="n">a</span> <span class="n">table</span> <span class="n">or</span> <span class="n">view</span><span class="p">.</span> <span class="nc">If</span> <span class="n">a</span> <span class="n">database</span> <span class="n">is</span> <span class="n">specified</span><span class="p">,</span> <span class="n">it</span> <span class="n">identifies</span> <span class="n">the</span> <span class="n">table</span><span class="o">/</span><span class="n">view</span> <span class="n">from</span> <span class="n">the</span> <span class="n">database</span><span class="p">.</span> <span class="nc">Otherwise</span><span class="p">,</span> <span class="n">it</span> <span class="n">first</span> <span class="n">attempts</span> <span class="n">to</span> <span class="n">find</span> <span class="n">a</span> <span class="n">temporary</span> <span class="n">view</span> <span class="k">with</span> <span class="n">the</span> <span class="k">given</span> <span class="n">name</span> <span class="n">and</span> <span class="k">then</span> <span class="k">match</span> <span class="n">the</span> <span class="n">table</span><span class="o">/</span><span class="n">view</span> <span class="n">from</span> <span class="n">the</span> <span class="n">current</span> <span class="n">database</span><span class="p">.</span> <span class="nc">Note</span> <span class="n">that</span><span class="p">,</span> <span class="n">the</span> <span class="n">global</span> <span class="n">temporary</span> <span class="n">view</span> <span class="n">database</span> <span class="n">is</span> <span class="n">also</span> <span class="n">valid</span> <span class="n">here</span><span class="p">.</span>
-<span class="k">def</span> <span class="nf">table</span><span class="p">(</span><span class="n">tableName</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">DataFrame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">table</span><span class="p">(</span><span class="n">sessionState</span><span class="p">.</span><span class="n">sqlParser</span><span class="p">.</span><span class="n">parseMultipartIdentifier</span><span class="p">(</span><span class="n">tableName</span><span class="p">))</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;sql</span> <span class="p">:</span> <span class="s">&quot;Executes a SQL query using Spark, returning the result as a `DataFrame`. The dialect that is used for SQL parsing can be configured with &#39;spark.sql.dialect&#39;.&quot;</span>
-<span class="k">def</span> <span class="nf">sql</span><span class="p">(</span><span class="n">sqlText</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">DataFrame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="kd">val</span> <span class="n">tracker</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">QueryPlanningTracker</span>
-  <span class="kd">val</span> <span class="n">plan</span> <span class="o">=</span> <span class="n">tracker</span><span class="p">.</span><span class="n">measurePhase</span><span class="p">(</span><span class="nc">QueryPlanningTracker</span><span class="p">.</span><span class="nc">PARSING</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">sessionState</span><span class="p">.</span><span class="n">sqlParser</span><span class="p">.</span><span class="n">parsePlan</span><span class="p">(</span><span class="n">sqlText</span><span class="p">)</span>
-  <span class="p">}</span>
-  <span class="nc">Dataset</span><span class="p">.</span><span class="n">ofRows</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">plan</span><span class="p">,</span> <span class="n">tracker</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;read</span> <span class="p">:</span> <span class="s">&quot;Returns a [[DataFrameReader]] that can be used to read non-streaming data in as a `DataFrame`.&quot;</span>
-<span class="n">sparkSession</span><span class="p">.</span><span class="n">read</span><span class="p">.</span><span class="n">parquet</span><span class="p">(</span><span class="s">&quot;/path/to/file.parquet&quot;</span><span class="p">)</span>
-<span class="n">sparkSession</span><span class="p">.</span><span class="n">read</span><span class="p">.</span><span class="n">schema</span><span class="p">(</span><span class="n">schema</span><span class="p">).</span><span class="n">json</span><span class="p">(</span><span class="s">&quot;/path/to/file.json&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">read</span><span class="p">:</span> <span class="nc">DataFrameReader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DataFrameReader</span><span class="p">(</span><span class="n">self</span><span class="p">)</span>
-
-<span class="ss">&#39;time</span> <span class="p">:</span> <span class="s">&quot;Executes some code block and prints to stdout the time taken to execute the block. This is available in Scala only and is used primarily for interactive testing and debugging.&quot;</span>
-<span class="k">def</span> <span class="nf">time</span><span class="p">[</span><span class="nc">T</span><span class="p">](</span><span class="n">f</span><span class="p">:</span> <span class="o">=&gt;</span> <span class="nc">T</span><span class="p">):</span> <span class="nc">T</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="kd">val</span> <span class="n">start</span> <span class="o">=</span> <span class="nc">System</span><span class="p">.</span><span class="n">nanoTime</span><span class="p">()</span>
-  <span class="kd">val</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">f</span>
-  <span class="kd">val</span> <span class="n">end</span> <span class="o">=</span> <span class="nc">System</span><span class="p">.</span><span class="n">nanoTime</span><span class="p">()</span>
-  <span class="c1">// scalastyle:off println</span>
-  <span class="n">println</span><span class="p">(</span><span class="s">s&quot;Time taken: {NANOSECONDS.toMillis(end - start)} ms&quot;</span><span class="p">)</span>
-  <span class="c1">// scalastyle:on println</span>
-  <span class="n">ret</span>
-<span class="p">}</span>
-
-<span class="ss">&#39;stop</span> <span class="p">:</span> <span class="s">&quot;Stop the underlying `SparkContext`.&quot;</span>
-<span class="k">def</span> <span class="nf">stop</span><span class="p">():</span> <span class="nc">Unit</span> <span class="o">=</span> <span class="p">{</span> <span class="n">sparkContext</span><span class="p">.</span><span class="n">stop</span><span class="p">()</span> <span class="p">}</span>
-
-<span class="ss">&#39;close</span> <span class="p">:</span> <span class="s">&quot;Synonym for `stop()`.&quot;</span>
-<span class="k">override</span> <span class="k">def</span> <span class="nf">close</span><span class="p">():</span> <span class="nc">Unit</span> <span class="o">=</span> <span class="n">stop</span><span class="p">()</span>
-
-<span class="ss">&#39;SparkSession</span> <span class="p">:</span> <span class="s">&quot;&quot;</span>
-
-<span class="k">object</span> <span class="nc">SparkSession</span> <span class="k">extends</span> <span class="nc">Logging</span> <span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Builder</span> <span class="k">extends</span> <span class="nc">Logging</span> <span class="p">{</span>
-        <span class="ss">&#39;appName</span> <span class="p">:</span> <span class="s">&quot; Sets a name for the application, which will be shown in the Spark web UI.&quot;</span>
-                <span class="s">&quot;If no application name is set, a randomly generated name will be used.&quot;</span>
-        <span class="k">def</span> <span class="nf">appName</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">Builder</span> <span class="o">=</span> <span class="n">config</span><span class="p">(</span><span class="s">&quot;spark.app.name&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-
-        <span class="ss">&#39;getOrCreate</span> <span class="p">:</span> <span class="s">&quot;Gets an existing [[SparkSession]] or, if there is no existing one, creates a new</span>
-<span class="s">                one based on the options set in this builder.</span>
-<span class="s">                This method first checks whether there is a valid thread-local SparkSession,</span>
-<span class="s">                and if yes, return that one. It then checks whether there is a valid global</span>
-<span class="s">                default SparkSession, and if yes, return that one. If no valid global default</span>
-<span class="s">                SparkSession exists, the method creates a new SparkSession and assigns the</span>
-<span class="s">                newly created SparkSession as the global default.</span>
-<span class="s">                In case an existing SparkSession is returned, the config options specified in</span>
-<span class="s">                this builder will be applied to the existing SparkSession.&quot;</span>
-        <span class="k">def</span> <span class="nf">getOrCreate</span><span class="p">():</span> <span class="nc">SparkSession</span> <span class="o">=</span> <span class="k">synchronized</span> <span class="p">{</span>
-            <span class="n">assertOnDriver</span><span class="p">()</span>
-        <span class="ss">&#39;builder</span> <span class="p">:</span> <span class="s">&quot;Creates a [[SparkSession.Builder]] for constructing a [[SparkSession]].&quot;</span>
-        <span class="k">def</span> <span class="nf">builder</span><span class="p">():</span> <span class="nc">Builder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Builder</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
 </div>
 </div>
 </body>
