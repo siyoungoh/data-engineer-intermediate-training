@@ -47,5 +47,3 @@ docker-compose logs notebook
 ### [5. 아파치 스파크 집계 실습](http://htmlpreview.github.io/?https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day3/notebooks/lgde-spark-core/lgde-spark-core-5-aggregation.html)
 <br>
 
-
-* 정답파일은 google drive - colab 을 사용해 공유합니다. 
