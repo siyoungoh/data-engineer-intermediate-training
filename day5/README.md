@@ -3,16 +3,13 @@
 > 가상의 웹 쇼핑몰의 주요 지표를 생성하기 위한, 접속정보, 매출 및 고객정보 등의 데이터를 수집하여 기본 지표를 생성합니다
 
 
-- 범례
-  * :green_book: : 기본, :blue_book: : 중급
-
 - 목차
-  * 1. 실습자료 최신버전 업데이트
-  * 2. 노트북 컨테이너 기동
-  * 3. Spark 자료
-  * 4. 지표 소개
-  * 5. 노트북 실습
-  * 6. 컨테이너 종료
+  * 1.실습자료 최신버전 업데이트
+  * 2.노트북 컨테이너 기동
+  * 3.Spark 자료
+  * 4.지표 소개
+  * 5.노트북 실습
+  * 6.컨테이너 종료
 
 - 실습 노트북
   * [실습 노트북](https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day5/notebooks/data-engineer-training-course.ipynb)
