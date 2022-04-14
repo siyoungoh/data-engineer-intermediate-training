@@ -7,12 +7,12 @@
   * :green_book: : 기본, :blue_book: : 중급
 
 - 목차
-  * [1. 최신버전 업데이트](#1-최신버전-업데이트)
-  * [2. 노트북 컨테이너 기동](#2-green_book-노트북-컨테이너-기동)
-  * [3. Spark 자료 확인](#3-green_book-수집된-데이터-탐색)
-  * [4. 기본 지표 생성](#4-green_book-기본-지표-생성)
-  * [5. 고급 지표 생성](#5-blue_book-고급-지표-생성)
-  * [6. 컨테이너 종료](#6-green_book-질문-및-컨테이너-종료)
+  * 1. 실습자료 최신버전 업데이트
+  * 2. 노트북 컨테이너 기동
+  * 3. Spark 자료
+  * 4. 지표 소개
+  * 5. 노트북 실습
+  * 6. 컨테이너 종료
 
 - 실습 노트북
   * [실습 노트북](https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day5/notebooks/data-engineer-training-course.ipynb)
