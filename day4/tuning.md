@@ -9,6 +9,109 @@
     - [3-5. 버킷팅을 통한 성능 개선](#3-5-버킷팅을-통한-성능-개선)
 
 
+## 1. 최신버전 업데이트
+> 원격 터미널에 접속하여 관련 코드를 최신 버전으로 내려받고, 과거에 실행된 컨테이너가 없는지 확인하고 종료합니다
+
+### 1-1. 최신 소스를 내려 받습니다
+```bash
+# terminal
+cd /home/ubuntu/work/data-engineer-intermediate-training/day4
+git pull
+```
+<br>
+
+### 1-2. 현재 기동되어 있는 도커 컨테이너를 확인하고, 종료합니다
+
+#### 1-2-1. 현재 기동된 컨테이너를 확인합니다
+```bash
+# terminal
+docker ps -a
+```
+<br>
+
+
+#### 1-2-2. 기동된 컨테이너가 있다면 강제 종료합니다
+```bash
+# terminal 
+docker rm -f `docker ps -aq`
+```
+> 다시 `docker ps -a` 명령으로 결과가 없다면 모든 컨테이너가 종료되었다고 보시면 됩니다
+<br>
+
+
+#### 1-2-3. 하이브 실습을 위한 컨테이너를 기동합니다
+```bash
+# terminal
+cd /home/ubuntu/work/data-engineer-intermediate-training/day4
+docker-compose pull
+docker-compose up -d
+docker-compose ps
+```
+<br>
+
+
+#### 1-2-4. 실습에 필요한 IMDB 데이터를 컨테이너로 복사합니다
+```bash
+# terminal
+docker cp data/imdb.tsv hive-server:/opt/hive/examples/imdb.tsv
+docker-compose exec hive-server ls /opt/hive/examples
+```
+
+> 마지막 ls /opt/hive/examples 명령어 결과로 imdb.tsv 파일이 확인되면 정상입니다
+<br>
+
+
+#### 1-2-5. 하이브 컨테이너로 접속합니다
+```bash
+# terminal
+echo "하이브 서버가 기동 되는데에 시간이 좀 걸립니다... 30초 후에 접속합니다"
+sleep 30 
+docker-compose exec hive-server bash
+```
+<br>
+
+
+#### 1-2-6. beeline 프로그램을 통해 hive 서버로 접속합니다
+
+> 여기서 `beeline` 은 Hive (벌집)에 접속하여 SQL 명령을 수행하기 위한 커맨드라인 프로그램이며, Oracle 의 SQL\*Plus 와 같은 도구라고 보시면 됩니다
+
+* 도커 컨테이너에서 beeline 명령을 수행하면 프롬프트가 `beeline>` 으로 변경되고, SQL 명령의 수행이 가능합니다
+```bash
+# docker
+beeline
+```
+<br>
+
+
+* beeline 프롬프트가 뜨면 Hive Server 에 접속하기 위해 대상 서버로 connect 명령을 수행합니다
+```bash
+# beeline
+!connect jdbc:hive2://localhost:10000 scott tiger
+```
+> 아래와 같은 메시지가 뜨면 성공입니다
+
+```bash
+Connecting to jdbc:hive2://localhost:10000
+Connected to: Apache Hive (version 2.3.2)
+Driver: Hive JDBC (version 2.3.2)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+```
+
+## 2 하이브의 파티션과 버킷
+![hive data model](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fsyoh%2FBPFjXgR8_B.png?alt=media&token=e46ca499-43a4-4920-94f8-412ddf75be98)
+
+- 파티션
+  - 하이브의 쿼리는 모든 하이브 테이블을 스캔하는 것이 기본값. 
+  - 데이터가 많은 테이블을 쿼리하면 성능저하가 발생함. 
+  - 각 파티션은 hdfs 테이블의 디렉토리의 하위 디렉토리에 저장함. 
+  - 테이블이 쿼리를 받으면 테이블 데이터 중 필요한 파티션(디렉토리)만 쿼리되기 때문에 I/O 와 쿼리시간을 많이 줄일 수 있음. 테이블 만들 때 구현하는게 간단하고 생성 파티션 확인하기도 쉬움. 
+
+- 버킷 
+  - 쿼리 성능을 최적화하기 위해 데이터 집합을 관리할 수 있는 작은 부분으로 잘게 나누는 또 다른 기술. HDFS 의 파일 세그먼트. 
+  - 버킷 개수 : 각 버킷에 너무 많거나 적은 데이터를 사용하지 않아야함. 좋은 선택은 HDFS 두 블록 정도. 만약 하둡 블록크기가 256mb 라면 각 버킷에 512mb 를 계획. 2^n 을 버킷 개수로 사용하는 것을 추천. 
+
+
+
 ## 3 하이브 트러블슈팅 가이드
 
 > IMDB 영화 예제를 통해 테이블을 생성하고, 다양한 성능 개선 방법을 시도해보면서 왜 그리고 얼마나 성능에 영향을 미치는 지 파악합니다
