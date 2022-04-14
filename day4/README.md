@@ -1,4 +1,4 @@
-# 4일차. 아파치 하이브 데이터 적재
+# 4일차. 아파치 하이브 데이터
 
 > 아파치 하이브를 통해 다양한 데이터 웨어하우스 예제를 실습합니다
 
@@ -11,7 +11,6 @@
     - [2-1. 하이브 데이터베이스 DDL 가이드](#2-1-하이브-데이터베이스-DDL-가이드)
     - [2-2. 하이브 테이블 DDL 가이드](#2-2-하이브-테이블-DDL-가이드)
     - [2-3. 하이브 DML 가이드](#2-3-하이브-DML-가이드)
-    - [2-4. 하이브 외부 저장소 테이블](#2-4-하이브-외부-저장소-테이블)
   * [참고 자료](#참고-자료)
 
 <br>
@@ -261,7 +260,7 @@ describe database extended testdb;
 
 - Managed Table : 옵션을 적지 않으면 기본적으로 managed table 이 생성됨. 세션이 종료되어도 테이블의 데이터와 파일은 유지됨. 
 **테이블을 Drop 하면 파일도 함께 삭제됨.**
-- External Table : 테이블을 Drop 해도 파일은 그대로 유지됨. 기존에 있는 HDFS 데이터에 대해 table 을 만들어 관리하기도 함. link 한다고 표현. 사용자가 실수로 table 을 drop 해도 데이터는 유지되므로 external table 로 관리를 하는 것이 유리할 수도 있음. 
+- External Table : 테이블을 Drop 해도 파일은 그대로 유지됨. 기존에 있는 데이터에 대해 table 을 만들어 관리하기도 함. link 한다고 표현. 사용자가 실수로 table 을 drop 해도 데이터는 유지되므로 external table 로 관리를 하는 것이 유리할 수도 있음. 
 - Temporary Table : 현재 hive 세션동안에만 유지되는 임시 테이블. 
 [Create a temporary table by Cloudera](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.0.1/using-hiveql/content/hive_create_a_hive_temporary_table.html)
 
@@ -859,7 +858,7 @@ select * from imdb_recover;
 
 
 
-### 2-4-3. Parquet 포맷과 Hive 테이블 데이터 타입
+### 참고. Parquet 포맷과 Hive 테이블 데이터 타입
 | Parquet | Hive | Description |
 | - | - | - |
 | int32 | int | 32비트 정수 |
@@ -869,13 +868,15 @@ select * from imdb_recover;
 | binary | string | 문자열 |
 <br>
 
-[목차로 돌아가기](#4일차-아파치-하이브-데이터-적재)
+[목차로 돌아가기](#4일차-아파치-하이브-데이터)
 
 <br>
 <br>
 
 
 ### 참고 자료
+  * [하이브 성능 튜닝](tuning.md)
+  * [External Table 예제](external_table.md)
   * [Hive Language Manual DDL](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL)
   * [Hive Language Manual DML](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DML)
   * [Top 7 Hive DDL Commands](https://data-flair.training/blogs/hive-ddl-commands/)
@@ -884,6 +885,6 @@ select * from imdb_recover;
   * [Hive update, delete ERROR](https://community.cloudera.com/t5/Support-Questions/Hive-update-delete-and-insert-ERROR-in-cdh-5-4-2/td-p/29485)
 
 
-[목차로 돌아가기](#4일차-아파치-하이브-데이터-적재)
+[목차로 돌아가기](#4일차-아파치-하이브-데이터)
 
 <br>
