@@ -1,13 +1,20 @@
 # 하이브 외부 저장소 테이블
 
-> 하이브의 경우 local 데이터를 하둡에 load 하여 Managed 테이블을 생성할 수도 있지만, 대게 외부 데이터 수집 및 적재의 경우 External 테이블로 생성합니다
+#### Table 의 종류
+[Hive wiki - Managed vs. External Tables](https://cwiki.apache.org/confluence/display/Hive/Managed+vs.+External+Tables)
 
-- External Table : 테이블을 Drop 해도 파일은 그대로 유지됨. 기존에 있는 HDFS 데이터에 대해 table 을 만들어 관리하기도 함. link 한다고 표현. 사용자가 실수로 table 을 drop 해도 데이터는 유지되므로 external table 로 관리를 하는 것이 유리할 수도 있음.   
+- Managed Table : 옵션을 적지 않으면 기본적으로 managed table 이 생성됨. 세션이 종료되어도 테이블의 데이터와 파일은 유지됨. 
+**테이블을 Drop 하면 파일도 함께 삭제됨.**
+- External Table : 테이블을 Drop 해도 파일은 그대로 유지됨. 기존에 있는 데이터에 대해 table 을 만들어 관리하기도 함. link 한다고 표현. 사용자가 실수로 table 을 drop 해도 데이터는 유지되므로 external table 로 관리를 하는 것이 유리할 수도 있음. 
+- Temporary Table : 현재 hive 세션동안에만 유지되는 임시 테이블. 
+[Create a temporary table by Cloudera](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.0.1/using-hiveql/content/hive_create_a_hive_temporary_table.html)  
+
   
+> 하이브의 경우 local 데이터를 하둡에 load 하여 Managed 테이블을 생성할 수도 있지만, 대게 외부 데이터 수집 및 적재의 경우 External 테이블로 생성합니다  
   
 ### 1. 매출 테이블의 외부 제공을 위해 외부 테이블로 생성합니다
 
-> 로컬 경로에 수집되었던 테이블 parquet 파일이 존재하므로, 해당 파일을 이용하여 생성합니다
+> 로컬 경로에 테이블 parquet 파일이 존재하므로, 해당 파일을 이용하여 생성합니다
 
 
 ```bash
