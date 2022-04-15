@@ -875,7 +875,6 @@ select * from imdb_recover;
 
 
 ### 참고 자료
-  * [하이브 성능 튜닝](tuning.md)
   * [External Table 예제](external_table.md)
   * [Hive Language Manual DDL](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL)
   * [Hive Language Manual DML](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DML)
@@ -883,6 +882,7 @@ select * from imdb_recover;
   * [Top 7 Hive DML Commands](https://data-flair.training/blogs/hive-dml-commands/)
   * [IMDB data from 2006 to 2016](https://www.kaggle.com/PromptCloudHQ/imdb-data)
   * [Hive update, delete ERROR](https://community.cloudera.com/t5/Support-Questions/Hive-update-delete-and-insert-ERROR-in-cdh-5-4-2/td-p/29485)
+  * [하이브 성능 튜닝](tuning.md)
 
 
 [목차로 돌아가기](#4일차-아파치-하이브-데이터)
