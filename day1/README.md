@@ -60,6 +60,8 @@ git version 2.17.1
 # terminal
 mkdir -p /home/ubuntu/work
 cd /home/ubuntu/work
+# 기존에 같은 폴더명이 있을 경우 삭제
+rm -rf /home/ubuntu/work/data-engineer-intermediate-training
 git clone https://github.com/siyoungoh/data-engineer-intermediate-training.git
 cd /home/ubuntu/work/data-engineer-intermediate-training/day1
 ```
