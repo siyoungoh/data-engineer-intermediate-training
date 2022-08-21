@@ -317,10 +317,10 @@ docker-compose ps -a
 ```
 <br>
 
-#### 2-3-4. [cp](https://docs.docker.com/engine/reference/commandline/compose_cp/) : 컴포즈 컨테이너와 파일을 복사합니다
+#### 2-3-4. [cp](https://docs.docker.com/engine/reference/commandline/cp/) : 로컬 파일을 컨테이너로 또는 컨테이너에서 로컬로 복사합니다
 ```bash
-# docker compose cp [OPTIONS] SERVICE:SRC_PATH DEST_PATH|-
-docker-compose cp ./local/path/filename ubuntu:/container/path/filename
+# docker cp [OPTIONS] SERVICE:SRC_PATH DEST_PATH|-
+docker cp ./local/path/filename ubuntu:/container/path/filename
 ```
 
 * 반대 경우에도 사용할 수 있습니다.  
