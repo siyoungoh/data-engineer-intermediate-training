@@ -546,7 +546,7 @@ hadoop fs -cat /user/sqoop/target/seoul_popular_trip/part-m-00000 | more
 
 <details><summary> :blue_book: 6. [기본] 오류의 원인을 파악하고, 문제 해결 후에 Export 작업을 수행하세요 (hint: 수집 컬럼의 필드 구분자) </summary>
 
-> 오류 메시지는 태그의 구분자도 콤마이고, 테이블 임포트 구분자도 콤마이기 때문에 익스포트 시에 컬럼의 위치를 못 찾는 다는 오류입니다 
+> 오류는 tag의 구분자도 콤마이고, 테이블에서 가져온 구분자도 콤마이기 때문에 익스포트 시에 컬럼의 위치를 못 찾아 발생합니다.
 
 * 탭 구분자로 `seoul_popular_exp` 경로에 다시 수집합니다
 ```bash
