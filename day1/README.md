@@ -157,7 +157,8 @@ docker-compose -f docker-compose.yml up -d
   mysql -hlocalhost -uscott -ptiger default
   ```
 
-  * docker 로 띄워져있는 mysql 에 접속하려면,`docker-compose exec mysql` 후에 mysql 접속 명령어를 입력해야합니다. 
+  * docker 로 띄워져있는 mysql 에 접속하려면,`docker-compose exec mysql` 후에 mysql 접속 명령어를 입력해야합니다.   
+  (예: `docker-compose exec mysql mysql --host=localhost --user=scott --password=tiger default`)
 
   * 로컬 환경에서는 `--host` 정보는 입력하지 않아도 됩니다
 
