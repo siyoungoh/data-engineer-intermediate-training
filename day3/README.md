@@ -35,7 +35,7 @@ docker-compose ps
 sleep 10
 docker-compose logs notebook
 ```
-> `http://127.0.0.1:8888/?token=87e758a1fac70558a6c4b4c5dd499d420654c509654c6b01` 이러한 형식의 URL 에서 `127.0.0.1` 을 자신의 호스트 이름(`vm[number].aiffelbiz.co.kr`)으로 변경하여 접속합니다
+> `http://127.0.0.1:8888/?token=87e758a1fac70558a6c4b4c5dd499d420654c509654c6b01` 이러한 형식의 URL 에서 `127.0.0.1` 을 자신의 호스트 이름(`vm[number].[ssh접속한url]`)으로 변경하여 접속합니다
 <br>
 
 
@@ -45,5 +45,8 @@ docker-compose logs notebook
 ### [3. 아파치 스파크 데이터타입 실습](http://htmlpreview.github.io/?https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day3/notebooks/lgde-spark-core/lgde-spark-core-3-data-types.html)
 ### [4. 아파치 스파크 조인 실습](http://htmlpreview.github.io/?https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day3/notebooks/lgde-spark-core/lgde-spark-core-4-join.html)
 ### [5. 아파치 스파크 집계 실습](http://htmlpreview.github.io/?https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day3/notebooks/lgde-spark-core/lgde-spark-core-5-aggregation.html)
+### [6. 아파치 스파크 JDBC to MySQL](https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day3/notebooks/lgde-spark-core/lgde-spark-core-6-jdbc-mysql.html)
+### [7. 아파치 스파크 JDBC to MongoDB](https://github.com/siyoungoh/data-engineer-intermediate-training/blob/master/day3/notebooks/lgde-spark-core/lgde-spark-core-7-jdbc-mongodb.html)
+
 <br>
 
