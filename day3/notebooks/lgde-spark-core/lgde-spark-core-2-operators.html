@@ -14053,9 +14053,8 @@ a.anchor-link {
 </blockquote>
 <h2 id="%EB%AA%A9%EC%B0%A8">&#47785;&#52264;<a class="anchor-link" href="#%EB%AA%A9%EC%B0%A8">&#182;</a></h2><ul>
 <li><a href="#1.-기본-연산자">1. 기본 연산자</a></li>
-<li><a href="#3.-RDD-의-특징과-데이터-변환의-종류">2. RDD 의 특징과 데이터 변환의 종류</a></li>
-<li><a href="#4.-데이터-타입">3. 데이터 타입</a></li>
-<li><a href="#2.-핵심-데이터-프레임-연산자">4. 핵심 데이터 프레임 연산자</a></li>
+<li><a href="#2.-RDD-의-특징과-데이터-변환의-종류">2. RDD 의 특징과 데이터 변환의 종류</a></li>
+<li><a href="#4.-핵심-데이터-프레임-연산자">4. 핵심 데이터 프레임 연산자</a></li>
 <li><a href="#5.-기타-데이터-프레임-연산자">5. 기타 데이터 프레임 연산자</a></li>
 <li><a href="#6.-데이터셋-API">6. 데이터셋 API</a></li>
 <li><a href="#참고자료">참고자료</a></li>
@@ -14113,10 +14112,12 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>22/04/12 20:45:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<pre>22/08/23 07:10:48 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &#34;WARN&#34;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+22/08/23 07:10:49 WARN Utils: Service &#39;SparkUI&#39; could not bind on port 4040. Attempting port 4041.
+22/08/23 07:10:49 WARN Utils: Service &#39;SparkUI&#39; could not bind on port 4041. Attempting port 4042.
 </pre>
 </div>
 </div>
@@ -14136,7 +14137,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
         <div>
             <p><b>SparkContext</b></p>
 
-            <p><a href="http://3ba1db1a8250:4040">Spark UI</a></p>
+            <p><a href="http://7067f1cd2563:4042">Spark UI</a></p>
 
             <dl>
               <dt>Version</dt>
@@ -14515,7 +14516,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;동물의 평균 수명&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
@@ -14540,6 +14541,17 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>[Stage 0:&gt;                                                          (0 + 4) / 4]</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>+------+----+
 |Name  |Age |
@@ -14550,6 +14562,17 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 +------+----+
 
 </pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>                                                                                </pre>
 </div>
 </div>
 
@@ -14570,214 +14593,6 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <li><strong>파티셔닝</strong>: DataFrame이나 Dataset이 클러스터에서 물리적으로 배치되는 형태를 정의</li>
 <li><strong>파티셔닝 스키마</strong>: 파티션을 구성하는 방법을 정의 (테이블 Root Directory 의 Sub Directories 구성을 말합니다)</li>
 </ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-<h3 id="1.1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84-%ED%95%A8%EC%88%98">1.1 &#45936;&#51060;&#53552; &#54532;&#47112;&#51076; &#54632;&#49688;<a class="anchor-link" href="#1.1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84-%ED%95%A8%EC%88%98">&#182;</a></h3><table>
-<thead><tr>
-<th>함수</th>
-<th>설명</th>
-<th>기타</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>df.printSchema()</td>
-<td>스키마 정보를 출력합니다.</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.schema</td>
-<td>StructType 스키마를 반환합니다</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.columns</td>
-<td>컬럼명 정보를 반환합니다</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.show(n)</td>
-<td>데이터 n 개를 출력합니다</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.first()</td>
-<td>데이터 프레임의 첫 번째 Row 를 반환합니다</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.head(n)</td>
-<td>데이터 프레임의 처음부터 n 개의 Row 를 반환합니다</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.createOrReplaceTempView</td>
-<td>임시 뷰 테이블을 생성합니다</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.union(newdf)</td>
-<td>데이터프레임 간의 유니온 연산을 수행합니다</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.limit(n)</td>
-<td>추출할 로우수 제한</td>
-<td>T</td>
-</tr>
-<tr>
-<td>df.repartition(n)</td>
-<td>파티션 재분배, 셔플발생</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.coalesce()</td>
-<td>셔플하지 않고 파티션을 병합</td>
-<td>마지막 스테이지의 reduce 수가 줄어드는 효과로 성능저하에 유의해야 합니다</td>
-</tr>
-<tr>
-<td>df.collect()</td>
-<td>모든 데이터 수집, 반환</td>
-<td>A</td>
-</tr>
-<tr>
-<td>df.take(n)</td>
-<td>상위 n개 로우 반환</td>
-<td>A</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.2-%EC%BB%AC%EB%9F%BC-%ED%95%A8%EC%88%98">1.2 &#52972;&#47100; &#54632;&#49688;<a class="anchor-link" href="#1.2-%EC%BB%AC%EB%9F%BC-%ED%95%A8%EC%88%98">&#182;</a></h3><h4 id="%EC%BB%AC%EB%9F%BC-%EC%9D%B4%EB%9E%80?">&#52972;&#47100; &#51060;&#46976;?<a class="anchor-link" href="#%EC%BB%AC%EB%9F%BC-%EC%9D%B4%EB%9E%80?">&#182;</a></h4><blockquote><p><strong>컬럼: 표현식을 사용해 레코드 단위로 계산한 값을 단순하게 나타내는 논리적인 구조</strong> (테이블의 컬럼으로 생각할 수 있음)</p>
-<ul>
-<li>컬럼의 실제값을 얻으려면 로우가 필요하고, 로우를 얻으려면 DataFrame이 필요 (로우는 데이터 레코드)<ul>
-<li>DataFrame을 통하지 않으면 외부에서 컬럼에 접근 불가</li>
-<li>DataFrame -&gt; Row -&gt; Column</li>
-</ul>
-</li>
-<li>컬럼의 특징<ul>
-<li>컬럼의 내용을 수정하려면 반드시 DataFrame의 스파크 트랜포메이션을 사용</li>
-<li>col, column 함수를 사용하는 것이 가장 간편 (책에서는 col 함수 사용)</li>
-<li>컬럼은 컬럼명을 카탈로그에 저장된 정보와 비교하기 전까지 미확인 상태</li>
-<li>분석기가 동작하는 단계에서 컬럼과 테이블을 분석</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<table>
-<thead><tr>
-<th>함수</th>
-<th>설명</th>
-<th>기타</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>df.select</td>
-<td>컬럼이나 표현식 사용</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.selectExpr</td>
-<td>문자열 표현식 사용 = df.select(expr())</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.withColumn(컬럼명, 표현식)</td>
-<td>컬럼 추가, 비교, 컬럼명 변경</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.withColumnRenamed(old_name, new_name)</td>
-<td>컬럼명 변경</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.drop()</td>
-<td>컬럼 삭제</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.where</td>
-<td>로우 필터링</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.filter</td>
-<td>로우 필터링</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.sort, df.orderBy</td>
-<td>정렬</td>
-<td>-</td>
-</tr>
-<tr>
-<td>df.sortWithinPartitions</td>
-<td>파티션별 정렬</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.3-%EA%B8%B0%ED%83%80-%ED%95%A8%EC%88%98">1.3 &#44592;&#53440; &#54632;&#49688;<a class="anchor-link" href="#1.3-%EA%B8%B0%ED%83%80-%ED%95%A8%EC%88%98">&#182;</a></h3><h4 id="%ED%91%9C%ED%98%84%EC%8B%9D">&#54364;&#54788;&#49885;<a class="anchor-link" href="#%ED%91%9C%ED%98%84%EC%8B%9D">&#182;</a></h4><blockquote><p><strong>표현식: DataFrame 레코드의 여러 값에 대한 트랜스포메이션 집합을 의미</strong></p>
-</blockquote>
-<ul>
-<li>여러 컬럼명을 입력받아 식별하고 단일 값을 만들기 위해 다양한 표현식을 각 레코드에 적용하는 함수<ul>
-<li><strong>표현식은 expr함수로 사용</strong></li>
-<li><strong>컬럼은 단지 표현식일 뿐</strong></li>
-<li><strong>표현식은 연산 순서를 지정하는 논리적 트리로 컴파일됨</strong></li>
-</ul>
-</li>
-</ul>
-<hr>
-<table>
-<thead><tr>
-<th>함수</th>
-<th>설명</th>
-<th>기타</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>expr("someCol - 5")</td>
-<td>표현식</td>
-<td>-</td>
-</tr>
-<tr>
-<td>lit()</td>
-<td>리터럴</td>
-<td>-</td>
-</tr>
-<tr>
-<td>cast()</td>
-<td>컬럼 데이터 타입 변경</td>
-<td>-</td>
-</tr>
-<tr>
-<td>distinct()</td>
-<td>unique row</td>
-<td>-</td>
-</tr>
-<tr>
-<td>desc(), asc()</td>
-<td>정렬 순서</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
 
 </div>
 </div>
@@ -15018,7 +14833,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 원시 데이터로 부터 읽거나, Spark SQL 통한 결과는 항상 데이터프레임이 생성됩니다&quot;</span><span class="p">)</span>
@@ -15078,7 +14893,7 @@ only showing top 5 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="o">*</span>
@@ -15136,7 +14951,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 컬럼의 앨리어스 혹은 전체 컬럼을 위한 * 도 사용할 수 있습니다&quot;</span><span class="p">)</span>
@@ -15234,7 +15049,7 @@ spark.sql("select upper(DEST_COUNTRY_NAME), lower(ORIGIN_COUNTRY_NAME) from 2015
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 리터럴(literal)을 사용한 리터럴 상수 값 컬럼 추가</span>
@@ -15285,7 +15100,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# withColumn(컬럼명, 표현식) 으로 컬럼 추가&quot;</span><span class="p">)</span>
@@ -15329,7 +15144,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 컬럼의 대소 비교를 통한 불리언 값 반환&quot;</span><span class="p">)</span>
@@ -15373,7 +15188,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 존재하는 컬럼을 표현식을 통해 새로운 컬럼 생성, 기존 컬럼을 삭제&quot;</span><span class="p">)</span>
@@ -15474,7 +15289,7 @@ spark.sql("""select
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 컬럼 명 변경하기&quot;</span><span class="p">)</span>
@@ -15506,7 +15321,7 @@ spark.sql("""select
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -15529,7 +15344,7 @@ spark.sql("""select
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 특정 컬럼을 제거합니다&quot;</span><span class="p">)</span>
@@ -15567,7 +15382,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -15585,7 +15400,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 기본적으로 스파크는 대소문자를 가리지 않지만, 옵션을 통해서 구분이 가능합니다&quot;</span><span class="p">)</span>
@@ -15636,7 +15451,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 한 번에 여러 컬럼도 삭제할 수 있습니다&quot;</span><span class="p">)</span>
@@ -15674,7 +15489,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15741,7 +15556,7 @@ answer.printSchema()
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 컬럼의 데이터 유형을 변경합니다&quot;</span><span class="p">)</span>
@@ -15830,7 +15645,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# Where 와 Filter 는 동일합니다&quot;</span><span class="p">)</span>
@@ -15900,7 +15715,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; distinct 함수 &quot;&quot;&quot;</span>
@@ -15985,7 +15800,7 @@ answer.distinct()
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# sort 와 orderBy 함수는 동일한 효과를 가집니다&quot;</span><span class="p">)</span>
@@ -16047,7 +15862,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="o">*</span>
@@ -16107,7 +15922,7 @@ only showing top 1 row
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# 정렬의 경우 예약어 컬럼명에 유의해야 하므로, expr 을 사용하거나, 명시적으로 구조화 API 를 사용하는 것도 좋습니다&quot;</span><span class="p">)</span> 
@@ -16175,7 +15990,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -16238,7 +16053,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; withColumn, selectExpr, select 차이점 &quot;&quot;&quot;</span>
@@ -16306,7 +16121,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; randomSplit 함수 &quot;&quot;&quot;</span>
@@ -16354,7 +16169,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; union 함수 &quot;&quot;&quot;</span>
@@ -16411,7 +16226,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_union</span> <span class="o">=</span> <span class="p">(</span>
@@ -16472,7 +16287,7 @@ only showing top 5 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 파티션 나누기 &quot;&quot;&quot;</span>
@@ -16526,7 +16341,7 @@ only showing top 5 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 파티션 합치기 &quot;&quot;&quot;</span>
@@ -16546,7 +16361,7 @@ only showing top 5 rows
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
@@ -16594,7 +16409,7 @@ only showing top 20 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collectDF</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -16614,7 +16429,7 @@ only showing top 20 rows
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 
 
 
@@ -16636,7 +16451,7 @@ only showing top 20 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collectDF</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># 결과를 정돈된 형태로 출력</span>
@@ -16680,7 +16495,7 @@ only showing top 20 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collectDF</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
@@ -16724,7 +16539,7 @@ only showing top 20 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collectDF</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span> <span class="c1"># 전체 모든 테이터를 수집, 반환</span>
@@ -16743,7 +16558,7 @@ only showing top 20 rows
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
 
 
 
@@ -16765,7 +16580,7 @@ only showing top 20 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collectDF</span><span class="o">.</span><span class="n">toLocalIterator</span><span class="p">()</span>
@@ -16784,13 +16599,13 @@ only showing top 20 rows
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object _local_iterator_from_socket.&lt;locals&gt;.PyLocalIterable.__iter__ at 0x7f14fc013660&gt;</pre>
+<pre>&lt;generator object _local_iterator_from_socket.&lt;locals&gt;.PyLocalIterable.__iter__ at 0x7fc0b0417eb0&gt;</pre>
 </div>
 
 </div>
@@ -16877,7 +16692,7 @@ display(answer)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="o">*</span>
@@ -17018,7 +16833,7 @@ display(answer)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span>
@@ -17091,7 +16906,7 @@ only showing top 1 row
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">Column</span>
@@ -17128,7 +16943,7 @@ only showing top 1 row
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">blogDF</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;AuthorsId&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">concat</span><span class="p">(</span><span class="n">expr</span><span class="p">(</span><span class="s2">&quot;First&quot;</span><span class="p">),</span> <span class="n">lit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span> <span class="n">expr</span><span class="p">(</span><span class="s2">&quot;Last&quot;</span><span class="p">),</span> <span class="n">lit</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">),</span> <span class="n">expr</span><span class="p">(</span><span class="s2">&quot;Id&quot;</span><span class="p">))))</span> \
@@ -17174,7 +16989,7 @@ only showing top 4 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">blogDF</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">expr</span><span class="p">(</span><span class="s2">&quot;Hits&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -17234,7 +17049,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">blogDF</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">desc</span><span class="p">())</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>

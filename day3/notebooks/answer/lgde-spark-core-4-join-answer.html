@@ -14065,7 +14065,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="o">*</span>
@@ -14113,10 +14113,12 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>22/04/12 18:52:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<pre>22/08/23 13:09:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &#34;WARN&#34;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+22/08/23 13:09:54 WARN Utils: Service &#39;SparkUI&#39; could not bind on port 4040. Attempting port 4041.
+22/08/23 13:09:54 WARN Utils: Service &#39;SparkUI&#39; could not bind on port 4041. Attempting port 4042.
 </pre>
 </div>
 </div>
@@ -14124,7 +14126,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
 
 
 
@@ -14136,7 +14138,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
         <div>
             <p><b>SparkContext</b></p>
 
-            <p><a href="http://bc1b98992d3a:4040">Spark UI</a></p>
+            <p><a href="http://16f3b05ebd0e:4042">Spark UI</a></p>
 
             <dl>
               <dt>Version</dt>
@@ -14234,7 +14236,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
@@ -14277,17 +14279,6 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
  |-- u_gender: string (nullable = true)
 
 </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                </pre>
 </div>
 </div>
 
@@ -14365,7 +14356,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">purchase</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="p">))</span>
@@ -14403,7 +14394,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14456,7 +14447,7 @@ display(answer)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -14466,8 +14457,8 @@ display(answer)
     <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;inferSchema&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/tbl_user.csv&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">left</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-<span class="n">left</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># left.printSchema()</span>
+<span class="c1"># left.show()</span>
 
 <span class="n">right</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;csv&quot;</span><span class="p">)</span>
@@ -14475,10 +14466,10 @@ display(answer)
     <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;inferSchema&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/tbl_purchase.csv&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">right</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-<span class="n">right</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># right.printSchema()</span>
+<span class="c1"># right.show()</span>
 
-<span class="n">join_codition</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">p_uid</span>
+<span class="n">join_codition</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">p_uid</span><span class="p">)</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">join_codition</span><span class="p">,</span> <span class="s2">&quot;inner&quot;</span><span class="p">)</span>
 <span class="n">answer</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="n">display</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
@@ -14502,46 +14493,6 @@ display(answer)
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>root
- |-- u_id: integer (nullable = true)
- |-- u_name: string (nullable = true)
- |-- u_gender: string (nullable = true)
- |-- u_signup: integer (nullable = true)
-
-+----+----------+--------+--------+
-|u_id|    u_name|u_gender|u_signup|
-+----+----------+--------+--------+
-|   1|    정휘센|      남|19700808|
-|   2|  김싸이언|      남|19710201|
-|   3|    박트롬|      여|19951030|
-|   4|    청소기|      남|19770329|
-|   5|유코드제로|      여|20021029|
-|   6|  윤디오스|      남|20040101|
-|   7|  임모바일|      남|20040807|
-|   8|  조노트북|      여|20161201|
-|   9|  최컴퓨터|      남|20201124|
-+----+----------+--------+--------+
-
-root
- |-- p_time: integer (nullable = true)
- |-- p_uid: integer (nullable = true)
- |-- p_id: integer (nullable = true)
- |-- p_name: string (nullable = true)
- |-- p_amount: integer (nullable = true)
-
-+----------+-----+----+-----------+--------+
-|    p_time|p_uid|p_id|     p_name|p_amount|
-+----------+-----+----+-----------+--------+
-|1603651550|    0|1000|GoldStar TV|  100000|
-|1603651550|    1|2000|    LG DIOS| 2000000|
-|1603694755|    1|2001|    LG Gram| 1800000|
-|1603673500|    2|2002|    LG Cyon| 1400000|
-|1603652155|    3|2003|      LG TV| 1000000|
-|1603674500|    4|2004|LG Computer| 4500000|
-|1603665955|    5|2001|    LG Gram| 3500000|
-|1603666155|    5|2003|      LG TV| 2500000|
-+----------+-----+----+-----------+--------+
-
-root
  |-- u_id: integer (nullable = true)
  |-- u_name: string (nullable = true)
  |-- u_gender: string (nullable = true)
@@ -14597,7 +14548,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">purchase</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="p">,</span> <span class="s2">&quot;left_outer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="o">.</span><span class="n">asc</span><span class="p">())</span>
@@ -14616,7 +14567,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -14644,7 +14595,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">purchase</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="p">,</span> <span class="s2">&quot;right_outer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="o">.</span><span class="n">asc</span><span class="p">())</span>
@@ -14663,7 +14614,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -14691,7 +14642,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">purchase</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="p">,</span> <span class="s2">&quot;full_outer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="o">.</span><span class="n">asc</span><span class="p">())</span>
@@ -14710,7 +14661,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -14746,7 +14697,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">purchase</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="p">,</span> <span class="s2">&quot;left_semi&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">u_id</span><span class="o">.</span><span class="n">asc</span><span class="p">())</span>
@@ -14765,7 +14716,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -14796,7 +14747,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">purchase</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">purchase</span><span class="o">.</span><span class="n">p_uid</span><span class="p">,</span> <span class="s2">&quot;left_anti&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">u_id</span><span class="o">.</span><span class="n">asc</span><span class="p">())</span>
@@ -14815,7 +14766,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -14847,7 +14798,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">createOrReplaceTempView</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">)</span>
@@ -14868,7 +14819,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -14890,7 +14841,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
@@ -14935,7 +14886,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 지정된 필드의 값이 일치하는 경우 해당 필드를 기준으로 조인</span>
@@ -14955,7 +14906,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -14995,7 +14946,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 크로스 조인이지만 조건을 설정해야 하며, 조건에 부합된 결과를 출력하여 inner조인과 동일.&quot;&quot;&quot;</span>
@@ -15017,7 +14968,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15039,7 +14990,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">crossJoin</span><span class="p">(</span><span class="n">purchase</span><span class="p">)</span>
@@ -15058,7 +15009,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -15122,7 +15073,7 @@ display(answer.orderBy(desc("p_amount")))
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15133,7 +15084,7 @@ display(answer.orderBy(desc("p_amount")))
     <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/tbl_purchase.csv&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">left</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-<span class="c1"># left.show()</span>
+<span class="n">left</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="n">right</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;csv&quot;</span><span class="p">)</span>
@@ -15142,9 +15093,9 @@ display(answer.orderBy(desc("p_amount")))
     <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/tbl_user.csv&quot;</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">right</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-<span class="c1"># right.show()</span>
+<span class="n">right</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="n">join_codition</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">p_uid</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">u_id</span>
+<span class="n">join_codition</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">p_uid</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">u_id</span><span class="p">)</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">join_codition</span><span class="p">,</span> <span class="s2">&quot;left_outer&quot;</span><span class="p">)</span>
 <span class="n">answer</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="n">display</span><span class="p">(</span><span class="n">answer</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="s2">&quot;p_amount&quot;</span><span class="p">)))</span>
@@ -15174,11 +15125,38 @@ display(answer.orderBy(desc("p_amount")))
  |-- p_name: string (nullable = true)
  |-- p_amount: integer (nullable = true)
 
++----------+-----+----+-----------+--------+
+|    p_time|p_uid|p_id|     p_name|p_amount|
++----------+-----+----+-----------+--------+
+|1603651550|    0|1000|GoldStar TV|  100000|
+|1603651550|    1|2000|    LG DIOS| 2000000|
+|1603694755|    1|2001|    LG Gram| 1800000|
+|1603673500|    2|2002|    LG Cyon| 1400000|
+|1603652155|    3|2003|      LG TV| 1000000|
+|1603674500|    4|2004|LG Computer| 4500000|
+|1603665955|    5|2001|    LG Gram| 3500000|
+|1603666155|    5|2003|      LG TV| 2500000|
++----------+-----+----+-----------+--------+
+
 root
  |-- u_id: integer (nullable = true)
  |-- u_name: string (nullable = true)
  |-- u_gender: string (nullable = true)
  |-- u_signup: integer (nullable = true)
+
++----+----------+--------+--------+
+|u_id|    u_name|u_gender|u_signup|
++----+----------+--------+--------+
+|   1|    정휘센|      남|19700808|
+|   2|  김싸이언|      남|19710201|
+|   3|    박트롬|      여|19951030|
+|   4|    청소기|      남|19770329|
+|   5|유코드제로|      여|20021029|
+|   6|  윤디오스|      남|20040101|
+|   7|  임모바일|      남|20040807|
+|   8|  조노트북|      여|20161201|
+|   9|  최컴퓨터|      남|20201124|
++----+----------+--------+--------+
 
 root
  |-- p_time: integer (nullable = true)
@@ -15261,7 +15239,7 @@ display(answer.orderBy(desc("p_amount"), desc("u_signup")))
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15283,7 +15261,7 @@ display(answer.orderBy(desc("p_amount"), desc("u_signup")))
 <span class="n">right</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="c1"># right.show()</span>
 
-<span class="n">join_codition</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">p_uid</span>
+<span class="n">join_codition</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">p_uid</span><span class="p">)</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">join_codition</span><span class="p">,</span> <span class="s2">&quot;left_outer&quot;</span><span class="p">)</span>
 <span class="n">answer</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="n">display</span><span class="p">(</span><span class="n">answer</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="s2">&quot;p_amount&quot;</span><span class="p">),</span> <span class="n">desc</span><span class="p">(</span><span class="s2">&quot;u_signup&quot;</span><span class="p">)))</span>
@@ -15403,7 +15381,7 @@ display(answer.orderBy(desc("p_amount"), desc("u_signup")))
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15425,7 +15403,7 @@ display(answer.orderBy(desc("p_amount"), desc("u_signup")))
 <span class="n">right</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="c1"># right.show()</span>
 
-<span class="n">join_codition</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">p_uid</span>
+<span class="n">join_codition</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">right</span><span class="o">.</span><span class="n">p_uid</span><span class="p">)</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">join_codition</span><span class="p">,</span> <span class="s2">&quot;inner&quot;</span><span class="p">)</span>
 <span class="n">answer</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="n">display</span><span class="p">(</span><span class="n">answer</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="s2">&quot;p_amount&quot;</span><span class="p">),</span> <span class="n">desc</span><span class="p">(</span><span class="s2">&quot;u_signup&quot;</span><span class="p">)))</span>
@@ -15541,7 +15519,7 @@ display(answer.orderBy(desc("p_amount"), desc("u_signup")))
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15685,7 +15663,7 @@ display(answer.orderBy(asc("u_signup")))
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -15795,7 +15773,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
@@ -15914,7 +15892,7 @@ root
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">up</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 <span class="n">up</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="c1"># up.select(&quot;id&quot;) # 주석해제해서 오류 발생시키기</span>
+<span class="n">up</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="c1"># 주석해제해서 오류 발생시키기</span>
 </pre></div>
 
      </div>
@@ -15945,6 +15923,46 @@ root
 </div>
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AnalysisException</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">/tmp/ipykernel_121/2113892385.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> up <span class="ansi-blue-fg">=</span> u<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">,</span> u<span class="ansi-blue-fg">.</span>id <span class="ansi-blue-fg">==</span> p<span class="ansi-blue-fg">.</span>id<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> up<span class="ansi-blue-fg">.</span>show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>up<span class="ansi-blue-fg">.</span>select<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;id&#34;</span><span class="ansi-blue-fg">)</span> <span class="ansi-red-fg"># 주석해제해서 오류 발생시키기</span>
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.9/site-packages/pyspark/sql/dataframe.py</span> in <span class="ansi-cyan-fg">select</span><span class="ansi-blue-fg">(self, *cols)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1667</span>         <span class="ansi-blue-fg">[</span>Row<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;Alice&#39;</span><span class="ansi-blue-fg">,</span> age<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">12</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> Row<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;Bob&#39;</span><span class="ansi-blue-fg">,</span> age<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">15</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">   1668</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">-&gt; 1669</span><span class="ansi-red-fg">         </span>jdf <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_jdf<span class="ansi-blue-fg">.</span>select<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_jcols<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>cols<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1670</span>         <span class="ansi-green-fg">return</span> DataFrame<span class="ansi-blue-fg">(</span>jdf<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>sql_ctx<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1671</span> 
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.9/site-packages/py4j/java_gateway.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1302</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1303</span>         answer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>gateway_client<span class="ansi-blue-fg">.</span>send_command<span class="ansi-blue-fg">(</span>command<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 1304</span><span class="ansi-red-fg">         return_value = get_return_value(
+</span><span class="ansi-green-intense-fg ansi-bold">   1305</span>             answer, self.gateway_client, self.target_id, self.name)
+<span class="ansi-green-intense-fg ansi-bold">   1306</span> 
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.9/site-packages/pyspark/sql/utils.py</span> in <span class="ansi-cyan-fg">deco</span><span class="ansi-blue-fg">(*a, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    115</span>                 <span class="ansi-red-fg"># Hide where the exception came from that shows a non-Pythonic</span>
+<span class="ansi-green-intense-fg ansi-bold">    116</span>                 <span class="ansi-red-fg"># JVM exception message.</span>
+<span class="ansi-green-fg">--&gt; 117</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> converted <span class="ansi-green-fg">from</span> <span class="ansi-green-fg">None</span>
+<span class="ansi-green-intense-fg ansi-bold">    118</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    119</span>                 <span class="ansi-green-fg">raise</span>
+
+<span class="ansi-red-fg">AnalysisException</span>: Reference &#39;id&#39; is ambiguous, could be: id, id.</pre>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -15957,7 +15975,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">u1</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;u_uid&quot;</span><span class="p">)</span>
@@ -16022,7 +16040,7 @@ root
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
@@ -16049,7 +16067,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">up</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
@@ -16150,7 +16168,7 @@ display(answer.orderBy(desc("p_amount")))
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -16160,8 +16178,8 @@ display(answer.orderBy(desc("p_amount")))
     <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;inferSchema&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/tbl_purchase_id.csv&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="c1"># left.printSchema()</span>
-<span class="c1"># left.show()</span>
+<span class="n">left</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+<span class="n">left</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="n">right</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;csv&quot;</span><span class="p">)</span>
@@ -16169,16 +16187,17 @@ display(answer.orderBy(desc("p_amount")))
     <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;inferSchema&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/tbl_user_id.csv&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="c1"># right.printSchema()</span>
-<span class="c1"># right.show()</span>
+<span class="n">right</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+<span class="n">right</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="n">u_left</span> <span class="o">=</span> <span class="n">left</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;u_id&quot;</span><span class="p">)</span>
 <span class="n">u_right</span> <span class="o">=</span> <span class="n">right</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;p_uid&quot;</span><span class="p">)</span>
 <span class="n">u_left</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="n">u_right</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 
-<span class="n">join_codition</span> <span class="o">=</span> <span class="n">u_left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">u_right</span><span class="o">.</span><span class="n">p_uid</span>
+<span class="n">join_codition</span> <span class="o">=</span> <span class="p">(</span><span class="n">u_left</span><span class="o">.</span><span class="n">u_id</span> <span class="o">==</span> <span class="n">u_right</span><span class="o">.</span><span class="n">p_uid</span><span class="p">)</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">u_left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">u_right</span><span class="p">,</span> <span class="n">join_codition</span><span class="p">,</span> <span class="s2">&quot;inner&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s2">&quot;p_amount &gt; 0&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;u_id&quot;</span><span class="p">,</span> <span class="s2">&quot;u_name&quot;</span><span class="p">,</span> <span class="s2">&quot;p_name&quot;</span><span class="p">,</span> <span class="s2">&quot;p_amount&quot;</span><span class="p">)</span>
+<span class="c1"># answer = u_left.where(&quot;p_amount &gt; 0&quot;).join(u_right, join_codition, &quot;inner&quot;).select(&quot;u_id&quot;, &quot;u_name&quot;, &quot;p_name&quot;, &quot;p_amount&quot;)</span>
 <span class="n">answer</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 <span class="n">display</span><span class="p">(</span><span class="n">answer</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="n">desc</span><span class="p">(</span><span class="s2">&quot;p_amount&quot;</span><span class="p">)))</span>
 </pre></div>
@@ -16201,6 +16220,46 @@ display(answer.orderBy(desc("p_amount")))
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>root
+ |-- p_time: integer (nullable = true)
+ |-- id: integer (nullable = true)
+ |-- p_id: integer (nullable = true)
+ |-- p_name: string (nullable = true)
+ |-- p_amount: integer (nullable = true)
+
++----------+---+----+-----------+--------+
+|    p_time| id|p_id|     p_name|p_amount|
++----------+---+----+-----------+--------+
+|1603651550|  0|1000|GoldStar TV|  100000|
+|1603651550|  1|2000|    LG DIOS| 2000000|
+|1603694755|  1|2001|    LG Gram| 1800000|
+|1603673500|  2|2002|    LG Cyon| 1400000|
+|1603652155|  3|2003|      LG TV| 1000000|
+|1603674500|  4|2004|LG Computer| 4500000|
+|1603665955|  5|2001|    LG Gram| 3500000|
+|1603666155|  5|2003|      LG TV| 2500000|
++----------+---+----+-----------+--------+
+
+root
+ |-- id: integer (nullable = true)
+ |-- u_name: string (nullable = true)
+ |-- u_gender: string (nullable = true)
+ |-- u_signup: integer (nullable = true)
+
++---+----------+--------+--------+
+| id|    u_name|u_gender|u_signup|
++---+----------+--------+--------+
+|  1|    정휘센|      남|19700808|
+|  2|  김싸이언|      남|19710201|
+|  3|    박트롬|      여|19951030|
+|  4|    청소기|      남|19770329|
+|  5|유코드제로|      여|20021029|
+|  6|  윤디오스|      남|20040101|
+|  7|  임모바일|      남|20040807|
+|  8|  조노트북|      여|20161201|
+|  9|  최컴퓨터|      남|20201124|
++---+----------+--------+--------+
+
+root
  |-- p_time: integer (nullable = true)
  |-- u_id: integer (nullable = true)
  |-- p_id: integer (nullable = true)
@@ -16276,7 +16335,7 @@ root
 <li><a href="https://www.youtube.com/watch?v=fp53QhSfQcI">Spark summit 2017 - Optimizing Apache Spark SQL Joins: Spark Summit East talk by Vida Ha</a> / <a href="https://www.slideshare.net/databricks/optimizing-apache-spark-sql-joins">slide</a></li>
 <li><a href="https://www.youtube.com/watch?v=Wg2boMqLjCg">Everyday I'm Shuffling - Tips for Writing Better Apache Spark Programs</a></li>
 <li><a href="https://0x0fff.com/spark-memory-management/">Spark Memory Management by 0x0fff</a></li>
-<li><a href="http://engineering.vcnc.co.kr/2018/05/parquet-and-spark/">Apache Spark에서 컬럼 기반 저장 포맷 Parquet(파케이) 제대로 활용하기</a></li>
+<li><a href="https://blog-tech.tadatada.com/2018-05-23-parquet-and-spark">Apache Spark에서 컬럼 기반 저장 포맷 Parquet(파케이) 제대로 활용하기</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/understanding-database-sharding">Understanding Database Sharding</a></li>
 </ul>
 

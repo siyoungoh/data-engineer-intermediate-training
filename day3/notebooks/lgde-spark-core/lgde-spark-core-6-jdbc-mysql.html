@@ -14058,7 +14058,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="o">*</span>
@@ -14106,7 +14106,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>21/09/05 04:03:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<pre>22/08/23 08:58:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &#34;WARN&#34;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
@@ -14117,7 +14117,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
 
 
 
@@ -14129,7 +14129,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
         <div>
             <p><b>SparkContext</b></p>
 
-            <p><a href="http://ad1020061a8b:4040">Spark UI</a></p>
+            <p><a href="http://441b67349016:4040">Spark UI</a></p>
 
             <dl>
               <dt>Version</dt>
@@ -14159,7 +14159,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">this_style_also_work_but</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -14186,7 +14186,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">connString</span> <span class="o">=</span> <span class="s2">&quot;jdbc:mysql://mysql:3306/testdb&quot;</span>
@@ -14199,10 +14199,10 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">seoul_popular_trip</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">jdbc</span><span class="p">(</span><span class="n">connString</span><span class="p">,</span> <span class="n">tableName</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="n">accessInfo</span><span class="p">)</span>
@@ -14211,6 +14211,120 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">Py4JJavaError</span>                             Traceback (most recent call last)
+<span class="ansi-green-fg">/tmp/ipykernel_50/2850347084.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>seoul_popular_trip <span class="ansi-blue-fg">=</span> spark<span class="ansi-blue-fg">.</span>read<span class="ansi-blue-fg">.</span>jdbc<span class="ansi-blue-fg">(</span>connString<span class="ansi-blue-fg">,</span> tableName<span class="ansi-blue-fg">,</span> properties<span class="ansi-blue-fg">=</span>accessInfo<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.9/site-packages/pyspark/sql/readwriter.py</span> in <span class="ansi-cyan-fg">jdbc</span><span class="ansi-blue-fg">(self, url, table, column, lowerBound, upperBound, numPartitions, predicates, properties)</span>
+<span class="ansi-green-intense-fg ansi-bold">    869</span>             jpredicates <span class="ansi-blue-fg">=</span> utils<span class="ansi-blue-fg">.</span>toJArray<span class="ansi-blue-fg">(</span>gateway<span class="ansi-blue-fg">,</span> gateway<span class="ansi-blue-fg">.</span>jvm<span class="ansi-blue-fg">.</span>java<span class="ansi-blue-fg">.</span>lang<span class="ansi-blue-fg">.</span>String<span class="ansi-blue-fg">,</span> predicates<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    870</span>             <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_df<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_jreader<span class="ansi-blue-fg">.</span>jdbc<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> table<span class="ansi-blue-fg">,</span> jpredicates<span class="ansi-blue-fg">,</span> jprop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 871</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_df<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_jreader<span class="ansi-blue-fg">.</span>jdbc<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> table<span class="ansi-blue-fg">,</span> jprop<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    872</span> 
+<span class="ansi-green-intense-fg ansi-bold">    873</span> 
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.9/site-packages/py4j/java_gateway.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1302</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1303</span>         answer <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>gateway_client<span class="ansi-blue-fg">.</span>send_command<span class="ansi-blue-fg">(</span>command<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 1304</span><span class="ansi-red-fg">         return_value = get_return_value(
+</span><span class="ansi-green-intense-fg ansi-bold">   1305</span>             answer, self.gateway_client, self.target_id, self.name)
+<span class="ansi-green-intense-fg ansi-bold">   1306</span> 
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.9/site-packages/pyspark/sql/utils.py</span> in <span class="ansi-cyan-fg">deco</span><span class="ansi-blue-fg">(*a, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    109</span>     <span class="ansi-green-fg">def</span> deco<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    110</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 111</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    112</span>         <span class="ansi-green-fg">except</span> py4j<span class="ansi-blue-fg">.</span>protocol<span class="ansi-blue-fg">.</span>Py4JJavaError <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    113</span>             converted <span class="ansi-blue-fg">=</span> convert_exception<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">.</span>java_exception<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.9/site-packages/py4j/protocol.py</span> in <span class="ansi-cyan-fg">get_return_value</span><span class="ansi-blue-fg">(answer, gateway_client, target_id, name)</span>
+<span class="ansi-green-intense-fg ansi-bold">    324</span>             value <span class="ansi-blue-fg">=</span> OUTPUT_CONVERTER<span class="ansi-blue-fg">[</span>type<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">(</span>answer<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> gateway_client<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    325</span>             <span class="ansi-green-fg">if</span> answer<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">==</span> REFERENCE_TYPE<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 326</span><span class="ansi-red-fg">                 raise Py4JJavaError(
+</span><span class="ansi-green-intense-fg ansi-bold">    327</span>                     <span class="ansi-blue-fg">&#34;An error occurred while calling {0}{1}{2}.\n&#34;</span><span class="ansi-blue-fg">.</span>
+<span class="ansi-green-intense-fg ansi-bold">    328</span>                     format(target_id, &#34;.&#34;, name), value)
+
+<span class="ansi-red-fg">Py4JJavaError</span>: An error occurred while calling o32.jdbc.
+: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProvider$.create(ConnectionProvider.scala:68)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$createConnectionFactory$1(JdbcUtils.scala:62)
+	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRDD$.resolveTable(JDBCRDD.scala:56)
+	at org.apache.spark.sql.execution.datasources.jdbc.JDBCRelation$.getSchema(JDBCRelation.scala:226)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:35)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:355)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:325)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$3(DataFrameReader.scala:307)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:307)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:225)
+	at org.apache.spark.sql.DataFrameReader.jdbc(DataFrameReader.scala:340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 27 more
+Caused by: java.net.UnknownHostException: mysql: Temporary failure in name resolution
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:132)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 30 more
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">

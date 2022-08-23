@@ -14114,10 +14114,11 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>22/04/12 18:23:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<pre>22/08/23 13:09:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &#34;WARN&#34;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+22/08/23 13:09:22 WARN Utils: Service &#39;SparkUI&#39; could not bind on port 4040. Attempting port 4041.
 </pre>
 </div>
 </div>
@@ -14137,7 +14138,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
         <div>
             <p><b>SparkContext</b></p>
 
-            <p><a href="http://664ec5845b66:4040">Spark UI</a></p>
+            <p><a href="http://16f3b05ebd0e:4041">Spark UI</a></p>
 
             <dl>
               <dt>Version</dt>
@@ -14162,7 +14163,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; DataFrame 생성 &quot;&quot;&quot;</span>
@@ -14292,6 +14293,7 @@ only showing top 5 rows
 
 <span class="n">x1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">x2</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x3</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14326,6 +14328,18 @@ only showing top 2 rows
 |   536366|HAND WARMER RED P...|
 +---------+--------------------+
 only showing top 2 rows
+
++---------+--------------------+
+|InvoiceNO|         Description|
++---------+--------------------+
+|   536365|WHITE HANGING HEA...|
+|   536365| WHITE METAL LANTERN|
+|   536365|CREAM CUPID HEART...|
+|   536365|KNITTED UNION FLA...|
+|   536365|RED WOOLLY HOTTIE...|
+|   536365|SET 7 BABUSHKA NE...|
+|   536365|GLASS STAR FROSTE...|
++---------+--------------------+
 
 </pre>
 </div>
@@ -14437,7 +14451,11 @@ only showing top 2 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.4-INSTR---%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%B4-%ED%8F%AC%ED%95%A8%EB%90%98%EC%97%88%EB%8A%94%EC%A7%80-%EC%97%AC%EB%B6%80">2.4 INSTR - &#53945;&#51221; &#47928;&#51088;&#50676;&#51060; &#54252;&#54632;&#46104;&#50632;&#45716;&#51648; &#50668;&#48512;<a class="anchor-link" href="#2.4-INSTR---%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%B4-%ED%8F%AC%ED%95%A8%EB%90%98%EC%97%88%EB%8A%94%EC%A7%80-%EC%97%AC%EB%B6%80">&#182;</a></h3>
+<h3 id="2.4-INSTR---%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%B4-%ED%8F%AC%ED%95%A8%EB%90%98%EC%97%88%EB%8A%94%EC%A7%80">2.4 INSTR - &#53945;&#51221; &#47928;&#51088;&#50676;&#51060; &#54252;&#54632;&#46104;&#50632;&#45716;&#51648;<a class="anchor-link" href="#2.4-INSTR---%ED%8A%B9%EC%A0%95-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%B4-%ED%8F%AC%ED%95%A8%EB%90%98%EC%97%88%EB%8A%94%EC%A7%80">&#182;</a></h3><ul>
+<li>주어진 문자열에서 substr 열이 처음 나타나는 위치를 찾습니다. 인수 중 하나가 null이면 null을 반환합니다.
+<a href="https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.instr.html">https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.sql.functions.instr.html</a></li>
+</ul>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14686,7 +14704,7 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="o">*</span>
@@ -15182,7 +15200,7 @@ only showing top 10 rows
 <li>존재 여부를 확인하거나 일치하는 모든 문자열을 치환</li>
 <li>정규 표현식을 위해 regexp_extract 함수와 regexp_replace 함수를 제공</li>
 </ul>
-<h3 id="5.1-%EB%8B%A8%EC%96%B4-%EC%B9%98%ED%99%98,-regexp_extract">5.1 &#45800;&#50612; &#52824;&#54872;, regexp_extract<a class="anchor-link" href="#5.1-%EB%8B%A8%EC%96%B4-%EC%B9%98%ED%99%98,-regexp_extract">&#182;</a></h3>
+<h3 id="5.1-%EB%8B%A8%EC%96%B4-%EC%B9%98%ED%99%98,-regexp_replace">5.1 &#45800;&#50612; &#52824;&#54872;, regexp_replace<a class="anchor-link" href="#5.1-%EB%8B%A8%EC%96%B4-%EC%B9%98%ED%99%98,-regexp_replace">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15239,7 +15257,7 @@ only showing top 2 rows
 <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
     <span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span>
     <span class="n">translate</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span> <span class="s2">&quot;LEET&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;Translated&quot;</span><span class="p">)</span> <span class="c1"># 정확히 매칭되지 않아도 부분만 적용됩니다 L:1, E:2</span>
-<span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15259,15 +15277,15 @@ only showing top 2 rows
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+--------------------+--------------------+
-|         Description|          Translated|
-+--------------------+--------------------+
-|WHITE HANGING HEA...|WHI2 HANGING H2AR...|
-| WHITE METAL LANTERN|    WHI2 M2A1 1AN2RN|
-|CREAM CUPID HEART...|CR2AM CUPID H2ARS...|
-|KNITTED UNION FLA...|KNI2D UNION F1AG ...|
-|RED WOOLLY HOTTIE...|R2D WOO11Y HOI2 W...|
-+--------------------+--------------------+
+<pre>+-----------------------------------+------------------------------+
+|Description                        |Translated                    |
++-----------------------------------+------------------------------+
+|WHITE HANGING HEART T-LIGHT HOLDER |WHI2 HANGING H2AR -1IGH HO1D2R|
+|WHITE METAL LANTERN                |WHI2 M2A1 1AN2RN              |
+|CREAM CUPID HEARTS COAT HANGER     |CR2AM CUPID H2ARS COA HANG2R  |
+|KNITTED UNION FLAG HOT WATER BOTTLE|KNI2D UNION F1AG HO WA2R BO12 |
+|RED WOOLLY HOTTIE WHITE HEART.     |R2D WOO11Y HOI2 WHI2 H2AR.    |
++-----------------------------------+------------------------------+
 only showing top 5 rows
 
 </pre>
@@ -15291,7 +15309,7 @@ only showing top 5 rows
 <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
     <span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span>
     <span class="n">regexp_extract</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span> <span class="n">extract_str</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;Extracted&quot;</span><span class="p">)</span>
-<span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15311,12 +15329,12 @@ only showing top 5 rows
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>+--------------------+---------+
-|         Description|Extracted|
-+--------------------+---------+
-|WHITE HANGING HEA...|    WHITE|
-| WHITE METAL LANTERN|    WHITE|
-+--------------------+---------+
+<pre>+----------------------------------+---------+
+|Description                       |Extracted|
++----------------------------------+---------+
+|WHITE HANGING HEART T-LIGHT HOLDER|WHITE    |
+|WHITE METAL LANTERN               |WHITE    |
++----------------------------------+---------+
 only showing top 2 rows
 
 </pre>
@@ -15381,7 +15399,7 @@ only showing top 3 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="6.-%EB%82%A0%EC%A7%9C%EC%99%80-%ED%83%80%EC%9E%84%EC%8A%A4%ED%8C%B8%ED%94%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85-%EB%8B%A4%EB%A3%A8%EA%B8%B0">6. &#45216;&#51676;&#50752; &#53440;&#51076;&#49828;&#54072;&#54532; &#45936;&#51060;&#53552; &#53440;&#51077; &#45796;&#47336;&#44592;<a class="anchor-link" href="#6.-%EB%82%A0%EC%A7%9C%EC%99%80-%ED%83%80%EC%9E%84%EC%8A%A4%ED%8C%B8%ED%94%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85-%EB%8B%A4%EB%A3%A8%EA%B8%B0">&#182;</a></h2><blockquote><p>시간대 설정이 필요하다면 스파크 SQL 설정의 spark.conf.sessionLocalTimeZone 속성으로 가능 <br>
+<h2 id="6.-%EB%82%A0%EC%A7%9C%EC%99%80-%ED%83%80%EC%9E%84%EC%8A%A4%ED%83%AC%ED%94%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85-%EB%8B%A4%EB%A3%A8%EA%B8%B0">6. &#45216;&#51676;&#50752; &#53440;&#51076;&#49828;&#53484;&#54532; &#45936;&#51060;&#53552; &#53440;&#51077; &#45796;&#47336;&#44592;<a class="anchor-link" href="#6.-%EB%82%A0%EC%A7%9C%EC%99%80-%ED%83%80%EC%9E%84%EC%8A%A4%ED%83%AC%ED%94%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85-%EB%8B%A4%EB%A3%A8%EA%B8%B0">&#182;</a></h2><blockquote><p>시간대 설정이 필요하다면 스파크 SQL 설정의 spark.conf.sessionLocalTimeZone 속성으로 가능 <br>
 TimestampType 클래스는 초 단위 정밀도만 지원 - 초 단위 이상 정밀도 요구 시 long 데이터 타입으로 데이터를 변환해 처리하는 우회 정책이 필요 <br></p>
 </blockquote>
 <ul>
@@ -15418,7 +15436,7 @@ TimestampType 클래스는 초 단위 정밀도만 지원 - 초 단위 이상 �
 <span class="n">dateDF</span><span class="o">.</span><span class="n">createOrReplaceTempView</span><span class="p">(</span><span class="s2">&quot;dataTable&quot;</span><span class="p">)</span>
 <span class="n">dateDF</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
 
-<span class="n">dateDF</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">dateDF</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15446,11 +15464,17 @@ TimestampType 클래스는 초 단위 정밀도만 지원 - 초 단위 이상 �
 +---+----------+-----------------------+
 |id |today     |now                    |
 +---+----------+-----------------------+
-|0  |2022-04-13|2022-04-13 03:28:05.304|
-|1  |2022-04-13|2022-04-13 03:28:05.304|
-|2  |2022-04-13|2022-04-13 03:28:05.304|
+|0  |2022-08-23|2022-08-23 22:09:33.364|
+|1  |2022-08-23|2022-08-23 22:09:33.364|
+|2  |2022-08-23|2022-08-23 22:09:33.364|
+|3  |2022-08-23|2022-08-23 22:09:33.364|
+|4  |2022-08-23|2022-08-23 22:09:33.364|
+|5  |2022-08-23|2022-08-23 22:09:33.364|
+|6  |2022-08-23|2022-08-23 22:09:33.364|
+|7  |2022-08-23|2022-08-23 22:09:33.364|
+|8  |2022-08-23|2022-08-23 22:09:33.364|
+|9  |2022-08-23|2022-08-23 22:09:33.364|
 +---+----------+-----------------------+
-only showing top 3 rows
 
 </pre>
 </div>
@@ -15498,7 +15522,7 @@ only showing top 3 rows
 <pre>+------------------+------------------+
 |date_sub(today, 5)|date_add(today, 5)|
 +------------------+------------------+
-|        2022-04-08|        2022-04-18|
+|        2022-08-18|        2022-08-28|
 +------------------+------------------+
 only showing top 1 row
 
@@ -15659,7 +15683,7 @@ only showing top 1 row
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
@@ -15672,11 +15696,44 @@ only showing top 1 row
     <span class="n">to_date</span><span class="p">(</span><span class="n">lit</span><span class="p">(</span><span class="s2">&quot;2017-12-11&quot;</span><span class="p">),</span> <span class="n">dateFormat</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">),</span>
     <span class="n">to_date</span><span class="p">(</span><span class="n">lit</span><span class="p">(</span><span class="s2">&quot;2017-20-12&quot;</span><span class="p">),</span> <span class="n">dateFormat</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;date2&quot;</span><span class="p">))</span>
 <span class="n">cleanDateDF</span><span class="o">.</span><span class="n">createOrReplaceTempView</span><span class="p">(</span><span class="s2">&quot;dateTable2&quot;</span><span class="p">)</span>
+<span class="n">cleanDateDF</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+
+<span class="n">cleanDateDF</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>root
+ |-- date: date (nullable = true)
+ |-- date2: date (nullable = true)
+
++----------+----------+
+|date      |date2     |
++----------+----------+
+|2017-11-12|2017-12-20|
++----------+----------+
+
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15802,6 +15859,20 @@ answer.printSchema()
 
 </details>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15815,11 +15886,16 @@ answer.printSchema()
     <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;inferSchema&quot;</span><span class="p">,</span> <span class="s2">&quot;true&quot;</span><span class="p">)</span>
     <span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">work_data</span><span class="si">}</span><span class="s2">/retail-data/by-day/2010-12-01.csv&quot;</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="n">df4</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
-<span class="n">df4</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1"># df4.printSchema()</span>
+<span class="c1"># df4.show(10)</span>
 <span class="n">answer</span> <span class="o">=</span> <span class="n">df4</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;LoadDate&quot;</span><span class="p">,</span> <span class="n">current_date</span><span class="p">())</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;InvoiceDiff&quot;</span><span class="p">,</span> <span class="n">expr</span><span class="p">(</span><span class="s2">&quot;LoadDate - to_date(InvoiceDate)&quot;</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-<span class="n">answer</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+<span class="c1"># display(answer)</span>
+<span class="c1"># answer.printSchema()</span>
+
+
+<span class="n">euro_dateFormat</span> <span class="o">=</span> <span class="s2">&quot;dd-MM-yyyy&quot;</span> <span class="c1"># 소문자 mm 주의</span>
+<span class="n">answer2</span> <span class="o">=</span> <span class="n">df4</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;LoadDate&quot;</span><span class="p">,</span> <span class="n">date_format</span><span class="p">(</span><span class="n">current_date</span><span class="p">(),</span><span class="n">euro_dateFormat</span><span class="p">))</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;InvoiceDiff&quot;</span><span class="p">,</span> <span class="n">expr</span><span class="p">(</span><span class="s2">&quot;LoadDate - to_date(InvoiceDate)&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">answer2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15838,102 +15914,51 @@ answer.printSchema()
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- InvoiceNo: string (nullable = true)
- |-- StockCode: string (nullable = true)
- |-- Description: string (nullable = true)
- |-- Quantity: integer (nullable = true)
- |-- InvoiceDate: string (nullable = true)
- |-- UnitPrice: double (nullable = true)
- |-- CustomerID: double (nullable = true)
- |-- Country: string (nullable = true)
-
-+---------+---------+--------------------+--------+-------------------+---------+----------+--------------+
-|InvoiceNo|StockCode|         Description|Quantity|        InvoiceDate|UnitPrice|CustomerID|       Country|
-+---------+---------+--------------------+--------+-------------------+---------+----------+--------------+
-|   536365|   85123A|WHITE HANGING HEA...|       6|2010-12-01 08:26:00|     2.55|   17850.0|United Kingdom|
-|   536365|    71053| WHITE METAL LANTERN|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|
-|   536365|   84406B|CREAM CUPID HEART...|       8|2010-12-01 08:26:00|     2.75|   17850.0|United Kingdom|
-|   536365|   84029G|KNITTED UNION FLA...|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|
-|   536365|   84029E|RED WOOLLY HOTTIE...|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|
-|   536365|    22752|SET 7 BABUSHKA NE...|       2|2010-12-01 08:26:00|     7.65|   17850.0|United Kingdom|
-|   536365|    21730|GLASS STAR FROSTE...|       6|2010-12-01 08:26:00|     4.25|   17850.0|United Kingdom|
-|   536366|    22633|HAND WARMER UNION...|       6|2010-12-01 08:28:00|     1.85|   17850.0|United Kingdom|
-|   536366|    22632|HAND WARMER RED P...|       6|2010-12-01 08:28:00|     1.85|   17850.0|United Kingdom|
-|   536367|    84879|ASSORTED COLOUR B...|      32|2010-12-01 08:34:00|     1.69|   13047.0|United Kingdom|
-+---------+---------+--------------------+--------+-------------------+---------+----------+--------------+
-only showing top 10 rows
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
 
 
 <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>+---------+---------+-----------------------------------+--------+-------------------+---------+----------+--------------+----------+-------------------------+
-|InvoiceNo|StockCode|                        Description|Quantity|        InvoiceDate|UnitPrice|CustomerID|       Country|  LoadDate|              InvoiceDiff|
-+---------+---------+-----------------------------------+--------+-------------------+---------+----------+--------------+----------+-------------------------+
-|   536365|   85123A| WHITE HANGING HEART T-LIGHT HOLDER|       6|2010-12-01 08:26:00|     2.55|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536365|    71053|                WHITE METAL LANTERN|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536365|   84406B|     CREAM CUPID HEARTS COAT HANGER|       8|2010-12-01 08:26:00|     2.75|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536365|   84029G|KNITTED UNION FLAG HOT WATER BOTTLE|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536365|   84029E|     RED WOOLLY HOTTIE WHITE HEART.|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536365|    22752|       SET 7 BABUSHKA NESTING BOXES|       2|2010-12-01 08:26:00|     7.65|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536365|    21730|  GLASS STAR FROSTED T-LIGHT HOLDER|       6|2010-12-01 08:26:00|     4.25|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536366|    22633|             HAND WARMER UNION JACK|       6|2010-12-01 08:28:00|     1.85|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536366|    22632|          HAND WARMER RED POLKA DOT|       6|2010-12-01 08:28:00|     1.85|   17850.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    84879|      ASSORTED COLOUR BIRD ORNAMENT|      32|2010-12-01 08:34:00|     1.69|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    22745|         POPPY&#39;S PLAYHOUSE BEDROOM |       6|2010-12-01 08:34:00|      2.1|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    22748|          POPPY&#39;S PLAYHOUSE KITCHEN|       6|2010-12-01 08:34:00|      2.1|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    22749|  FELTCRAFT PRINCESS CHARLOTTE DOLL|       8|2010-12-01 08:34:00|     3.75|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    22310|            IVORY KNITTED MUG COSY |       6|2010-12-01 08:34:00|     1.65|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    84969| BOX OF 6 ASSORTED COLOUR TEASPOONS|       6|2010-12-01 08:34:00|     4.25|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    22623|      BOX OF VINTAGE JIGSAW BLOCKS |       3|2010-12-01 08:34:00|     4.95|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    22622|     BOX OF VINTAGE ALPHABET BLOCKS|       2|2010-12-01 08:34:00|     9.95|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    21754|           HOME BUILDING BLOCK WORD|       3|2010-12-01 08:34:00|     5.95|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    21755|           LOVE BUILDING BLOCK WORD|       3|2010-12-01 08:34:00|     5.95|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-|   536367|    21777|        RECIPE BOX WITH METAL HEART|       4|2010-12-01 08:34:00|     7.95|   13047.0|United Kingdom|2022-04-13|11 years 4 months 12 days|
-+---------+---------+-----------------------------------+--------+-------------------+---------+----------+--------------+----------+-------------------------+
+<pre>+---------+---------+-----------------------------------+--------+-------------------+---------+----------+--------------+----------+-----------+
+|InvoiceNo|StockCode|                        Description|Quantity|        InvoiceDate|UnitPrice|CustomerID|       Country|  LoadDate|InvoiceDiff|
++---------+---------+-----------------------------------+--------+-------------------+---------+----------+--------------+----------+-----------+
+|   536365|   85123A| WHITE HANGING HEART T-LIGHT HOLDER|       6|2010-12-01 08:26:00|     2.55|   17850.0|United Kingdom|23-08-2022|       null|
+|   536365|    71053|                WHITE METAL LANTERN|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|23-08-2022|       null|
+|   536365|   84406B|     CREAM CUPID HEARTS COAT HANGER|       8|2010-12-01 08:26:00|     2.75|   17850.0|United Kingdom|23-08-2022|       null|
+|   536365|   84029G|KNITTED UNION FLAG HOT WATER BOTTLE|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|23-08-2022|       null|
+|   536365|   84029E|     RED WOOLLY HOTTIE WHITE HEART.|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|23-08-2022|       null|
+|   536365|    22752|       SET 7 BABUSHKA NESTING BOXES|       2|2010-12-01 08:26:00|     7.65|   17850.0|United Kingdom|23-08-2022|       null|
+|   536365|    21730|  GLASS STAR FROSTED T-LIGHT HOLDER|       6|2010-12-01 08:26:00|     4.25|   17850.0|United Kingdom|23-08-2022|       null|
+|   536366|    22633|             HAND WARMER UNION JACK|       6|2010-12-01 08:28:00|     1.85|   17850.0|United Kingdom|23-08-2022|       null|
+|   536366|    22632|          HAND WARMER RED POLKA DOT|       6|2010-12-01 08:28:00|     1.85|   17850.0|United Kingdom|23-08-2022|       null|
+|   536367|    84879|      ASSORTED COLOUR BIRD ORNAMENT|      32|2010-12-01 08:34:00|     1.69|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    22745|         POPPY&#39;S PLAYHOUSE BEDROOM |       6|2010-12-01 08:34:00|      2.1|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    22748|          POPPY&#39;S PLAYHOUSE KITCHEN|       6|2010-12-01 08:34:00|      2.1|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    22749|  FELTCRAFT PRINCESS CHARLOTTE DOLL|       8|2010-12-01 08:34:00|     3.75|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    22310|            IVORY KNITTED MUG COSY |       6|2010-12-01 08:34:00|     1.65|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    84969| BOX OF 6 ASSORTED COLOUR TEASPOONS|       6|2010-12-01 08:34:00|     4.25|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    22623|      BOX OF VINTAGE JIGSAW BLOCKS |       3|2010-12-01 08:34:00|     4.95|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    22622|     BOX OF VINTAGE ALPHABET BLOCKS|       2|2010-12-01 08:34:00|     9.95|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    21754|           HOME BUILDING BLOCK WORD|       3|2010-12-01 08:34:00|     5.95|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    21755|           LOVE BUILDING BLOCK WORD|       3|2010-12-01 08:34:00|     5.95|   13047.0|United Kingdom|23-08-2022|       null|
+|   536367|    21777|        RECIPE BOX WITH METAL HEART|       4|2010-12-01 08:34:00|     7.95|   13047.0|United Kingdom|23-08-2022|       null|
++---------+---------+-----------------------------------+--------+-------------------+---------+----------+--------------+----------+-----------+
 only showing top 20 rows</pre>
 </div>
 
 </div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- InvoiceNo: string (nullable = true)
- |-- StockCode: string (nullable = true)
- |-- Description: string (nullable = true)
- |-- Quantity: integer (nullable = true)
- |-- InvoiceDate: string (nullable = true)
- |-- UnitPrice: double (nullable = true)
- |-- CustomerID: double (nullable = true)
- |-- Country: string (nullable = true)
- |-- LoadDate: date (nullable = false)
- |-- InvoiceDiff: interval (nullable = true)
-
-</pre>
-</div>
 </div>
 
 </div>
 
 </div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="%EC%82%AC%EC%9A%A9-%ED%8C%A8%ED%84%B4%EC%97%90-%EB%94%B0%EB%9D%BC-%EC%B0%B8%EA%B3%A0">&#49324;&#50857; &#54056;&#53556;&#50640; &#46384;&#46972; &#52280;&#44256;<a class="anchor-link" href="#%EC%82%AC%EC%9A%A9-%ED%8C%A8%ED%84%B4%EC%97%90-%EB%94%B0%EB%9D%BC-%EC%B0%B8%EA%B3%A0">&#182;</a></h1><ul>
+<li>function 공식문서
+<a href="https://spark.apache.org/docs/3.1.2/api/python/reference/pyspark.sql.html#functions">https://spark.apache.org/docs/3.1.2/api/python/reference/pyspark.sql.html#functions</a></li>
+</ul>
 
+</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -15953,11 +15978,13 @@ only showing top 20 rows</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="7-1.-%EC%BB%AC%EB%9F%BC-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%84%90-%EC%B2%98%EB%A6%AC-%ED%95%A8%EC%88%98-(ifnull,-nullIf,-nvl,-nvl2)">7-1. &#52972;&#47100; &#44050;&#50640; &#46384;&#47480; &#45328; &#52376;&#47532; &#54632;&#49688; (ifnull, nullIf, nvl, nvl2)<a class="anchor-link" href="#7-1.-%EC%BB%AC%EB%9F%BC-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%84%90-%EC%B2%98%EB%A6%AC-%ED%95%A8%EC%88%98-(ifnull,-nullIf,-nvl,-nvl2)">&#182;</a></h3><ul>
-<li>SQL 함수이며 DataFrame의 select 표현식으로 사용 가능<ul>
-<li>ifnull(null, 'return_value') # 두 번째 값을, 아니라면 첫 번째 값을 반환 </li>
-<li>nullif('value', 'value')     # 두 값이 같으면 null</li>
-<li>nvl(null, 'return_value')    # 두 번째 값을, 아니라면 첫 번째 값을 반환</li>
-<li>nvl2('not_null', 'return_value', 'else_value') # 두 번째 값을, 아니라면 세번째 값을 반환</li>
+<li><p>SQL 함수이며 DataFrame의 select 표현식으로 사용 가능
+참고. <a href="http://www.gurubee.net/lecture/1880">http://www.gurubee.net/lecture/1880</a></p>
+<ul>
+<li>ifnull(expr, 'return_value') # expr이 null 이라면, 두 번째 값을, 아니라면 첫 번째 값을 반환 </li>
+<li>nullif('value', 'value')     # 두 값이 같으면 null 반환</li>
+<li>nvl(expr, 'return_value')    # expr이 null 이라면, 두 번째 값을, 아니라면 첫 번째 값을 반환. ifnull 과 같음</li>
+<li>nvl2(expr, 'return_value', 'else_value') # expr이 null 이라면, 두 번째 값을, 아니라면 세번째 값을 반환</li>
 </ul>
 </li>
 </ul>
@@ -16012,7 +16039,8 @@ only showing top 20 rows</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7-2-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%A1%9C%EC%9A%B0-%EC%A0%9C%EA%B1%B0-(na.drop)">7-2 &#52972;&#47100;&#51032; &#45328; &#44050;&#50640; &#46384;&#47480; &#47196;&#50864; &#51228;&#44144; (na.drop)<a class="anchor-link" href="#7-2-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%A1%9C%EC%9A%B0-%EC%A0%9C%EA%B1%B0-(na.drop)">&#182;</a></h3>
+<h3 id="7-2-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%A1%9C%EC%9A%B0-%EC%A0%9C%EA%B1%B0-(na.drop)">7-2 &#52972;&#47100;&#51032; &#45328; &#44050;&#50640; &#46384;&#47480; &#47196;&#50864; &#51228;&#44144; (na.drop)<a class="anchor-link" href="#7-2-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EB%A1%9C%EC%9A%B0-%EC%A0%9C%EA%B1%B0-(na.drop)">&#182;</a></h3><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.DataFrameNaFunctions.drop.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.DataFrameNaFunctions.drop.html</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16109,7 +16137,8 @@ only showing top 1 row
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7.3-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EA%B0%92%EC%9D%84-%EC%B1%84%EC%9B%80-(na.fill)">7.3 &#52972;&#47100;&#51032; &#45328; &#44050;&#50640; &#46384;&#47480; &#44050;&#51012; &#52292;&#50880; (na.fill)<a class="anchor-link" href="#7.3-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EA%B0%92%EC%9D%84-%EC%B1%84%EC%9B%80-(na.fill)">&#182;</a></h3>
+<h3 id="7.3-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EA%B0%92%EC%9D%84-%EC%B1%84%EC%9B%80-(na.fill)">7.3 &#52972;&#47100;&#51032; &#45328; &#44050;&#50640; &#46384;&#47480; &#44050;&#51012; &#52292;&#50880; (na.fill)<a class="anchor-link" href="#7.3-%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%84%90-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EA%B0%92%EC%9D%84-%EC%B1%84%EC%9B%80-(na.fill)">&#182;</a></h3><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.DataFrameNaFunctions.fill.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.DataFrameNaFunctions.fill.html</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16179,7 +16208,8 @@ only showing top 1 row
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="7.4-%EC%A1%B0%EA%B1%B4%EC%97%90-%EB%94%B0%EB%9D%BC-%EB%8B%A4%EB%A5%B8-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EB%8C%80%EC%B2%B4-(na.replace)">7.4 &#51312;&#44148;&#50640; &#46384;&#46972; &#45796;&#47480; &#44050;&#51004;&#47196; &#45824;&#52404; (na.replace)<a class="anchor-link" href="#7.4-%EC%A1%B0%EA%B1%B4%EC%97%90-%EB%94%B0%EB%9D%BC-%EB%8B%A4%EB%A5%B8-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EB%8C%80%EC%B2%B4-(na.replace)">&#182;</a></h3>
+<h3 id="7.4-%EC%A1%B0%EA%B1%B4%EC%97%90-%EB%94%B0%EB%9D%BC-%EB%8B%A4%EB%A5%B8-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EB%8C%80%EC%B2%B4-(na.replace)">7.4 &#51312;&#44148;&#50640; &#46384;&#46972; &#45796;&#47480; &#44050;&#51004;&#47196; &#45824;&#52404; (na.replace)<a class="anchor-link" href="#7.4-%EC%A1%B0%EA%B1%B4%EC%97%90-%EB%94%B0%EB%9D%BC-%EB%8B%A4%EB%A5%B8-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EB%8C%80%EC%B2%B4-(na.replace)">&#182;</a></h3><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.DataFrameNaFunctions.replace.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.DataFrameNaFunctions.replace.html</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16188,7 +16218,7 @@ only showing top 1 row
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 조건에 따라 다른 값으로 대체 &quot;&quot;&quot;</span>
-<span class="n">myDf</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s2">&quot;&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Hello&quot;</span><span class="p">],</span> <span class="s2">&quot;string_null&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># null을 지정하는 방법은?</span>
+<span class="n">myDf</span><span class="o">.</span><span class="n">na</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s2">&quot;&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Hello&quot;</span><span class="p">],</span> <span class="s2">&quot;string_null&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
 </pre></div>
 
      </div>
@@ -16227,6 +16257,9 @@ only showing top 1 row
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="8.-%EB%B3%B5%ED%95%A9-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EB%A3%A8%EA%B8%B0">8. &#48373;&#54633; &#45936;&#51060;&#53552; &#45796;&#47336;&#44592;<a class="anchor-link" href="#8.-%EB%B3%B5%ED%95%A9-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EB%A3%A8%EA%B8%B0">&#182;</a></h2><blockquote><p>구조체, 배열, 맵 등을 스파크에서 다루기</p>
+<ul>
+<li>복합 데이터 타입을 사용해서 해결하려는 문제에 적합한 방식으로 데이터를 구성,구조화</li>
+</ul>
 </blockquote>
 
 </div>
@@ -16357,18 +16390,21 @@ only showing top 5 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%EC%BB%AC%EB%9F%BC%EC%9D%84-%EA%B5%AC%EB%B6%84%EC%9E%90%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EC%97%AC-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98-(split)">&#52972;&#47100;&#51012; &#44396;&#48516;&#51088;&#47196; &#48516;&#47532;&#54616;&#50668; &#48176;&#50676;&#47196; &#48320;&#54872; (split)<a class="anchor-link" href="#%EC%BB%AC%EB%9F%BC%EC%9D%84-%EA%B5%AC%EB%B6%84%EC%9E%90%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EC%97%AC-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98-(split)">&#182;</a></h4>
+<h4 id="%EC%BB%AC%EB%9F%BC%EC%9D%84-%EA%B5%AC%EB%B6%84%EC%9E%90%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EC%97%AC-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98-(split)">&#52972;&#47100;&#51012; &#44396;&#48516;&#51088;&#47196; &#48516;&#47532;&#54616;&#50668; &#48176;&#50676;&#47196; &#48320;&#54872; (split)<a class="anchor-link" href="#%EC%BB%AC%EB%9F%BC%EC%9D%84-%EA%B5%AC%EB%B6%84%EC%9E%90%EB%A1%9C-%EB%B6%84%EB%A6%AC%ED%95%98%EC%97%AC-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EB%B3%80%ED%99%98-(split)">&#182;</a></h4><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.split.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.split.html</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 컬럼을 배열로 변환 &quot;&quot;&quot;</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">split</span>
 
-<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span> <span class="s2">&quot; &quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Description 컬럼을 배열로 변환 - 마치 col처럼 데이터에 접근 가능해짐</span>
+<span class="c1"># &quot;WHITE METAL LANTERN&quot; string을 각각 column명[index]로 접근 가능해짐 WHITE</span>
+<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span> <span class="s2">&quot; &quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -16407,10 +16443,11 @@ only showing top 2 rows
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 배열값의 조회 &quot;&quot;&quot;</span>
+<span class="c1"># &quot;WHITE METAL LANTERN&quot; string을 각각 column명[index]로 접근 가능해짐 WHITE</span>
 <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">split</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;array_col&quot;</span><span class="p">))</span>\
     <span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s2">&quot;array_col[0]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -16451,7 +16488,8 @@ only showing top 2 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%EB%B0%B0%EC%97%B4%EC%9D%98-%EA%B8%B8%EC%9D%B4-(size)">&#48176;&#50676;&#51032; &#44600;&#51060; (size)<a class="anchor-link" href="#%EB%B0%B0%EC%97%B4%EC%9D%98-%EA%B8%B8%EC%9D%B4-(size)">&#182;</a></h4>
+<h4 id="%EB%B0%B0%EC%97%B4%EC%9D%98-%EA%B8%B8%EC%9D%B4-(size)">&#48176;&#50676;&#51032; &#44600;&#51060; (size)<a class="anchor-link" href="#%EB%B0%B0%EC%97%B4%EC%9D%98-%EA%B8%B8%EC%9D%B4-(size)">&#182;</a></h4><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.size.htm">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.size.htm</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16501,7 +16539,8 @@ only showing top 2 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%EB%B0%B0%EC%97%B4%EC%97%90-%ED%8A%B9%EC%A0%95-%EA%B0%92%EC%9D%B4-%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8-(array_contains)">&#48176;&#50676;&#50640; &#53945;&#51221; &#44050;&#51060; &#51316;&#51116;&#54616;&#45716;&#51648; &#54869;&#51064; (array_contains)<a class="anchor-link" href="#%EB%B0%B0%EC%97%B4%EC%97%90-%ED%8A%B9%EC%A0%95-%EA%B0%92%EC%9D%B4-%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8-(array_contains)">&#182;</a></h4>
+<h4 id="%EB%B0%B0%EC%97%B4%EC%97%90-%ED%8A%B9%EC%A0%95-%EA%B0%92%EC%9D%B4-%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8-(array_contains)">&#48176;&#50676;&#50640; &#53945;&#51221; &#44050;&#51060; &#51316;&#51116;&#54616;&#45716;&#51648; &#54869;&#51064; (array_contains)<a class="anchor-link" href="#%EB%B0%B0%EC%97%B4%EC%97%90-%ED%8A%B9%EC%A0%95-%EA%B0%92%EC%9D%B4-%EC%A1%B4%EC%9E%AC%ED%95%98%EB%8A%94%EC%A7%80-%ED%99%95%EC%9D%B8-(array_contains)">&#182;</a></h4><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.array_contains.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.array_contains.html</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16550,7 +16589,8 @@ only showing top 2 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%B0%B0%EC%97%B4%EA%B0%92%EC%97%90-%ED%8F%AC%ED%95%A8%EB%90%9C-%EB%AA%A8%EB%93%A0-%EA%B0%92%EC%9D%84-%EB%A1%9C%EC%9A%B0%EB%A1%9C-%EB%B3%80%ED%99%98-(explode)">&#52972;&#47100;&#51032; &#48176;&#50676;&#44050;&#50640; &#54252;&#54632;&#46108; &#47784;&#46304; &#44050;&#51012; &#47196;&#50864;&#47196; &#48320;&#54872; (explode)<a class="anchor-link" href="#%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%B0%B0%EC%97%B4%EA%B0%92%EC%97%90-%ED%8F%AC%ED%95%A8%EB%90%9C-%EB%AA%A8%EB%93%A0-%EA%B0%92%EC%9D%84-%EB%A1%9C%EC%9A%B0%EB%A1%9C-%EB%B3%80%ED%99%98-(explode)">&#182;</a></h4>
+<h4 id="%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%B0%B0%EC%97%B4%EA%B0%92%EC%97%90-%ED%8F%AC%ED%95%A8%EB%90%9C-%EB%AA%A8%EB%93%A0-%EA%B0%92%EC%9D%84-%EB%A1%9C%EC%9A%B0%EB%A1%9C-%EB%B3%80%ED%99%98-(explode)">&#52972;&#47100;&#51032; &#48176;&#50676;&#44050;&#50640; &#54252;&#54632;&#46108; &#47784;&#46304; &#44050;&#51012; &#47196;&#50864;&#47196; &#48320;&#54872; (explode)<a class="anchor-link" href="#%EC%BB%AC%EB%9F%BC%EC%9D%98-%EB%B0%B0%EC%97%B4%EA%B0%92%EC%97%90-%ED%8F%AC%ED%95%A8%EB%90%9C-%EB%AA%A8%EB%93%A0-%EA%B0%92%EC%9D%84-%EB%A1%9C%EC%9A%B0%EB%A1%9C-%EB%B3%80%ED%99%98-(explode)">&#182;</a></h4><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.explode.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.explode.html</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16696,8 +16736,9 @@ only showing top 2 rows
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="8.3-%EB%A7%B5">8.3 &#47605;<a class="anchor-link" href="#8.3-%EB%A7%B5">&#182;</a></h3><ul>
-<li>map 함수와 컬럼의 키0값 쌍을 이용해 생성</li>
-<li>적합한 키를 사용해 데이터를 조회할 수 있으며, 해당키가 없다면 null값을 반환</li>
+<li>map 함수와 컬럼의 키-값 쌍을 이용해 생성</li>
+<li>적합한 키를 사용해 데이터를 조회할 수 있으며, 해당키가 없다면 null값을 반환
+<a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.create_map.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.create_map.html</a></li>
 </ul>
 
 </div>
@@ -16817,13 +16858,19 @@ only showing top 20 rows
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.explode.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.explode.html</a></p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 맵의 분해 &quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 맵의 분해해서 컬럼으로 변환 &quot;&quot;&quot;</span>
 <span class="n">exploded</span> <span class="o">=</span> <span class="n">df</span> \
     <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">create_map</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;Description&quot;</span><span class="p">),</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;InvoiceNo&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;complex_map&quot;</span><span class="p">))</span> \
     <span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s2">&quot;explode(complex_map)&quot;</span><span class="p">)</span>
@@ -16874,7 +16921,9 @@ only showing top 5 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="9.-JSON-%EB%8B%A4%EB%A3%A8%EA%B8%B0">9. JSON &#45796;&#47336;&#44592;<a class="anchor-link" href="#9.-JSON-%EB%8B%A4%EB%A3%A8%EA%B8%B0">&#182;</a></h3>
+<h3 id="9.-JSON-%EB%8B%A4%EB%A3%A8%EA%B8%B0">9. JSON &#45796;&#47336;&#44592;<a class="anchor-link" href="#9.-JSON-%EB%8B%A4%EB%A3%A8%EA%B8%B0">&#182;</a></h3><p><a href="https://spark.apache.org/docs/3.1.2/api/python/reference/pyspark.sql.html#functions">https://spark.apache.org/docs/3.1.2/api/python/reference/pyspark.sql.html#functions</a>
+<a href="https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.get_json_object.html">https://spark.apache.org/docs/3.1.2/api/python/reference/api/pyspark.sql.functions.get_json_object.html</a></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -17139,7 +17188,7 @@ only showing top 2 rows
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3><font color=green>5. [기본]</font> f"{work_data}/retail-data/by-day/2010-12-01.csv" 에 저장된 CSV 파일을 읽고</h3>
+<h3><font color=green>5. [추가]</font> f"{work_data}/retail-data/by-day/2010-12-01.csv" 에 저장된 CSV 파일을 읽고</h3>
 <h4 id="1.-%EC%8A%A4%ED%82%A4%EB%A7%88%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">1. &#49828;&#53412;&#47560;&#47484; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#1.-%EC%8A%A4%ED%82%A4%EB%A7%88%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="2.-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-10%EA%B1%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">2. &#45936;&#51060;&#53552;&#47484; 10&#44148; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#2.-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-10%EA%B1%B4-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="3.-%EA%B3%A0%EA%B0%9D%EA%B5%AC%EB%B6%84%EC%9E%90(CustomerID)%EC%99%80-%EC%84%A4%EB%AA%85(Description)-%EC%BB%AC%EB%9F%BC%EC%9D%B4-%EB%84%90%EA%B0%92%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%84-%EC%B6%94%EC%B6%9C%ED%95%98%EC%97%AC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">3. &#44256;&#44061;&#44396;&#48516;&#51088;(CustomerID)&#50752; &#49444;&#47749;(Description) &#52972;&#47100;&#51060; &#45328;&#44050;&#51064; &#45936;&#51060;&#53552;&#54532;&#47112;&#51076;&#51012; &#52628;&#52636;&#54616;&#50668; &#52636;&#47141;&#54616;&#49464;&#50836;<a class="anchor-link" href="#3.-%EA%B3%A0%EA%B0%9D%EA%B5%AC%EB%B6%84%EC%9E%90(CustomerID)%EC%99%80-%EC%84%A4%EB%AA%85(Description)-%EC%BB%AC%EB%9F%BC%EC%9D%B4-%EB%84%90%EA%B0%92%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%84-%EC%B6%94%EC%B6%9C%ED%95%98%EC%97%AC-%EC%B6%9C%EB%A0%A5%ED%95%98%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="4.-%EA%B3%A0%EA%B0%9D%EA%B5%AC%EB%B6%84%EC%9E%90(CustomerID)%EA%B0%80-null-%EC%9D%B8-%EA%B2%BD%EC%9A%B0%EB%8A%94-0.0-%EC%9C%BC%EB%A1%9C-%EC%B9%98%ED%99%98%ED%95%98%EA%B3%A0">4. &#44256;&#44061;&#44396;&#48516;&#51088;(CustomerID)&#44032; null &#51064; &#44221;&#50864;&#45716; 0.0 &#51004;&#47196; &#52824;&#54872;&#54616;&#44256;<a class="anchor-link" href="#4.-%EA%B3%A0%EA%B0%9D%EA%B5%AC%EB%B6%84%EC%9E%90(CustomerID)%EA%B0%80-null-%EC%9D%B8-%EA%B2%BD%EC%9A%B0%EB%8A%94-0.0-%EC%9C%BC%EB%A1%9C-%EC%B9%98%ED%99%98%ED%95%98%EA%B3%A0">&#182;</a></h4><h4 id="5.-%EC%84%A4%EB%AA%85(Description)%EA%B0%80-null-%EC%9D%B8-%EA%B2%BD%EC%9A%B0%EB%8A%94-%22NOT-MENTIONED%22-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EC%A0%80%EC%9E%A5%EB%90%A0-%EC%88%98-%EC%9E%88%EB%8F%84%EB%A1%9D-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A3%BC%EC%84%B8%EC%9A%94">5. &#49444;&#47749;(Description)&#44032; null &#51064; &#44221;&#50864;&#45716; "NOT MENTIONED" &#44050;&#51004;&#47196; &#51200;&#51109;&#46112; &#49688; &#51080;&#46020;&#47197; &#47564;&#46308;&#50612;&#51452;&#49464;&#50836;<a class="anchor-link" href="#5.-%EC%84%A4%EB%AA%85(Description)%EA%B0%80-null-%EC%9D%B8-%EA%B2%BD%EC%9A%B0%EB%8A%94-%22NOT-MENTIONED%22-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EC%A0%80%EC%9E%A5%EB%90%A0-%EC%88%98-%EC%9E%88%EB%8F%84%EB%A1%9D-%EB%A7%8C%EB%93%A4%EC%96%B4%EC%A3%BC%EC%84%B8%EC%9A%94">&#182;</a></h4><h4 id="6.-%EC%B5%9C%EC%A2%85-%EC%8A%A4%ED%82%A4%EB%A7%88%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94">6. &#52572;&#51333; &#49828;&#53412;&#47560;&#50752; &#45936;&#51060;&#53552;&#47484; &#52636;&#47141;&#54644; &#51452;&#49464;&#50836;<a class="anchor-link" href="#6.-%EC%B5%9C%EC%A2%85-%EC%8A%A4%ED%82%A4%EB%A7%88%EC%99%80-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%B6%9C%EB%A0%A5%ED%95%B4-%EC%A3%BC%EC%84%B8%EC%9A%94">&#182;</a></h4><details><summary>[실습5] 출력 결과 확인 </summary>
 
 > 아래와 유사하게 방식으로 작성 되었다면 정답입니다
