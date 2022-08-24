@@ -27,6 +27,25 @@ git pull
 ```
 <br>
 
+#### 1-1-2. `git pull` 시 오류 해결 
+내가 수정한 내역을 없애고 원격 Git repo에 업데이트된 자료 가져오기  
+*주의: 내가 만든 수정 및 작업내용(notebook 실습 등) 사라집니다*  
+ 
+```bash
+ # 원하는 폴더로 이동
+# cd ~/work/{폴더명}
+cd ~/work/data-engineer-intermediate-training/day4
+
+# 내가 작업한 수정사항 없애버리기 - 로컬 repo의 이전 commit 의 파일상태로 돌아가기
+git checkout -- .
+
+# 상태를 확인해보기 - 변경사항이 없다고 보임
+git status -sb
+
+# 그동안 원격 repo-github 의 수업자료-에서 추가된 commit 내역 가져오기
+git pull
+```  
+
 ### 1-2. 현재 기동되어 있는 도커 컨테이너를 확인하고, 종료합니다
 
 #### 1-2-1. 현재 기동된 컨테이너를 확인합니다
