@@ -14113,12 +14113,10 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>22/08/23 13:09:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+<pre>22/08/24 06:37:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark&#39;s default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to &#34;WARN&#34;.
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-22/08/23 13:09:54 WARN Utils: Service &#39;SparkUI&#39; could not bind on port 4040. Attempting port 4041.
-22/08/23 13:09:54 WARN Utils: Service &#39;SparkUI&#39; could not bind on port 4041. Attempting port 4042.
 </pre>
 </div>
 </div>
@@ -14138,7 +14136,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
         <div>
             <p><b>SparkContext</b></p>
 
-            <p><a href="http://16f3b05ebd0e:4042">Spark UI</a></p>
+            <p><a href="http://17adcd534836:4040">Spark UI</a></p>
 
             <dl>
               <dt>Version</dt>
@@ -14175,7 +14173,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </ul>
 <p><img src="https://i.pinimg.com/originals/12/c8/90/12c890126fb2d1e99099468f53d47260.jpg" alt="join"></p>
 <p><img src="https://miro.medium.com/max/1400/0*jfglHEcbPtwv50J1.png" alt="semi anti"></p>
-<p><img src="https://oracletechnocampus.files.wordpress.com/2016/02/2cea0-jointable2-bmp.jpg" alt=""></p>
+<p><img src="https://user-images.githubusercontent.com/81408668/186349627-c99a7bfc-1b62-4436-802c-baddd6f13ffc.png" alt="sql-outer-joins"></p>
 
 </div>
 </div>
@@ -14236,7 +14234,7 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([</span>
@@ -14279,6 +14277,17 @@ To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLeve
  |-- u_gender: string (nullable = true)
 
 </pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>                                                                                </pre>
 </div>
 </div>
 
@@ -15887,7 +15896,7 @@ root
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">up</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
@@ -15933,7 +15942,7 @@ root
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">AnalysisException</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_121/2113892385.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/ipykernel_544/2113892385.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> up <span class="ansi-blue-fg">=</span> u<span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>p<span class="ansi-blue-fg">,</span> u<span class="ansi-blue-fg">.</span>id <span class="ansi-blue-fg">==</span> p<span class="ansi-blue-fg">.</span>id<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> up<span class="ansi-blue-fg">.</span>show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>up<span class="ansi-blue-fg">.</span>select<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;id&#34;</span><span class="ansi-blue-fg">)</span> <span class="ansi-red-fg"># 주석해제해서 오류 발생시키기</span>
@@ -15972,10 +15981,10 @@ root
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="3.2-%EC%A4%91%EB%B3%B5-%EC%BB%AC%EB%9F%BC%EB%AA%85-%ED%95%B4%EA%B2%B0%EB%B0%A9%EC%95%88---%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%98-%EC%BB%AC%EB%9F%BC-%EB%AA%85%EC%9D%84-%EB%8B%A4%EB%A5%B4%EA%B2%8C-%EB%A7%8C%EB%93%A0%EB%8B%A4">3.2 &#51473;&#48373; &#52972;&#47100;&#47749; &#54644;&#44208;&#48169;&#50504; - &#45936;&#51060;&#53552; &#54532;&#47112;&#51076;&#51032; &#52972;&#47100; &#47749;&#51012; &#45796;&#47476;&#44172; &#47564;&#46304;&#45796;<a class="anchor-link" href="#3.2-%EC%A4%91%EB%B3%B5-%EC%BB%AC%EB%9F%BC%EB%AA%85-%ED%95%B4%EA%B2%B0%EB%B0%A9%EC%95%88---%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84%EC%9D%98-%EC%BB%AC%EB%9F%BC-%EB%AA%85%EC%9D%84-%EB%8B%A4%EB%A5%B4%EA%B2%8C-%EB%A7%8C%EB%93%A0%EB%8B%A4">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">u1</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;u_uid&quot;</span><span class="p">)</span>
@@ -15993,81 +16002,15 @@ root
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- u_uid: long (nullable = true)
- |-- name: string (nullable = true)
- |-- gender: string (nullable = true)
-
-root
- |-- p_uid: long (nullable = true)
- |-- name: string (nullable = true)
- |-- amount: long (nullable = true)
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>u_uid</th><th>name</th><th>gender</th><th>p_uid</th><th>name</th><th>amount</th></tr>
-<tr><td>3</td><td>박트롬</td><td>여</td><td>3</td><td>LG Cyon</td><td>1800000</td></tr>
-<tr><td>2</td><td>김싸이언</td><td>남</td><td>2</td><td>LG DIOS</td><td>2000000</td></tr>
-</table>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table border='1'>
-<tr><th>u_uid</th></tr>
-<tr><td>3</td></tr>
-<tr><td>2</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="3.3-%EC%A4%91%EB%B3%B5-%EC%BB%AC%EB%9F%BC%EB%AA%85-%ED%95%B4%EA%B2%B0%EB%B0%A9%EC%95%88---%EC%A1%B0%EC%9D%B8-%EC%A7%81%ED%9B%84-%EC%A4%91%EB%B3%B5-%EC%BB%AC%EB%9F%BC%EC%9D%84-%EC%A0%9C%EA%B1%B0%ED%95%A9%EB%8B%88%EB%8B%A4">3.3 &#51473;&#48373; &#52972;&#47100;&#47749; &#54644;&#44208;&#48169;&#50504; - &#51312;&#51064; &#51649;&#54980; &#51473;&#48373; &#52972;&#47100;&#51012; &#51228;&#44144;&#54633;&#45768;&#45796;<a class="anchor-link" href="#3.3-%EC%A4%91%EB%B3%B5-%EC%BB%AC%EB%9F%BC%EB%AA%85-%ED%95%B4%EA%B2%B0%EB%B0%A9%EC%95%88---%EC%A1%B0%EC%9D%B8-%EC%A7%81%ED%9B%84-%EC%A4%91%EB%B3%B5-%EC%BB%AC%EB%9F%BC%EC%9D%84-%EC%A0%9C%EA%B1%B0%ED%95%A9%EB%8B%88%EB%8B%A4">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">up</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
@@ -16078,51 +16021,6 @@ root
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>id</th><th>name</th><th>gender</th><th>name</th><th>amount</th></tr>
-<tr><td>3</td><td>박트롬</td><td>여</td><td>LG Cyon</td><td>1800000</td></tr>
-<tr><td>2</td><td>김싸이언</td><td>남</td><td>LG DIOS</td><td>2000000</td></tr>
-</table>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>id</th></tr>
-<tr><td>3</td></tr>
-<tr><td>2</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -16165,10 +16063,10 @@ display(answer.orderBy(desc("p_amount")))
 
 </details>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 여기에 실습 코드를 작성하고 실행하세요 (Shift+Enter)</span>
@@ -16205,108 +16103,6 @@ display(answer.orderBy(desc("p_amount")))
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>root
- |-- p_time: integer (nullable = true)
- |-- id: integer (nullable = true)
- |-- p_id: integer (nullable = true)
- |-- p_name: string (nullable = true)
- |-- p_amount: integer (nullable = true)
-
-+----------+---+----+-----------+--------+
-|    p_time| id|p_id|     p_name|p_amount|
-+----------+---+----+-----------+--------+
-|1603651550|  0|1000|GoldStar TV|  100000|
-|1603651550|  1|2000|    LG DIOS| 2000000|
-|1603694755|  1|2001|    LG Gram| 1800000|
-|1603673500|  2|2002|    LG Cyon| 1400000|
-|1603652155|  3|2003|      LG TV| 1000000|
-|1603674500|  4|2004|LG Computer| 4500000|
-|1603665955|  5|2001|    LG Gram| 3500000|
-|1603666155|  5|2003|      LG TV| 2500000|
-+----------+---+----+-----------+--------+
-
-root
- |-- id: integer (nullable = true)
- |-- u_name: string (nullable = true)
- |-- u_gender: string (nullable = true)
- |-- u_signup: integer (nullable = true)
-
-+---+----------+--------+--------+
-| id|    u_name|u_gender|u_signup|
-+---+----------+--------+--------+
-|  1|    정휘센|      남|19700808|
-|  2|  김싸이언|      남|19710201|
-|  3|    박트롬|      여|19951030|
-|  4|    청소기|      남|19770329|
-|  5|유코드제로|      여|20021029|
-|  6|  윤디오스|      남|20040101|
-|  7|  임모바일|      남|20040807|
-|  8|  조노트북|      여|20161201|
-|  9|  최컴퓨터|      남|20201124|
-+---+----------+--------+--------+
-
-root
- |-- p_time: integer (nullable = true)
- |-- u_id: integer (nullable = true)
- |-- p_id: integer (nullable = true)
- |-- p_name: string (nullable = true)
- |-- p_amount: integer (nullable = true)
-
-root
- |-- p_uid: integer (nullable = true)
- |-- u_name: string (nullable = true)
- |-- u_gender: string (nullable = true)
- |-- u_signup: integer (nullable = true)
-
-root
- |-- u_id: integer (nullable = true)
- |-- u_name: string (nullable = true)
- |-- p_name: string (nullable = true)
- |-- p_amount: integer (nullable = true)
-
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table border='1'>
-<tr><th>u_id</th><th>u_name</th><th>p_name</th><th>p_amount</th></tr>
-<tr><td>4</td><td>청소기</td><td>LG Computer</td><td>4500000</td></tr>
-<tr><td>5</td><td>유코드제로</td><td>LG Gram</td><td>3500000</td></tr>
-<tr><td>5</td><td>유코드제로</td><td>LG TV</td><td>2500000</td></tr>
-<tr><td>1</td><td>정휘센</td><td>LG DIOS</td><td>2000000</td></tr>
-<tr><td>1</td><td>정휘센</td><td>LG Gram</td><td>1800000</td></tr>
-<tr><td>2</td><td>김싸이언</td><td>LG Cyon</td><td>1400000</td></tr>
-<tr><td>3</td><td>박트롬</td><td>LG TV</td><td>1000000</td></tr>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
